@@ -1,0 +1,88 @@
+
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  padding: 8px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/*form, input {
+  width: 100%;
+  padding: 8px;
+}*/
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+/*
+7. Fichier login_style.css
+Pour le style de la page de connexion, vous pouvez créer un fichier 
+CSS nommé login_style.css dans un répertoire style :
+*/
+
+/*
+Structure des Fichiers
+Votre répertoire de projet devrait ressembler à ceci :
+
+projet
+│
+├── users.json
+├── login.php
+├── create_user.php
+├── admin_dashboard.php
+├── logout.php
+├── check_login.php
+└── style
+    └── login_style.css
+*/
+
+/*
+Avec cette structure, vous aurez une application avec des fonctionnalités 
+de connexion sécurisée, de création d'utilisateurs, et de gestion de sessions pour les administrateurs.
+*/

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Dédiée</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+  <div id="main-content"></div>
+  <script>
+    const content = {
+      biologie: {
+        title: "Biologie des Insectes",
+        image: "../assets/images/insect-biology.jpg",
+        text: `<p>Explorez la biologie des insectes, y compris leurs cycles de vie, leur morphologie et leurs comportements uniques. Les insectes sont les êtres vivants les plus diversifiés de la planète, représentant plus de 80% des espèces animales.</p>
+              <p><strong>Cycles de vie :</strong> Les insectes passent par différents stades de développement, y compris l'œuf, la larve, la nymphe et l'adulte.</p>
+              <p><strong>Morphologie :</strong> Les insectes ont un corps divisé en trois parties : la tête, le thorax et l'abdomen, avec des appendices spécialisés.</p>
+              <p><strong>Comportements :</strong> Les insectes exhibent des comportements fascinants, tels que la pollinisation, la construction de nids et la communication chimique.</p>`
+      },
+      habitats: {
+        title: "Habitats des Insectes",
+        image: "../assets/images/insect-habitats.jpg",
+        text: `<p>Découvrez les divers habitats des insectes, des forêts tropicales aux déserts arides, et comment ils se sont adaptés à ces environnements. Les insectes peuvent être trouvés dans presque tous les écosystèmes terrestres et aquatiques.</p>
+              <p><strong>Forêts :</strong> Les forêts tropicales abritent une énorme biodiversité d'insectes, jouant un rôle crucial dans les cycles écologiques.</p>
+              <p><strong>Déserts :</strong> Les insectes du désert ont développé des adaptations uniques pour survivre dans des conditions extrêmes.</p>
+              <p><strong>Milieux aquatiques :</strong> De nombreux insectes, comme les libellules et les moustiques, passent une partie de leur vie dans l'eau.</p>`
+      },
+      role: {
+        title: "Rôle des Insectes dans l'Écosystème",
+        image: "../assets/images/ecosystem-roles.jpg",
+        text: `<p>Les insectes jouent un rôle crucial dans l'écosystème, notamment dans la pollinisation, la décomposition des matières organiques, et comme source de nourriture pour de nombreuses autres espèces. Leur contribution à la biodiversité et à la santé des écosystèmes est inestimable.</p>
+              <p><strong>Pollinisation :</strong> Les insectes comme les abeilles et les papillons pollinisent une grande variété de plantes, ce qui est essentiel pour la production de fruits et de graines.</p>
+              <p><strong>Décomposition :</strong> Les insectes décomposeurs, comme les coléoptères et les fourmis, recyclent les matières organiques, enrichissant ainsi le sol.</p>
+              <p><strong>Nourriture :</strong> Les insectes servent de source de nourriture pour de nombreux animaux, y compris les oiseaux, les reptiles et les mammifères.</p>`
+      }
+    };
+
+    function loadContent(type) {
+      const mainContent = document.getElementById('main-content');
+      mainContent.innerHTML = `
+        <h2>${content[type].title}</h2>
+        <img src="${content[type].image}" alt="${content[type].title}">
+        ${content[type].text}
+        <a href="../index.html" class="btn-back">Retour à l'accueil</a>
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const type = urlParams.get('type');
+      if (type && content[type]) {
+        loadContent(type);
+      }
+    });
+  </script>
+</body>
+</html>

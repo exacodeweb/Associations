@@ -1,0 +1,8 @@
+
+{
+  "admin": {
+      "password": "$2y$10$2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2",
+      "role": "admin"
+  }
+}
+

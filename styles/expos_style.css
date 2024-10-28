@@ -1,0 +1,598 @@
+/* Police pour le texte principal */
+body {
+background: lightgoldenrodyellow;
+background-position: 100% 100%;
+font-family: 'Barlow', sans-serif;
+}
+
+/* Titres (headlines) */
+h1, h2, h3, h4, h5, h6, .title {
+font-family: 'Rajdhani', sans-serif;
+}
+
+/*----------------------------------------------------------------------------------------------------------BODY--*/
+/* 20/06/2024 body {
+background: lightgoldenrodyellow;
+background-position: 100% 100%;
+margin: 0px;
+/*font-family: 'Tangerine';font-size: 22px;*/  /*
+}*/
+
+/*--------------------------------------------------------------------------------------------------------ENTETE--*/
+
+/*.header {
+display: flex;
+flex-wrap: wrap;
+flex: 1 1 160px;
+flex-direction: row;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+background: mediumorchid;
+padding: 10px;
+}*/
+
+/*--------------------------------------------------------------------------------------------------SECTION-LOGO--*/
+
+/*.logo {
+display: flex;
+color: white;
+margin-left: 10px;
+font-family: 'Tangerine', serif;
+font-weight: 590;
+text-shadow: 4px 4px 4px blue;
+font-size: 55px;
+font-weight: 500;
+}*/
+
+/*--------------------------------------------------------------------------------------------------SECTION-MENU--*/
+
+/*.menu {
+display: flex;
+flex-direction: row;
+height: 80px;
+align-items: center;
+color: white;
+margin-right: 25px;
+margin-left: 10px;
+}*/
+
+/*--------------------------------------------------------------------------------------------------ARRIERE-PLAN--*/
+
+/*.link-nav {
+color: white;
+}*/
+
+/*.link-nav:hover {
+color: lightblue;
+/*text-decoration: none;*//*
+}*/
+
+/*--------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+
+/* 19/09/06/2024 
+.breadcrumb {
+width: 400px;
+}
+
+.breadcrumb-item {
+max-width: 100%;
+background: none;
+margin-left: 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.link-rep {
+margin-right: 5px;
+margin-left: 5px;
+}  */
+
+/*-------------------------------------------------------------------------------------------------------CONTENT--*/
+
+/* 20/06/2024
+.content {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+width: 100%;
+margin-top: 5px;
+margin-bottom: 5px;
+color: black;
+background: lightgoldenrodyellow;
+}
+
+/*-----------------------------------------------------------------------------------MAIN--*/
+
+/* 20/06/2024
+.main {
+float: left;
+flex-direction: column;
+width: 70%;
+/*70% du parent "content"*/ /*
+margin-left: 10px;
+background: #FBFBF9;
+align-items: center;
+border-radius: 5px;
+box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+padding: 0px;
+}
+
+/*------------------------------------------------------------- STRUCTURE CONTENU STYLE --*/
+.content {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+width: 100%;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+/*--MAIN--*/
+.main {
+float: left;
+flex-direction: column;
+width: 70%;
+/*70% du parent "content"*/
+margin-left: 10px;
+background: #fbfbf9;
+align-items: center;
+border-radius: 5px;
+box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+/*--ASIDE--*/
+.aside {
+float: right;
+flex-direction: column;
+width: 26%;
+/*22% du parent "content"*/
+margin-right: 10px;
+padding: 4px;
+border-radius: 5px;
+height: 590px;
+box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* Aside navigation styling */
+.aside-nav {
+display: flex;
+flex-direction: column;
+background: #fbfbf9;
+margin-bottom: 20px;
+height: 100px;
+padding: 4px;
+box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+margin-top: 0px;
+}
+
+.aside-link {
+display: flex;
+flex-direction: column;
+border: 2px solid green;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*--ARTICLE--*/
+
+h1 {
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+h2, .title {
+color: #0000ff;
+font-weight: 600;
+font-size: 1.5em;
+}
+
+/*h3 {
+display: flex;
+justify-content: center;
+}*/
+
+h4 {
+display: flex;
+justify-content: center;
+}
+
+.title,
+strong {
+color: #0000ff;
+}
+
+hr {
+height: 2px;
+color: blue;
+}
+
+.titre {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+p {
+margin-left: 0px;
+color: black;
+}
+
+p , .article {
+display: flex;
+flex-direction: column;
+/*align-items: left;*/
+text-align: justify;
+padding: 10px;
+margin-bottom: 20px;
+}
+
+.link {
+display: flex;
+flex-direction: row;
+text-align: center;
+justify-content: center;
+margin-top: 10px;
+font-size: 1.2em;
+}
+
+.link-page {
+padding: 20px;
+width: 20%;
+font-size: 18.72px;
+/*h3 = 18.72px*/
+font-weight: 600;
+margin-bottom: 1px;
+}
+
+/*--IMAGES--*/
+.block1-img {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-content: center;
+align-items: center;
+margin-bottom: 20px;
+width: 100%;
+}
+
+.section1 {
+width: 90%;
+border: 2px solid white;
+margin-bottom: 30px;
+}
+
+img {
+border-radius: 5px;
+}
+
+.card-img-top {
+width: 100%;
+height: 65.89785831960461vh;
+/*400px*/
+object-fit: cover;
+}
+
+/*--FIGAPTION--*/
+
+/*--COORDONNE--*/
+.section-2 {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+padding: 0px;
+text-align: left;
+}
+
+/*--GOOGLE MAP--*/
+.block-map {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-content: center;
+align-items: center;
+width: 100%;
+border: 2px solid white;
+margin-bottom: 50px;
+}
+
+.map {
+border: 1px solid blue;
+border-radius: 5px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.section-article {/*.hero-section*/
+background: url('path/to/your/image.jpg') no-repeat center center/cover;
+/*height: 60vh;*/
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+color: white;
+color: blue;
+padding: 20px;
+
+min-width: 100%;
+}
+
+.hero-title {
+font-size: 3em;
+margin-bottom: 0.5em;
+}
+
+.hero-subtitle {
+font-size: 1.5em;
+margin-bottom: 1em;
+}
+/* Style pour le bouton héroïque */
+.hero-btn {
+padding: 10px 20px;
+background: var(--main-color);
+border: none;
+border-radius: 5px;
+color: white;
+font-size: 1em;
+text-decoration: none;
+}
+
+.hero-btn:hover {
+background: var(--hover-color);
+}
+
+.introduction {
+padding: 40px 20px;
+text-align: center;
+}
+
+.introduction h2 {
+font-size: 2em;
+color: var(--text-color);
+margin-bottom: 20px;
+}
+
+.introduction p {
+font-size: 1.2em;
+color: #333;
+line-height: 1.6em;
+}
+
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 20px;
+}
+
+.gallery img {
+width: 30%;
+margin-bottom: 20px;
+border-radius: 5px;
+}
+
+.section {
+padding: 40px 20px;
+background: #fbfbf9;
+margin-bottom: 20px;
+}
+
+.section h3 {
+font-size: 1.8em;
+color: var(--text-color);
+margin-bottom: 20px;
+}
+
+.section p {
+font-size: 1.2em;
+color: #333;
+line-height: 1.6em;
+}
+
+.map-section {
+padding: 40px 20px;
+text-align: center;
+}
+
+.map-section iframe {
+width: 100%;
+height: 450px;
+border: none;
+border-radius: 5px;
+}
+
+.contact-section {
+padding: 40px 20px;
+background: #7dc95e;
+color: white;
+}
+
+.contact-section h3 {
+font-size: 1.8em;
+margin-bottom: 20px;
+}
+
+.contact-section p {
+font-size: 1.2em;
+line-height: 1.6em;
+}
+
+.contact-section a {
+color: white;
+text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*-- CONTENTENU --*/  
+/*20/06/2024 @media screen  and (max-width: 576px) {/*and (min-width: 220px)*//*
+.content {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+padding: 0px;/*5px*//*
+}
+}*/
+
+/*20/06/2024 @media screen and (max-width: 768px) {
+.content,
+.main,
+.aside {
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 5px;/*10px*/ /*
+}*/
+/*
+.content {
+width: 100% !important;
+
+}
+}*/
+
+/*20/06/2024 @media screen  and (max-width: 576px) {/*and (min-width: 220px)*/ /*
+.main {
+margin: 0px;/*10px*/ /*
+width: auto;
+}*/
+
+/*.col-md-6 {
+display: flex;
+padding: 10px;
+border: 1px solid grey;
+width: auto;
+}
+
+.img-fluid {
+width: 200px;
+}
+
+}*/
+/*------------------------------------------------*/
+
+/*20/06/2024 @media screen  and (max-width: 768px) {/*and (min-width: 320px)*//*
+.main {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+align-content: center;
+height: auto;
+border: 1px solid blue;
+background: #fbfbf9;
+border-radius: 5px;
+margin-left: 0px !important;
+margin-right: 0px !important;/*20px*//*
+width: 100% !important;/*99%*//*
+}
+
+
+.main,
+.aside {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+width: 100%;/**//*
+margin: 0px;
+
+padding: 10px;
+}*/
+
+/*-------------------------------------- Test 18/06/2024 --*/
+/*20/06/2024.main {
+flex: 1;
+min-width: 100px;
+margin: 10px;
+background: #fbfbf9;
+border-radius: 5px;
+box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+padding: 5px;/*10px*/ /*
+}*/
+
+h2 {
+font-size: 2.25vw;
+}
+/*
+.aside {
+margin-top: 10px;
+/*width: 100%;*//*
+}*/
+
+/*---------------------------------------------------------- RESPONSIVE STRUCTURE CONTENU --*/
+@media screen  and (max-width : 576px) {
+
+.content {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100% !important;
+padding: 0px;/*5px*/
+}
+
+/*.link {
+font-size: 1em;
+}*/
+
+.main,
+.aside {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+width: 100%;
+margin: 0px;
+}
+
+.content,
+.main,
+.aside {
+flex-direction: column;
+width: 100%;
+margin: 0;
+padding: 5px;/*10px*/
+}
+
+.aside {
+padding: 0px;
+margin-top: 10px;
+}
+}
+/*------------------------------------------------------------------------ FIN DU CONTENU --*/
+
+/*-- ASIDE --*/
+@media screen  and (max-width: 576px) {/*and (min-width: 220px)*/
+/*20/06/2024 .aside {
+padding: 0px;
+margin-top: 10px;
+}
+.aside-nav {
+padding: 5px;
+}
+}*/
+
+ul {
+padding-left: 20px;
+}
+}
+@media screen  and (max-width: 576px) {/*and (min-width: 220px)*/
+section, .section, .introdution {
+padding: 0px 5px 0px 0px !important;
+margin-bottom: 0px !important;
+}     
+}
+
+
+@media screen and (max-width: 768px) {
+.gallery img {
+width: 100%;
+}
+}
+
+.ctn{
+text-align: center;
+}

@@ -1,0 +1,1964 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c-->
+<!DOCTYPE html>
+<html lang="en"><!--ISO 639-1-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <!--<link rel="stylesheet" href="../css/style.css" type="text/css"> -->
+  <title>ECF-blog</title>
+
+  <!--Bootstrap cdn-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!--kit icones--> <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+  <!--style de police d'ecriture-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+  <!--STYLE-CSS-->
+  <style>
+    /*----------------------------------------------------------------------------------------------------------BODY--*/
+    body {
+      background: lightgoldenrodyellow;
+      background-position: 100% 100%;
+      margin: 0px;
+      /*font-family: 'Tangerine';font-size: 22px;*/
+    }
+
+    /*--------------------------------------------------------------------------------------------------------ENTETE--*/
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 160px;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+
+      padding: 10px;
+    }
+
+    /*--------------------------------------------------------------------------------------------------SECTION-LOGO--*/
+
+    .logo {
+      display: flex;
+      color: white;
+      margin-left: 10px;
+      font-family: 'Tangerine', serif;
+      font-weight: 590;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+      font-weight: 500;
+    }
+
+    /*--------------------------------------------------------------------------------------------------SECTION-MENU--*/
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 80px;
+      align-items: center;
+      color: white;
+      margin-right: 25px;
+      margin-left: 10px;
+    }
+
+    /*--------------------------------------------------------------------------------------------------ARRIERE-PLAN--*/
+
+    .link-nav {
+      color: white;
+    }
+
+    .link-nav:hover {
+      color: lightblue;
+      /*text-decoration: none;*/
+    }
+
+    /*--------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+    .breadcrumb {
+      width: 400px;
+    }
+
+    .breadcrumb-item {
+      max-width: 100%;
+      background: none;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .link-rep {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------CONTENT--*/
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: black;
+      background: lightgoldenrodyellow;
+    }
+
+
+    /*----------------------------------------------------------------------------------------------------------MAIN--*/
+    .main {
+      float: left;
+      flex-direction: column;
+      width: 70%;
+      /*70% du parent "content"*/
+      margin-left: 10px;
+      background: #FBFBF9;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+
+      padding: 0px;
+    }
+
+    /*------------------------------------------------------------------------------------------ BOUTON INSCRIPTION --*/
+
+   /*------------------------------------------------------------------*/
+   .btn-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+
+      .link-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 160px; /*150px*/
+        border-radius: 50px;
+        text-decoration: none !important;
+        background-color:mediumorchid!important;/*#0145b5*/
+        color: white;
+      }
+
+      .link-btn:hover {
+        background-color:rgb(211, 85, 163)!important;/*green*/
+      }
+
+    /*-------------------------------------------------------------------------------------------------------ARTICLE--*/
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+      padding: 10px;
+      /*10px*/
+      margin-bottom: 10px;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 12px;
+      margin-bottom: 50px;
+
+      /*font-family: 'Montserrat Light', arial;*/
+      /*DisneyPark*/
+      /* PT Sans*/
+      /*Andantino script*/
+      /*Calligraph*/
+      /*Montserrat Light*/
+      font-size: 1.5em;
+      /*font-weight: 600;*/
+    }
+
+    p {
+      margin-left: 0px;
+      color: black;
+      text-align: justify;
+    }
+
+    /*-----*/
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+      margin-top: 10px;
+
+      font-size: 1.2em;
+      text-decoration: underline;
+    }
+
+    .link-page {
+      padding: 20px;
+      width: 40%;
+      /*20%*/
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 1px;
+      padding: 0;
+    }
+
+    /*
+    h4 {
+      color: #0000ff;
+      font-weight: 600;
+      font-size: 1.5em;
+    }*/
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0000ff;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    .title,
+    strong {
+      color: #0000ff;
+    }
+
+    hr {
+      height: 1px;
+      width: 90%;
+      background: grey;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------IMAGES--*/
+    .block1-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .section1 {
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+      border: 2px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    .text-width-img {
+      padding: 10px;
+    }
+
+    .text-width-img img {
+      width: 250px;
+      height: 150px;
+      float: left;
+      margin-right: 15px;
+    }
+
+    .text-width-img p {
+      font-family: Arial, sans-serif;
+      font-size: 1em;
+      text-align: justify;
+    }
+
+    .subtitle {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #0000ff;
+      font-size: 1.5em;
+    }
+
+    img {
+      border-radius: 5px;
+      border: 1px solid blue;
+    }
+
+    /*------------------------------------------------------------------------------------------------LIRE LA SUITE---*/
+
+    .btn {
+      display: flex;
+      flex-direction: row;
+      width: 150px;
+      height: 20px;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px 50px;
+      color: white;
+    }
+
+    .btn:hover {
+      background: green;
+    }
+
+    /*----------------------------------------------------------------------------------------LIEN ANCRE commentaire--*/
+
+    .anchor {
+      width: 250px;
+      margin-top: 20px;
+      /*40px*/
+    }
+
+    .header-com {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      padding: 5px;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    #comment-section {
+      float: right;
+      justify-content: left;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 40px;
+
+
+      padding: 10px;
+    }
+
+    .com {
+      background: #f3deba;
+      width: 100%;
+      padding: 5px;
+      /*5px*/
+      margin-bottom: 50px;
+      box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+
+    /*----------------------------------------------------------------------------------------------------FORMULAIRE--*/
+    .section-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      margin-top: 20px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      width: 60%;/*90%*/
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 90%;/*60%*/
+      border: 1px solid grey;
+      /*grey*/
+      border-radius: 5px;
+      background-color: #f8f9f8;
+    }
+
+    .form-group {
+      width: 90%;
+    }
+
+    form,
+    label,
+    input {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      height: 25px;
+      text-align: left;
+      width: 80%;
+    }
+
+    textarea {
+      height: 25px;
+      text-align: left;
+      width: 80%;
+    }
+
+    button:hover {
+      background: green;
+    }
+
+    button,
+    .submit[type=submit] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 160px;
+      height: 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      background: #0145b5;
+      color: white;
+      border: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------ASIDE--*/
+    .aside {
+      float: right;
+      flex-direction: column;
+      width: 26%;
+      /*22% du parent "content"*/
+      margin-right: 10px;
+      padding: 4px;
+      border-radius: 5px;
+      height: 590px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-nav {
+      display: flex;
+      flex-direction: column;
+      background: #FBFBF9;
+      margin-bottom: 20px;
+      height: 100px;
+      padding: 4px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-link {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+
+    /*----------------------- bouton remonter --*/
+
+    .back-to-top {
+      position: fixed;
+      top: 420px;
+      width: 60px;
+      height: 60px;
+
+      /*bottom: -1850px; /*10px*/
+      right: 20px;
+      /*background: white;*/
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 50% 50%;
+      z-index: 2;
+    }
+
+    /*--MISE A JOURS--*/
+    time,
+    .time {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      margin-left: 30px;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------FOOTER--*/
+
+    .blockfooter {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #7dc95e;
+      color: white;
+      height: 150px;
+      width: 100%;
+    }
+
+    .block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      width: 50%;
+      margin-left: 80px;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    .mention {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    a {
+      color: #0000ff;
+      text-decoration: none;
+    }
+
+    /*-------------------------------------------------------MEDIA QUERY----------------------------------------------*/
+
+    @media screen and (max-width : 768px) {
+      .header-logo {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+
+      /*-- MEDIA QUERY --*/
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        .header {
+          font-size: 12px;
+          display: flex;
+          /*flex-direction: row;*/
+          flex-direction: column;
+          text-align: left;
+          max-width: 100%;
+          /*-----------------*/
+        }
+      }
+
+      /*-- SMARTPHONE --*/
+      @media screen and (max-width: 576px) {
+        .link,
+        .link-int,
+        menu {
+          font-size: 12px;
+          max-width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: center;
+          text-align: left;
+          height: 40px;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .link,
+        .link-int,
+        menu {
+          font-size: 12px;
+          max-width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: center;
+          text-align: left;
+          height: 40px;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        .menu {
+          display: flex;
+          flex-direction: column;
+          height: 40px;
+          font-size: 12px;
+          max-width: 100%;
+          text-align: center;
+          background-color: blueviolet;
+          height: auto;
+          margin-right: 15px;
+          margin-left: 10px;
+        }
+      }
+
+
+    /*----------------------------------------------------------------------------------------------MENU--SMARTPHONE--*/
+
+    /*@media screen and (min-width : 320px) and (max-width : 576px) {
+      .menu {
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        font-size: 12px;
+        max-width: 100%;
+        text-align: center;
+      }
+    }*/
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .menu {
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        font-size: 12px;
+        max-width: 100%;
+        text-align: center;
+        background-color: blueviolet;
+        height: auto;
+        margin-right: 15px;
+        margin-left: 10px;
+      }
+    }
+
+
+    /*-------------------------------------------------------------------------------------------------- BREADCRUMB --*/
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+      .breadgroumb {
+        width: 90%;
+      }
+    }
+    /*------------------------------------------------------------------------------------------------ AJOUTER-TEST --*/
+      /*-- RESPONSIVE --*/
+      /*-- HEADER --*/
+      @media screen and (max-width: 768px) {/*and (min-width: 220px)*/ 
+        .header {
+          font-size: 12px;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          max-width: 100%;
+          align-content: center;
+        }
+
+      .logo {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+      }
+      }
+
+      @media screen and (max-width: 576px) {
+        .link,
+        .link-int,
+        menu {
+          font-size: 12px;
+          max-width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: center;
+          text-align: left;
+          height: 40px;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .link,
+        .link-int,
+        menu {
+          font-size: 12px;
+          max-width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: center;
+          text-align: left;
+          height: 40px;
+        }
+      }
+
+      @media screen  and (max-width: 768px) {/*and (min-width: 220px)*/
+        .menu {
+          display: flex;
+          flex-direction: column;
+          height: 40px;
+          font-size: 12px;
+          max-width: 100%;
+          text-align: center;
+          background-color: blueviolet;
+          height: auto;
+          margin-right: 15px;
+          margin-left: 10px;
+        }
+      }
+
+   /*-------------------------------------------------------------------------------------------------- BREADCRUMB --*/
+    @media screen  and (max-width: 320px) {/*and (min-width: 320px)*/
+      .breadcrumb-item {
+        width: 100%;
+        font-size: 0.5em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+      }
+    }
+
+
+    /*----------------------------------------------------------------------------------------------------- CONTENU --*/
+
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 5px;
+      }
+
+      .link {
+        font-size: 1em;
+      }
+
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+
+    @media screen and (max-width : 576px) {/* and (min-width : 320px) */
+
+      .main,
+      .aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0px;
+      }
+
+
+
+      /*----------------------------------------------------- TEST --*/
+
+
+       form, #comment-form {/*#comment-form*//*
+      float: right;
+      justify-content: left;*/
+      width: 100% !important;/*
+      text-align: left;
+      margin-bottom: 40px;
+      padding: 10px;*/
+      /*display: flex;*/
+    }
+
+
+      #comment-section {
+      float: right;
+      justify-content: left;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 40px;
+      padding: 10px;
+    }
+
+      .form {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      width: 90% !important;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 90% !important;/*60%*/
+      border: 1px solid grey;
+      /*grey*/
+      border-radius: 5px;
+      background-color: #f8f9f8;
+    }
+    /*-----------------------------------------------------------*/
+
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+
+    @media screen and (min-width : 320px) and (max-width : 992px) {
+
+      .form,
+      form {
+        width: 95%;
+      }
+    }
+
+
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+
+      .block,
+      .contact,
+      .mention,
+      .text-dark {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+      }
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+      .aside {
+        padding: 0px;
+        margin-top: 10px;
+      }
+    }
+
+      /*--------------------------------------------------------------------------------------------------- AJOUTER --*/
+
+      /*-- CONTENTENU --*/
+     @media screen  and (max-width: 576px) {/*and (min-width: 220px)*/
+        .content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding: 0px;/*5px*/
+        }
+      }
+
+      @media screen  and (max-width: 576px) {/*and (min-width: 220px)*/
+        .main,
+        .aside {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 100%;
+          margin: 0px;
+        }
+
+      /*-- ASIDE --*/
+      @media screen  and (max-width: 576px) {/*and (min-width: 220px)*/
+        .aside {
+          padding: 10px;
+          margin-top: 10px;
+        }
+        .aside-nav {
+          padding: 5px;
+        }
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+      }
+      @media screen  and (max-width: 576px) {/*and (min-width: 220px)*/
+        section, .section, .introdution {
+          padding: 0px 5px 0px 0px !important;
+          margin-bottom: 0px !important;
+        }     
+      }
+
+      /*---------------------------------------------------------------------------------------------------- FOOTER --*/
+      @media screen and (max-width: 768pxpx) {/*576px*/
+        .blockfooter {
+          font-size: 12px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center !important;
+          align-content: center !important;
+          align-items: center !important;   
+          padding: 20px;  
+          height: auto;        
+        }
+      }
+
+      @media screen and (max-width: 768px) {/*576px*/
+        .block,
+        .contact,
+        .mention,
+        .text-dark {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          width: 100%;
+          margin: 0px; 
+        }
+        /*-- FOOTER --*/
+        .footer {
+          padding: 10px;          
+        }
+      }
+
+        @media screen  and (max-width: 768px) { /*576px*/
+        .blockfooter {
+          font-size: 12px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center !important;
+          align-content: center !important;
+          align-items: center !important;   
+          padding: 20px;  
+          height: auto;        
+        }
+      }
+
+      @media screen  and (max-width: 768px) {/*576px*/
+        .block,
+        .contact,
+        .mention,
+        .text-dark {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          width: 100%;
+          margin: 0px; 
+        }
+      
+        .footer {
+          padding: 10px;          
+        }
+      }
+      /*----------------------------------------------------------------------------------------------------*/
+
+      .commentaires {
+        height: auto;
+      }
+
+  </style>
+</head>
+
+<body>
+
+  <!--NAV-BAR-->
+  <!--<container>-->
+
+  <div class="header">
+    <div class="logo">Ailes-Enchantées</div><!--Entomologie-->
+
+    <!--OPTION MENU BURGER-->
+    <!--
+    <label for="toggle">☰</label>
+    <input type="checkbox" id="toggle">-->
+    <!--
+    <label for="toggle">☰</label>
+    <input type="checkbox" id="toggle">-->
+
+
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="./blog.html" title="Blog" class="link-nav m-2">Blog</a>
+
+      <a href="./Agenda.html" title="A propos" class="link-nav m-2">Évènements</a>
+
+      <a href="./qui_somme_nous.html" title="Qui somme nous" class="link-nav m-2">Qui sommes nous ?</a>
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </div>
+
+  <!--FIL D'ARIANE-->
+  <div class="breadcrumb-item">
+    <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> > <a href="../index.html"
+      class="link-rep">Acceuil</a> > blog
+  </div>
+
+  <!--CONTENT-->
+  <div class="content">
+
+    <!--MAIN-->
+    <main class="main">
+
+      <div class="article">
+        <h2 class="title"><!--BIENVENUE SUR LE BLOG-->Papillons en Lumière : <br>Histoires et Inspirations du Monde des Lépidoptères</h2>
+
+        <p><!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio asperiores architecto ex ratione eum. Quidem.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Cumque alias molestiae nulla eaque iste praesentium similique culpa ab,
+          vero sit sunt magni, commodi possimus suscipit.-->
+
+
+          Bienvenue sur le blog de Papillons en Lumière ! Découvrez un univers fascinant où chaque battement d'aile raconte une histoire unique. Notre blog est dédié à la beauté et à la préservation des papillons. Que vous soyez un amoureux de la nature, un entomologiste passionné ou simplement curieux d'en apprendre davantage sur ces créatures délicates, nous avons quelque chose pour vous. Plongez dans des articles inspirants, des conseils pour créer des jardins favorables aux papillons, et des récits captivants sur les efforts de conservation à travers le monde. Rejoignez-nous et laissez-vous émerveiller par la magie des papillons !
+        </p>
+
+        <!--<a class="link-page w-100 d-flex flex-column text-center" href="./inscription.html">
+          <h5 class="link">inscrivez-vous ? cliquer ici</h5>
+        </a>-->
+
+
+        <div class="btn-card"><!-- ./calendar.html -->
+          <a href="./inscription.html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez">s'inscrire<!--inscrivez-vous ici-->
+          </a>
+        </div>
+
+
+      </div> 
+
+      <!--LIEN ANCRE-->
+      <a href="#comment-section" class="anchor">Accéder à la section commentaires</a><!-- ml-2-->
+
+      <!--TEXT IMGAGE 1-->
+      <div class="section1"><!--block-parent-->
+        <div class="text-width-img">
+          <div class="subtitle"><!--Mon premier article:--> Aglais urticae :<br> Le Petit Nymphale qui Émerveille Nos Jardins</div>
+          <h5>Aglais urticae</h5>
+          <div class="text"><!--Aglais_urticae_(La-Petite-Tortue).jpg-->
+            <img src="../images3/photo1.jpg" alt="image papillon">
+            <p><!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Aenean euismod elementum nisi quis. Varius vel pharetra vel
+              turpis nunc eget lorem dolor. Nec feugiat in fermentum posuere urna. Consequat nisl vel pretium
+              lectus quam. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Euismod lacinia
+              at quis risus sed vulputate. Nisl nisi scelerisque eu ultrices. Ipsum faucibus vitae aliquet nec
+              lamcorper sit amet. Vulputate ut pharetra sit amet aliquam id. Bibendum ut tristique et
+              egestas quis ipsum suspendisse ultrices gravida. Imperdiet sed euismod nisi porta lorem. Morbi
+              tristique senectus et netus et malesuada fames ac turpis.-->
+
+              <!--Rencontrez Aglais urticae, plus connu sous le nom de Petit Nymphale ou Tortue. Ce magnifique papillon, 
+              avec ses ailes orangées et ses motifs noirs et bleus, est un véritable joyau de nos jardins. 
+              Son histoire est celle d'un voyage extraordinaire : de la chenille vorace à l'adulte gracieux, 
+              chaque étape de sa vie est une merveille de la nature. Facile à observer dans les prairies et 
+              les jardins fleuris, Aglais urticae nous rappelle la beauté fragile et éphémère de la biodiversité. 
+              Protéger ce papillon, c'est aussi protéger les plantes qu'il pollinise et les habitats où il prospère. 
+              Plongez avec nous dans le monde fascinant de ce lépidoptère et découvrez comment vous pouvez 
+              contribuer à sa conservation tout en profitant de sa présence élégante dans vos espaces verts.-->
+
+
+              <!--Rencontrez Aglais urticae, le Petit Nymphale, un papillon éclatant qui transforme nos jardins en 
+              havres de beauté et de vitalité. Avec ses ailes vibrantes d'orange, parsemées de motifs noirs et 
+              de taches bleues, il est non seulement un plaisir pour les yeux, mais aussi un acteur essentiel de 
+              nos écosystèmes. En tant que pollinisateur, l'Aglais urticae joue un rôle crucial dans la 
+              fertilisation des plantes, contribuant à la reproduction de nombreuses espèces florales. 
+              Ce petit papillon est également une précieuse source de nourriture pour divers prédateurs, 
+              comme les oiseaux et les chauves-souris, participant ainsi à l'équilibre de la chaîne alimentaire.
+
+              Son cycle de vie, de la chenille qui se nourrit des orties à l'élégant adulte, illustre la 
+              merveille de la transformation naturelle et la résilience des espèces. En favorisant l'habitat de 
+              l'Aglais urticae dans nos jardins, nous aidons à préserver la biodiversité et à maintenir des 
+              environnements sains et équilibrés. Protéger ce papillon, c'est aussi protéger les plantes qu'il 
+              aide à polliniser et les habitats qu'il enrichit. Laissez-vous inspirer par le Petit Nymphale et 
+              découvrez comment votre jardin peut devenir un sanctuaire pour cette créature délicate et 
+              indispensable, tout en contribuant à un écosystème plus riche et plus diversifié.-->
+
+                <!----------------------------------------------------------------------------------------------------->
+
+              <!--Découvrez Aglais urticae, le Petit Nymphale, un papillon éclatant qui apporte une touche de magie et 
+              de couleur à nos jardins. Avec ses ailes vibrantes d'orange, parsemées de motifs noirs et de 
+              taches bleues, il est un véritable joyau de la nature. Aglais urticae a une période de vol qui s'étend 
+              de mars à octobre, offrant un spectacle continu du printemps à l'automne.
+
+              Aglais urticae joue un rôle essentiel dans nos écosystèmes en tant que pollinisateur, aidant à la 
+              reproduction de nombreuses plantes et contribuant à la diversité florale. Ses chenilles se nourrissent 
+              principalement d'orties, contribuant à la régulation de cette plante souvent envahissante. 
+              En accueillant l'Aglais urticae dans nos jardins, nous participons à la préservation de la biodiversité 
+              et soutenons des écosystèmes sains.
+
+              Ce papillon est également une source de nourriture pour divers prédateurs, comme les oiseaux et les 
+              chauves-souris, participant ainsi à l'équilibre de la chaîne alimentaire. Son cycle de vie, 
+              de la chenille à l'adulte élégant, illustre la merveille de la transformation 
+              naturelle et la résilience des espèces.
+
+              Protéger Aglais urticae, c'est aussi préserver les plantes qu'il pollinise et les habitats qu'il enrichit. 
+              Laissez-vous inspirer par le Petit Nymphale et découvrez comment votre jardin peut devenir un 
+              refuge pour cette créature délicate et indispensable, tout en contribuant à la biodiversité et 
+              à la santé de l'écosystème local.-->
+
+              <!------------------------------------------------------------------------------------------------------->
+
+              Bienvenue dans le monde fascinant d'Aglais urticae, plus connu sous le nom de Petit Nymphale. 
+              Ce papillon éclatant, avec ses ailes ornées de motifs orange vif, noirs et bleus, est un véritable 
+              joyau de nos jardins. De mars à octobre, il apporte une touche de magie et de couleur à nos espaces verts. 
+              Dans cet article, nous explorerons le rôle crucial d'Aglais urticae dans nos écosystèmes, 
+              son cycle de vie captivant, et les moyens par lesquels nous pouvons encourager sa présence et 
+              contribuer à la biodiversité. Préparez-vous à découvrir comment ce petit trésor peut transformer 
+              votre jardin en un sanctuaire vibrant et plein de vie.
+
+
+              <stron>Description et Identification</stron><br>
+              Aglais urticae se distingue par ses ailes vibrantes d'orange, agrémentées de motifs noirs et de taches 
+              bleues sur les bords. Le dessous de ses ailes est brun foncé, offrant un camouflage efficace lorsqu'il se 
+              repose. Ce papillon de taille moyenne a une envergure allant de 45 à 62 mm, le rendant facilement 
+              identifiable et admiré pour ses couleurs éclatantes.<br>
+
+              <strong>Période de Vol</strong><br>
+              La période de vol d'Aglais urticae s'étend de mars à octobre, couvrant ainsi le printemps, l'été et le 
+              début de l'automne. Durant ces mois, il est courant de le voir se poser sur des fleurs pour se nourrir 
+              de nectar, contribuant ainsi à la pollinisation de nombreuses plantes.<br>
+
+              <strong>Rôle Écologique</strong><br>
+              Aglais urticae joue un rôle essentiel dans nos écosystèmes en tant que pollinisateur. 
+              En butinant de fleur en fleur, il aide à la reproduction de nombreuses plantes, contribuant à la 
+              diversité florale de nos jardins et prairies. Les chenilles de ce papillon se nourrissent principalement 
+              d'orties, une plante souvent perçue comme nuisible mais qui est vitale pour plusieurs espèces de 
+              papillons. En contrôlant les populations d'orties, 
+              Aglais urticae participe à l'équilibre de la végétation locale.<br>
+
+              <strong>Cycle de Vie</strong><br>
+              Le cycle de vie d'Aglais urticae est une véritable merveille de la nature. 
+              Après l'accouplement, les femelles pondent leurs œufs sur les orties. Les chenilles éclosent et 
+              commencent à se nourrir de ces plantes, passant par plusieurs stades de croissance avant de se 
+              transformer en chrysalides. Quelques semaines plus tard, les adultes émergent, prêts à 
+              entamer un nouveau cycle de vie. Cette transformation, de l'œuf à l'adulte, illustre 
+              la beauté et la complexité des processus naturels.<br>
+
+              <strong>Protection et Préservation</strong><br>
+              Protéger Aglais urticae, c'est aussi préserver les plantes et les habitats dont il dépend. 
+              Voici quelques conseils pour favoriser la présence du Petit Nymphale dans votre jardin :
+
+              <ul>
+                <li>Plantez des orties : Créez un habitat favorable en laissant pousser des orties dans une partie de votre jardin.</li>
+                <li>Évitez les pesticides : Utilisez des méthodes de jardinage biologiques pour protéger les papillons et leurs habitats.</li>
+                <li>Créez des zones de repos : Offrez des espaces calmes et ensoleillés où les papillons peuvent se reposer et se nourrir.</li>
+              </ul>
+            
+              <strong>Conclusion</strong><br>
+              Aglais urticae, le Petit Nymphale, est plus qu'un simple ornement pour nos jardins. Il est un acteur 
+              clé de la biodiversité et un symbole de la résilience de la nature. En accueillant ce papillon dans 
+              nos espaces verts, nous contribuons à la préservation de notre environnement et enrichissons nos jardins 
+              de couleurs et de vie. Laissez-vous inspirer par le Petit Nymphale et découvrez comment votre 
+              jardin peut devenir un sanctuaire pour cette créature délicate et indispensable, tout en contribuant à un 
+              écosystème plus riche et plus diversifié.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--TEXT IMGAGE 2-->
+      <div class="section1"><!--block-parent-->
+        <div class="text-width-img">
+          <div class="subtitle"><!--Mon deuxieme article:-->Araschnia levana :<br> Le Papillon Carte-Géographique qui Intrigue Nos Jardins </div>
+          <h5> Araschnia levana </h5>
+          <div class="text">
+            <img src="../images3/Araschnia_levana_(La-carte-géographique).jpg" alt="image papillon">
+            <p><!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Aenean euismod elementum nisi quis. Varius vel pharetra vel
+              turpis nunc eget lorem dolor. Nec feugiat in fermentum posuere urna. Consequat nisl vel pretium
+              lectus quam. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Euismod lacinia
+              at quis risus sed vulputate. Nisl nisi scelerisque eu ultrices. Ipsum faucibus vitae aliquet nec
+              lamcorper sit amet. Vulputate ut pharetra sit amet aliquam id. Bibendum ut tristique et
+              egestas quis ipsum suspendisse ultrices gravida. Imperdiet sed euismod nisi porta lorem. Morbi
+              tristique senectus et netus et malesuada fames ac turpis.-->
+
+              <!--Découvrez Araschnia levana, le papillon carte-géographique, un véritable chef-d'œuvre de la nature qui 
+              apporte une touche de mystère et de fascination à nos jardins. Ce papillon est unique en son genre, 
+              avec deux formes saisonnières distinctes : au printemps (avril à juin), ses ailes arborent des motifs 
+              orange et noirs rappelant une carte géographique, tandis qu'en été (juillet à septembre), elles 
+              deviennent sombres avec des motifs blancs, imitant un damier.
+
+              Araschnia levana joue un rôle essentiel dans nos écosystèmes en tant que pollinisateur, aidant à la 
+              reproduction de nombreuses plantes et contribuant à la diversité florale. De plus, ses chenilles se 
+              nourrissent de feuilles d'orties, participant ainsi à la régulation de cette plante souvent envahissante. 
+              En intégrant Araschnia levana dans nos jardins, nous favorisons un environnement sain et équilibré.
+              
+              Ce papillon est également une source de nourriture pour divers prédateurs, contribuant à la richesse de 
+              la chaîne alimentaire. Son cycle de vie, de la chenille à l'adulte aux motifs changeants, nous rappelle 
+              la beauté et la complexité des transformations naturelles.
+              
+              Protéger Araschnia levana, c'est aussi préserver les plantes qu'il pollinise et les habitats qu'il 
+              enrichit. Laissez-vous inspirer par le papillon carte-géographique et découvrez comment votre 
+              jardin peut devenir un refuge pour cette créature captivante, tout en contribuant à la biodiversité et à 
+              la santé de l'écosystème local.-->
+
+              <!------------------------------------------------------------------------------------------------------->
+
+              Bienvenue dans le monde mystérieux d'Araschnia levana, communément appelé le papillon carte-géographique. 
+              Ce magnifique papillon, aux ailes décorées de motifs orange vif et noirs, est un véritable enchantement 
+              pour nos jardins. De la fin du printemps à l'été, il ajoute une touche de couleur et d'intrigue à 
+              nos espaces verts, captivant les observateurs attentifs. Dans cet article, nous explorerons le rôle 
+              unique d'Araschnia levana dans nos écosystèmes, son cycle de vie fascinant, et les moyens par lesquels 
+              nous pouvons encourager sa présence et contribuer à la biodiversité. Préparez-vous à découvrir 
+              comment ce papillon énigmatique peut transformer votre jardin en un havre de mystère et de beauté.<br>
+
+              <strong>Description et Identification</strong><br>
+              Araschnia levana est aisément identifiable grâce à ses ailes éclatantes, qui ressemblent à une 
+              carte géographique. Au printemps, ses ailes arborent des couleurs orange et noires vives, tandis 
+              qu'en été, elles deviennent plus sombres avec des motifs blancs, créant ainsi un contraste saisissant. 
+              Ce papillon a une envergure d'environ 40 à 50 mm, en faisant une présence remarquable dans nos jardins.<br>
+              
+              <strong>Période de Vol</strong><br>
+              La période de vol d'Araschnia levana s'étend du printemps à l'été, généralement d'avril à septembre.
+              Pendant ces mois, il est possible d'observer ce papillon virevoltant dans les jardins, 
+              les prairies et les lisières de forêts, à la recherche de nectar et de partenaires pour se reproduire.<br>
+              
+              <strong>Rôle Écologique</strong><br>
+              Araschnia levana joue un rôle essentiel en tant que pollinisateur, contribuant ainsi à la reproduction 
+              de nombreuses plantes sauvages. Ses habitudes de butinage aident à maintenir la diversité florale dans 
+              nos écosystèmes. De plus, ses chenilles se nourrissent de diverses plantes hôtes, contribuant 
+              ainsi à l'équilibre de la végétation.<br>
+              
+              <strong>Cycle de Vie</strong><br>
+              Le cycle de vie d'Araschnia levana est fascinant. Après l'éclosion des œufs, 
+              les jeunes chenilles commencent à se nourrir des feuilles des plantes hôtes. Elles passent ensuite 
+              par plusieurs stades de croissance avant de se transformer en chrysalides. Quelques semaines plus tard, 
+              les adultes émergent, prêts à poursuivre le cycle de vie.<br>
+              
+              <strong>Protection et Préservation</strong>
+              Protéger Araschnia levana, c'est aussi préserver les habitats naturels et les plantes hôtes dont il dépend. 
+              Voici quelques conseils pour favoriser sa présence dans votre jardin :
+              <ul>
+                <li> Plantez des fleurs riches en nectar pour attirer les papillons.</li>
+                <li>Évitez l'utilisation de pesticides qui pourraient nuire aux papillons et à leurs habitats.</li>
+                <li>Créez des zones de repos avec des plantes hôtes pour les chenilles.</li>
+              </ul>
+             
+              <strong>Conclusion</strong>
+              Araschnia levana, le papillon carte-géographique, est un trésor de nos jardins, et un acteur essentiel de la biodiversité. En accueillant ce papillon dans nos espaces verts, nous contribuons à préserver la beauté et l'équilibre de nos écosystèmes. Laissez-vous séduire par le mystère d'Araschnia levana et découvrez comment votre jardin peut devenir un sanctuaire pour cette créature fascinante, tout en enrichissant la biodiversité locale.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--TEXT IMGAGE 3-->
+      <div class="section1"><!--block-parent-->
+        <div class="text-width-img">
+          <div class="subtitle"><!--Mon troisième article:--> Brenthis daphne : <br> La Petite Violette qui Embellit Nos Jardins</div>
+          <h5>Brenthis daphne </h5>
+          <div class="text">
+            <img src="../images3/Brenthis_daphne_(Le-Nacré-de-la-ronce).jpg" alt="image papillon">
+            <p><!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Aenean euismod elementum nisi quis. Varius vel pharetra vel
+              turpis nunc eget lorem dolor. Nec feugiat in fermentum posuere urna. Consequat nisl vel pretium
+              lectus quam. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Euismod lacinia
+              at quis risus sed vulputate. Nisl nisi scelerisque eu ultrices. Ipsum faucibus vitae aliquet nec
+              lamcorper sit amet. Vulputate ut pharetra sit amet aliquam id. Bibendum ut tristique et
+              egestas quis ipsum suspendisse ultrices gravida. Imperdiet sed euismod nisi porta lorem. Morbi
+              tristique senectus et netus et malesuada fames ac turpis.-->
+
+              <!--Découvrez Brenthis daphne, la Petite Violette, un papillon délicat qui ajoute une touche de charme et de 
+              couleur à nos jardins. Ce papillon se distingue par ses ailes orange ornées de motifs noirs, créant un 
+              contraste saisissant qui attire l'œil. Brenthis daphne a une période de vol qui s'étend de juin à août, 
+              offrant ainsi un spectacle estival enchanteur.
+
+              Brenthis daphne joue un rôle crucial dans nos écosystèmes en tant que pollinisateur, facilitant la 
+              reproduction de nombreuses plantes sauvages et contribuant à la diversité florale. Ses chenilles se 
+              nourrissent principalement de violettes, aidant à maintenir l'équilibre de ces plantes 
+              au sein de leur habitat naturel.
+              
+              En accueillant Brenthis daphne dans nos jardins, nous soutenons la biodiversité locale et créons des 
+              environnements sains et dynamiques. Ce papillon est également une source de nourriture pour divers 
+              prédateurs, enrichissant ainsi la chaîne alimentaire. Son cycle de vie, de la chenille à l'adulte, 
+              nous rappelle la beauté et la complexité des transformations naturelles.
+              
+              Protéger Brenthis daphne, c'est aussi préserver les plantes qu'il aide à polliniser et les habitats 
+              qu'il enrichit. Laissez-vous inspirer par la Petite Violette et découvrez comment votre jardin peut 
+              devenir un sanctuaire pour cette créature gracieuse, tout en contribuant à un écosystème 
+              plus riche et plus diversifié.-->
+
+              <!------------------------------------------------------------------------------------------------------->
+
+              Bienvenue dans l'univers enchanteur de Brenthis daphne, plus connue sous le nom de Petite Violette. 
+              Ce papillon délicat et coloré, avec ses ailes ornées de motifs élégants, est un véritable trésor de nos 
+              jardins estivaux. De juin à août, il ajoute une touche de charme et de vitalité à nos espaces verts, 
+              captivant les regards et éveillant les esprits curieux. Dans cet article, 
+              nous explorerons le rôle essentiel de Brenthis daphne dans nos écosystèmes, 
+              son cycle de vie fascinant, et les moyens par lesquels nous pouvons favoriser sa présence et 
+              contribuer à la biodiversité. Préparez-vous à découvrir comment ce petit joyau peut transformer 
+              votre jardin en un sanctuaire vivant et dynamique.<br>
+
+              <strong>Description et Identification</strong><br>
+              Brenthis daphne est facilement reconnaissable grâce à ses ailes orange vives ornées de motifs noirs et bruns. 
+              Le dessous de ses ailes présente des nuances plus subtiles de beige et de marron, souvent décorées 
+              de taches argentées, ce qui ajoute à son charme et à sa beauté. Ce papillon est de taille moyenne, 
+              avec une envergure variant de 40 à 50 mm, ce qui en fait une présence notable mais délicate dans nos jardins.<br>
+              
+              <strong>Période de Vol</strong><br>
+              La période de vol de Brenthis daphne s'étend de juin à août. Pendant ces mois d'été, il est possible de 
+              l'observer flânant de fleur en fleur, à la recherche de nectar. Ce papillon est particulièrement actif 
+              par temps ensoleillé et préfère les prairies fleuries, les lisières de forêt et les jardins bien entretenus.<br>
+              
+              <strong>Rôle Écologique</strong><br>
+              Brenthis daphne joue un rôle crucial dans nos écosystèmes en tant que pollinisateur. En butinant de 
+              fleur en fleur, il aide à la reproduction de nombreuses plantes sauvages, contribuant ainsi à la 
+              diversité florale. Les violettes, qui sont la principale source de nourriture de ses chenilles, 
+              bénéficient directement de sa présence. En maintenant ces plantes au sein de leur habitat naturel, 
+              Brenthis daphne aide à préserver un équilibre écologique essentiel.<br>
+              
+              <strong>Cycle de Vie</strong><br>
+              Le cycle de vie de Brenthis daphne est une merveille de transformation. Les femelles pondent leurs œufs 
+              sur les violettes, où les jeunes chenilles émergent pour se nourrir. Après plusieurs stades de 
+              croissance, les chenilles se métamorphosent en chrysalides, d'où émerge l'adulte quelques semaines 
+              plus tard. Cette transformation spectaculaire nous rappelle la beauté et la complexité des processus naturels.<br>
+              
+              <strong>Protection et Préservation</strong><br>
+              Protéger Brenthis daphne, c'est aussi préserver les plantes et les habitats dont il dépend. 
+              Voici quelques conseils pour favoriser la présence de la Petite Violette dans votre jardin :
+              <ul>
+                <li>Plantez des violettes : Créez un habitat favorable en plantant des violettes, la principale source de nourriture pour ses chenilles.</li>
+                <li>Évitez les pesticides : Utilisez des méthodes de jardinage biologiques pour protéger les papillons et leurs habitats.</li>
+                <li>Créez des zones sauvages : Laissez une partie de votre jardin à l'état sauvage pour offrir un refuge aux papillons et autres pollinisateurs.</li>
+              </ul>
+              
+              <strong>Conclusion</strong>
+              Brenthis daphne, la Petite Violette, est plus qu'un simple ornement pour nos jardins. 
+              Elle est un acteur essentiel de la biodiversité et un symbole de la beauté naturelle. 
+              En accueillant ce papillon dans nos espaces verts, nous contribuons à la préservation de notre 
+              environnement et enrichissons nos jardins de couleurs et de vie. Laissez-vous inspirer par la 
+              Petite Violette et découvrez comment votre jardin peut devenir un sanctuaire pour cette 
+              créature gracieuse, tout en contribuant à un écosystème plus riche et plus diversifié.
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--<a class="p-2" href="https://lacristalide.fr/" target="_blank">un peut de poesie</a>--><!--site apprenent study-->
+
+      <!-- ARTICLE 4 LIRE LA SUITE -->
+
+      <section class="p-2 bg-light">
+        <!--<h5>Brenthis daphne </h5>-->
+        <div class="subtitle pb-2"><!--Mes derniers articles-->Brenthis daphne : <br> La Petite Violette qui Embellit Nos Jardins</div>
+        <div><!--article-->
+          <h5>Brenthis daphne </h5>
+          <p>
+            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.-->
+          
+            Bienvenue dans l'univers enchanteur de Brenthis daphne, plus connue sous le nom de Petite Violette. 
+            Ce papillon délicat et coloré, avec ses ailes ornées de motifs élégants, est un véritable trésor de nos 
+            jardins estivaux. De juin à août, il ajoute une touche de charme et de vitalité à nos espaces verts, 
+            captivant les regards et éveillant les esprits curieux. Dans cet article, nous explorerons le rôle 
+            essentiel de Brenthis daphne dans nos écosystèmes, son cycle de vie fascinant, et les moyens par lesquels 
+            nous pouvons favoriser sa présence et contribuer à la biodiversité. Préparez-vous à découvrir comment 
+            ce petit joyau peut transformer votre jardin en un sanctuaire vivant et dynamique.
+          
+          </p>
+        </div><!--article-->
+      </section>
+      <!---->
+      <a
+        href="javascript:document.getElementById('re001').style.display='block';document.getElementById('re001').releaseCapture();">
+        <div class="btn btn-primary mb-3 ml-2 btn-sm">Lire la suite</div><!--role="button"-->
+      </a>
+      <!---->
+      <div id="re001" style="display: none;">
+        <div style="border: 2px solid rgb(128, 128, 128);">
+          <div class="text-width-img">
+            <div class="text"><!--Aglais_urticae_(La-Petite-Tortue)-->
+              <img src="../images3/photo1.jpg" alt="image papillon">
+              
+                <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Aenean euismod elementum nisi quis. Varius vel pharetra vel
+                turpis nunc eget lorem dolor. Nec feugiat in fermentum posuere urna. Consequat nisl vel pretium
+                lectus quam. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Euismod lacinia
+                at quis risus sed vulputate. Nisl nisi scelerisque eu ultrices. Ipsum faucibus vitae aliquet nec
+                lamcorper sit amet. Vulputate ut pharetra sit amet aliquam id. Bibendum ut tristique et
+                egestas quis ipsum suspendisse ultrices gravida. Imperdiet sed euismod nisi porta lorem. Morbi
+                tristique senectus et netus et malesuada fames ac turpis.-->
+
+                <strong>Description et Identification</strong><br>
+                Brenthis daphne est facilement reconnaissable grâce à ses ailes orange vives ornées de motifs 
+                noirs et bruns. Le dessous de ses ailes présente des nuances plus subtiles de beige et de marron, 
+                souvent décorées de taches argentées, ce qui ajoute à son charme et à sa beauté. Ce papillon est de 
+                taille moyenne, avec une envergure variant de 40 à 50 mm, ce qui en fait une présence notable mais délicate dans nos jardins.
+                <br>
+                <strong>Période de Vol</strong><br>
+                La période de vol de Brenthis daphne s'étend de juin à août. Pendant ces mois d'été, il est possible 
+                de l'observer flânant de fleur en fleur, à la recherche de nectar. Ce papillon est particulièrement 
+                actif par temps ensoleillé et préfère les prairies fleuries, les lisières de forêt et les 
+                jardins bien entretenus.
+                <br>
+                <strong>Rôle Écologique</strong><br>
+                Brenthis daphne joue un rôle crucial dans nos écosystèmes en tant que pollinisateur. 
+                En butinant de fleur en fleur, il aide à la reproduction de nombreuses plantes sauvages, 
+                contribuant ainsi à la diversité florale. Les violettes, qui sont la principale source de nourriture 
+                de ses chenilles, bénéficient directement de sa présence. En maintenant ces plantes au sein de leur 
+                habitat naturel, Brenthis daphne aide à préserver un équilibre écologique essentiel.
+                <br>
+                <strong>Cycle de Vie</strong><br>
+                Le cycle de vie de Brenthis daphne est une merveille de transformation. Les femelles pondent leurs 
+                œufs sur les violettes, où les jeunes chenilles émergent pour se nourrir. Après plusieurs stades de 
+                croissance, les chenilles se métamorphosent en chrysalides, d'où émerge l'adulte quelques semaines 
+                plus tard. Cette transformation spectaculaire nous rappelle la beauté et la complexité des processus naturels.
+                <br>
+                <strong>Protection et Préservation</strong><br>
+                Protéger Brenthis daphne, c'est aussi préserver les plantes et les habitats dont il dépend. 
+                Voici quelques conseils pour favoriser la présence de la Petite Violette dans votre jardin :
+                <br>
+
+                <ul>
+                  <li><strong>Plantez des violettes :</strong> 
+                Créez un habitat favorable en plantant des violettes, la principale source de nourriture pour ses chenilles.</li>
+                  <li>                <strong>Évitez les pesticides :</strong> 
+                Utilisez des méthodes de jardinage biologiques pour protéger les papillons et leurs habitats.</li>
+                  <li>                <strong>Créez des zones sauvages :</strong>
+                Laissez une partie de votre jardin à l'état sauvage pour offrir un refuge aux papillons et autres pollinisateurs.</li>
+                </ul>
+
+                <br>
+                <strong>Conclusion</strong><br>
+                Brenthis daphne, la Petite Violette, est plus qu'un simple ornement pour nos jardins. Elle est un 
+                acteur essentiel de la biodiversité et un symbole de la beauté naturelle. En accueillant ce 
+                papillon dans nos espaces verts, nous contribuons à la préservation de notre environnement et 
+                enrichissons nos jardins de couleurs et de vie. Laissez-vous inspirer par la Petite Violette et 
+                découvrez comment votre jardin peut devenir un sanctuaire pour cette créature gracieuse, tout en 
+                contribuant à un écosystème plus riche et plus diversifié.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <!---->
+        <a
+          href="javascript:document.getElementById('re001').style.display='none';document.getElementById('re001').releaseCapture();">
+          <!--<div class="btn btn-success mt-3 ml-2 btn-sm">Fermer</div>-->
+          <div class="btn btn-success mt-3 ml-2 btn-sm">Fermer</div><!--role="button" -->
+        </a>
+        <!---->
+      </div>
+      <hr>
+
+      <!--COMMENTAIRE-->
+      <!-- <div class="comment"> 
+
+        <h2 class="subtitle pb-2"> -->  <!--3 commentaires--> <!-- Commentaires</h2> 
+        <div id="comment-counter"></div>
+
+        <div class="title text-success"></div> -->   <!--option-->  <!--
+        <div class="header-com">
+          <div id="comment-section">  
+
+            <div class="com">  -->  <!--
+              <p> -->  <!--Très instructif !--> <!--  Quelle découverte fascinante ! J'ignorais complètement l'importance de ces 
+                papillons dans nos jardins. Merci pour ces informations détaillées !
+              </p>
+              <span> --> <!--Par Olivier le: 05/06/2012--> <!-- Par Sophie le 10/07/2023</span>
+            </div>
+
+            <div class="com">  --><!--
+              <p> -->  <!--Je ne suis pas entièrement d'accord avec vous.-->  <!--
+                Les photos sont magnifiques ! J'ai toujours aimé observer les papillons dans mon jardin, 
+                mais je ne savais pas grand-chose sur leur rôle écologique. Cet article m'a vraiment ouvert les yeux.
+              </p>
+              <span>  --> <!--Par Marine le: 15/06/2012--> <!-- Par Antoine le 12/07/2023</span>
+            </div>
+
+            <div class="com">  --> <!--
+              <p> -->  <!--Super, merci pour cet article--> <!--
+                Je suis tellement heureux de savoir que je peux contribuer à la préservation de ces papillons 
+                en laissant pousser des violettes dans mon jardin. Merci pour les conseils pratiques !
+              </p>
+              <span> -->  <!--Par François le: 07/06/2012-->  <!-- Par Camille le 15/07/2023</span>
+            </div>
+
+            <div class="com">
+              <p>
+                Je suis tombé amoureux de ces papillons en lisant cet article. Leur cycle de vie est tellement fascinant. 
+                Je vais certainement observer mon jardin avec un œil nouveau désormais.
+              </p>
+              <span>Par Hugo le 18/07/2023</span>
+            </div>
+
+            <div class="com">
+              <p>
+                Ces articles sont une bouffée d'air frais dans le monde numérique saturé d'informations triviales. 
+                Merci pour la qualité de vos contenus et pour nous sensibiliser à la beauté et à l'importance de la nature
+              </p>
+              <span>Par Emma le 20/07/2023</span>
+            </div>
+
+            <div class="com">
+              <p>
+                Je suis émerveillé par la diversité et la complexité de la vie des papillons. 
+                C'est incroyable de penser à tout ce qui se passe dans nos jardins sans que nous le remarquions. 
+                Merci pour cette perspective enrichissante !
+              </p>
+              <span>Par Lucas le 22/07/2023</span>
+            </div>
+
+          </div>
+        </div>
+      </div> -->
+
+      <!--<hr>-->
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<!--
+4. Affichage des commentaires
+Pour afficher les commentaires sur votre page, vous pouvez récupérer les données 
+depuis la base de données et les afficher à l'endroit désiré. Voici un exemple de 
+code PHP que vous pouvez intégrer à votre page principale pour afficher les commentaires :
+-->
+
+<!--// Connexion à la base de données (à adapter selon vos paramètres)-->
+<!--
+<?php
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "votre_base_de_donnees";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Sélectionner les commentaires depuis la base de données
+$sql = "SELECT commenter_name, comment_text, comment_date FROM comments ORDER BY comment_date DESC";
+$result = $conn->query($sql);
+
+// Afficher les commentaires
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<div class='com'>";
+        echo "<p>" . $row['comment_text'] . "</p>";
+        echo "<span>Par " . $row['commenter_name'] . " le " . date('d/m/Y', strtotime($row['comment_date'])) . "</span>";
+        echo "</div>";
+    }
+} else {
+    echo "Aucun commentaire pour le moment.";
+}
+
+// Fermer la connexion à la base de données
+$conn->close();
+?> -->
+<!--
+Pour rendre la partie commentaire de votre blog dynamique, permettant aux visiteurs de laisser des commentaires et de les afficher ensuite sur la page, vous pouvez suivre ces étapes générales :
+
+1. Création de la table MySQL pour stocker les commentaires
+Utilisez phpMyAdmin pour créer une table dans votre base de données qui stockera les commentaires. Voici un exemple de structure de table simple :
+
+sql
+CREATE TABLE comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    commenter_name VARCHAR(100) NOT NULL,
+    comment_text TEXT NOT NULL,
+    comment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+-->
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+      <!--FORMULAIRE-->
+      
+      <!--<div class="section-form">-->
+
+        <!--<div class="form">
+          <form action="contact.php" method="post"> --> <!----> <!--action="inscription.php."--> <!--
+            <div class="title text-dark">Laisser un commentaire</div>
+
+            <div class="form-group">
+              <label for="text">prenom</label>
+              <input type="text" class="form-control" id="text" required="required">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Adresse e-mail</label>
+              <input id="email" type="email" class="form-control" required="required">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" rows="3" required="required"></textarea>
+            </div>
+
+            <button type="submit" class="click">publier</button>
+          </form>
+          </div>-->
+
+          <!----------------------------------------------------------------------------------------------------------->
+          <!-- Formulaire de commentaire -->  <!--
+          <div class="form">
+            <form id="comment-form" action="/submit-comment" method="post">
+              <div class="title text-dark">Laisser un commentaire</div>
+
+              <div class="form-group">
+              <input class="form-control" type="text" id="name" name="name" placeholder="Votre nom" required>
+              </div>
+
+              <div class="form-group">
+              <textarea class="form-control" id="comment" name="comment" placeholder="Votre commentaire" required></textarea>
+              </div>
+
+              <button type="submit">Envoyer</button>
+            </form>
+          </div>
+
+          <div class="form">
+          <form id="comment-form" action="comment_handler.php" method="POST">
+            <div class="form-group">
+                <label for="commenter_name">Nom:</label>
+                <input type="text" class="form-control" id="commenter_name" name="commenter_name" required>
+            </div>
+            <div class="form-group">
+                <label for="comment_text">Commentaire:</label>
+                <textarea class="form-control" id="comment_text" name="comment_text" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+          </form>
+          </div>-->
+
+
+
+
+
+          <!--===============================================-->
+
+          <!-- Section des commentaires -->  <!--
+          <div class="commentaires">   -->
+            <!--<h2>Commentaires</h2>-->   <!--
+            <div id="zone_commentaires">
+                <?php include 'afficher_commentaires.php'; ?>
+            </div>
+          </div> -->
+        
+          <!-- Formulaire pour ajouter un commentaire -->  <!--
+          <div class="form">  --> <!-- ajouter-commentaire -->   <!--
+
+            <form id="comment-form" action="ajouter_commentaire.php" method="post">
+            <h2 class="title text-dark">Ajouter un commentaire</h2>
+              <div class="form-group">
+                <label for="nom">Votre nom :</label>
+                <input  class="form-control" type="text" id="nom" name="nom" required>
+              </div>
+
+              <div class="form-group">
+                <label for="commentaire"></label> --> <!--Votre commentaire :-->  <!--
+                <textarea  class="form-control" id="commentaire" name="commentaire" rows="3" required></textarea>
+              </div>  -->
+
+              <!--<input type="submit" value="Ajouter" class="btn btn-primary">-->   <!--
+              <button type="submit" class="btn btn-primary" value="Ajouter">Soumettre</button>
+            </form>
+          </div>  -->
+
+          <!--
+            CREATE TABLE comments (
+                id INT(11) NOT NULL AUTO_INCREMENT,
+                commenter_name VARCHAR(100) NOT NULL,
+                comment_text TEXT NOT NULL,
+                comment_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (id)
+            );
+          -->
+
+            <!-- Section des commentaires -->  <!--
+            <div class="commentaires">
+              <h2>Commentaires</h2>
+              <div id="zone_commentaires">
+                  <?php include 'afficher_commentaires.php'; ?>
+              </div>
+          </div>  -->
+          
+          <!-- Formulaire pour ajouter un commentaire -->  <!--
+          <div class="ajouter-commentaire">
+              <h2>Ajouter un commentaire</h2>
+              <form action="ajouter_commentaire.php" method="post">
+                  <label for="nom">Votre nom :</label><br>
+                  <input type="text" id="nom" name="nom" required><br><br>
+                  
+                  <label for="commentaire">Votre commentaire :</label><br>
+                  <textarea id="commentaire" name="commentaire" rows="4" required></textarea><br><br>
+                  
+                  <input type="submit" value="Ajouter">
+              </form>
+          </div>-->
+
+          <!--
+            CREATE TABLE comments (
+                id INT(11) NOT NULL AUTO_INCREMENT,
+                commenter_name VARCHAR(100) NOT NULL,
+                comment_text TEXT NOT NULL,
+                comment_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                is_approved BOOLEAN NOT NULL DEFAULT 0,
+                PRIMARY KEY (id)
+            );
+          -->
+
+
+
+        <!--========================================================================================================-->
+
+        <!---------------------------------------------------------------------->
+        <!--<div class="comment">
+
+          <h2 class="subtitle pb-2">Commentaires</h2>
+          <div id="comment-counter"></div>
+  
+          <div class="title text-success"></div>
+          <div class="header-com">
+            <div id="comment-section">-->
+        <!----------------------------------------------------------------------->
+
+        <!--<form method="post" action="admin_login.php">-->
+          <!-- Si nécessaire, ajoutez un chemin relatif approprié -->
+          <!--<form method="post" action="./php/admin_login.php">-->
+
+      <div class="section-form">
+
+        <!-- Section des commentaires -->
+        <div class="commentaires" id="comment-section">
+          <h2>Discuter au sujet des papillons</h2><!--Commentaires-->
+          <div id="zone_commentaires"></div>
+        </div>
+
+        <!-- Formulaire pour ajouter un commentaire -->
+        <div class="form">
+          <!--<form id="comment-form" action="ajouter_commentaire.php" method="post"> --> <!--ajouter_commentaire.php-->
+          <form id="comment-form" action="../php/ajouter_commentaire.php" method="post"><!--ajouter_commentaire.php-->
+              <h2 class="title text-dark">Ajouter un post</h2><!--Ajouter un commentaire-->
+              
+              <div class="form-group">
+                  <label for="nom">Votre nom :</label>
+                  <input class="form-control" type="text" id="nom" name="nom" required>
+              </div>
+              
+              <div class="form-group">
+                  <label for="commentaire">Votre commentaire :</label>
+                  <textarea class="form-control" id="commentaire" name="commentaire" rows="3" required></textarea>
+              </div>
+              
+              <!--<input type="submit" value="Ajouter" class="btn btn-primary">-->
+              <button type="submit" class="btn btn-primary">Soumettre</button>
+          </form>
+        </div>
+
+      </div><!-- BALISE FERMANTE DE SECTION FORM -->
+          <!--===============================================-->      
+      <!--</div>--><!-- ? Balise fermente de: content-->
+
+      <!--IMAGE 2-->
+      <div class="section1-img">
+        <div class="article">
+        </div>
+      </div>
+
+      <!-- bouton remonter -->
+      <a href="#">
+        <div class="back-to-top bg-success d-flex align-items-center justify-content-center">
+          remonter
+        </div>
+      </a>
+
+    </main>
+
+    <!--ASIDE-->
+
+    <aside class="aside"><!--d-flex flex-direction-column bolder border-success-->
+
+      <div class="aside-nav">
+        <h5>images</h5>
+        <a href="https://www.photospapillons.com/papillons-de-france.php">Banques images</a>
+        <a href="./gallery- (essai test).html">Galerie images</a><!--./Galerie-index.html-->
+      </div>
+
+      <div class="aside-nav"><!-- d-flex flex-direction-column-->
+        <h5>Évènements</h5>
+        <a href="./calendar.html">Agenda</a>
+        <a href="./assos.html">assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sortie</h5>
+        <a href="./musée.html">Musee</a>
+        <a href="./exposition.html">exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>site web</h5>
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+          target="_blank">Actualité</a>
+        <a href="./recherche_wiki.html">recherche wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>identifier</h5>
+        <a href="./identification.html">quel est ce papillon</a>
+        <a href="./fiche-details.html">page lepidoptera</a>
+      </div>
+
+    </aside>
+  </div><!--Fin de content-->
+
+  <!-- bouton remonter -->
+  <a href="#">
+    <div class="back-to-top bg-success d-flex align-items-center justify-content-center">
+      remonter
+    </div>
+  </a>
+
+  <!--MISE A JOUR-->
+  <div class="Time">
+    <p>
+      <Time datetime="2022-08-13T20:00+00:00">Mis a jours le: 16 Fevrier 2023 09:58:38</time>
+    </p>
+  </div>
+
+  <!--FOOTER-->
+  <footer class="blockfooter">
+    <div class="block">
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">informations</h5>
+          <a href="../rgpd/mentions_légales.html">mention
+            légale</a><!--../obligations_légales/mentions_légales.html" class="mention-->
+          <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+        </div>
+      </div>
+
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">nous contacter</h5>
+          <a href="tel:+336250214" class="contact">06 25 02 14</a>
+          <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--</container>-->
+
+  <!--<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("../php/recuperer_commentaires.php")
+            .then(response => response.json())
+            .then(data => {
+                const zoneCommentaires = document.getElementById("zone_commentaires");
+                if (data.length > 0) {
+                    data.forEach(commentaire => {
+                        const comDiv = document.createElement("div");
+                        comDiv.className = "com";
+                        comDiv.innerHTML = `<p>${commentaire.text}</p><span>Par ${commentaire.name} le ${commentaire.date}</span>`;
+                        zoneCommentaires.appendChild(comDiv);
+                    });
+                } else {
+                    zoneCommentaires.innerHTML = "Aucun commentaire pour le moment.";
+                }
+            })
+            .catch(error => {
+                console.error("Erreur lors de la récupération des commentaires :", error);
+            });
+    });
+    </!->-->
+ 
+    <script src="../scripts/comments_script.js"></script><!---->
+</body>
+
+</html>
+
+<!--
+C:\xampp\htdocs\Mon_projet\
+├── index.html
+├── styles/
+│   ├── avis_style.css
+│   ├── calendar_style.css
+│   ├── contact_style.css
+│   ├── inscription_style.css
+│   └── styles.css
+├── scripts/
+│   ├── inscription.js
+│   ├── contact_script.js
+│   ├── comments_script.js
+│   ├── calendar_script.js
+│   ├── avis.js
+│   ├── load-content.js
+│   ├── main.js
+│   ├── papillons.js
+│   ├── gallery.js
+│   └── script.js
+├── data/
+│   ├── content.json
+│   ├── events.json
+│   └── papillons.json
+├── php/
+│   ├── admin_login.php 
+│   ├── ajouter_commentaire.php 
+│   ├── csrf_token.php  
+│   ├── get_events.php
+│   ├── inscription.php
+│   ├── moderate_comments.php 
+│   ├── process_comment.php
+│   ├── process_contact.php
+│   ├── recupeter_commentaires.php
+│   ├── session_init.php
+│   ├── session_init_contact.php
+│   ├── submit_avis.php
+│   ├── submit_contact.php  
+│   └── submit_inscription.php
+├── pages/
+│   ├── agenda.html
+│   ├── a-propos-ecf.html
+│   ├── assos.html
+│   ├── blog.html
+│   ├── calandar.html
+│   ├── contact.html
+│   ├── exposition.html
+│   ├── fiche_details.html
+│   ├── galerie-index.html
+│   ├── identification.html
+│   ├── inscription.html
+│   ├── musée.html
+│   ├── page-dediee.html
+│   ├── qui_somme_nous.html
+│   ├── recherche_wiki.html
+│   ├── sommaire.html
+│   └── thank_you.html
+├── rgpd/
+│   └── mentions_legales.html
+├── images3/
+│   ├── photo1.jpg
+│   ├── photo2.jpg
+│   ├── photo3.jpg
+│   ├── photo4.jpg
+│   ├── photo5.jpg
+│   ├── photo6.jpg
+│   └── photo_.jpg
+└── assets/
+    └── images/
+        ├── insect-biology.jpg
+        ├── insect-habitats.jpg
+        └── ecosystem-roles.jpg
+-->
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription à l'événement-1</title>
+    <link rel="stylesheet" href="../style/inscription_style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventTitle = urlParams.get('event');
+            const eventDate = urlParams.get('date');
+
+            if (eventTitle) {
+                document.getElementById('event-title').textContent = eventTitle;
+                document.getElementById('event-title-input').value = eventTitle;
+            }
+            if (eventDate) {
+                document.getElementById('event-date').textContent = eventDate;
+                document.getElementById('event-date-input').value = eventDate;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="breadcrumb-item">
+        <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+        <a href="../pages/calendar.html" class="link-rep">Calendar</a> > Inscription
+    </div>
+    <div class="content">
+        <main class="main">
+            <div class="section-form">
+                <div class="article">
+                    <h2>Inscription à l'événement</h2>
+                    <p>Vous vous inscrivez pour l'événement :</p>
+                    <p><strong>Événement :</strong> <span id="event-title"></span></p>
+                    <p><strong>Date :</strong> <span id="event-date"></span></p>
+                </div>
+                <form class="form" action="../php/submit_inscription.php" method="POST">
+                    <div class="title text-dark">Complétez ce formulaire</div>
+                    <input type="hidden" name="event_title" id="event-title-input">
+                    <input type="hidden" name="event_date" id="event-date-input">
+                    <div class="form-control">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    <!--</div>-->
+                    <!--<div class="form-control">-->
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

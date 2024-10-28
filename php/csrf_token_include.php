@@ -1,0 +1,1 @@
+<?php include('../php/csrf_token.php'); ?> <!-- Inclusion du token CSRF -->

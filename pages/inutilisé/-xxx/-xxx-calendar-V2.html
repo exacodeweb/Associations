@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Événements</title>
+  <!--<link rel="stylesheet" href="styles.css">-->
+  <!-- Inclure Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<!--<meta charset="utf-8">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--<meta name="description" content="Entomologie">-->
+<!--<link rel="stylesheet" href="../css/style.css" type="text/css"> -->
+<!--<title>ECF-calandar</title>-->
+
+<!--Bootstrap cdn-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+  integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<!--kit icones-->
+<!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+<script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+<!--style de police d'ecriture-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<!---->
+
+<!--Bootstrap cdn-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+<!--kit icones--><!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+<script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+<!--style de police d'ecriture-->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<style>
+
+body {
+      background: lightgoldenrodyellow;
+      background-position: 100% 100%;
+      margin: 0px;
+    }
+
+    /*------------------------------------------------------------------------------------------------------HEADER--*/
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 160px;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+    }
+
+    /*---------------------------------------------------------------------------------------------------BLOCK-NAV--*/
+
+    .logo {
+      display: flex;
+      color: white;
+      margin-left: 10px;
+      font-family: "Tangerine", serif;
+      font-weight: 590;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+      font-weight: 500;
+    }
+
+    /*--------------------------------------------------------*/
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 80px;
+      align-items: center;
+      color: white;
+      margin-right: 25px;
+      margin-left: 10px;
+    }
+
+    /*------------------------------------------------------------------------------------------------ARRIERE-PLAN--*/
+    /*
+      a:hover {
+        text-decoration: none;
+        color: deepskyblue;
+      }
+      */
+
+    .link-nav {
+      color: white;
+      text-decoration: none;
+    }
+
+    .link-nav:hover {
+      color: lightblue;
+    }
+
+    .link-page {
+      margin: 5px;
+    }
+
+    /*------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+    .breadcrumb {
+      width: 400px;
+    }
+
+    .breadcrumb-item {
+      max-width: 100%;
+      background: none;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .link-rep {
+      margin-right: 5px;
+      margin-left: 5px;
+      color: blue;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------CONTENT--*/
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------MAIN--*/
+
+    .main {
+      float: left;
+      flex-direction: column;
+      width: 70%;
+      /*70% du parent "content"*/
+      margin-left: 10px;
+      background: #fbfbf9;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    /*-------------------------------------------------------------------------------------------------------ASIDE--*/
+
+    .aside {
+      float: right;
+      flex-direction: column;
+      width: 26%;
+      /*22%*/
+      /*22% du parent "content"*/
+      margin-right: 10px;
+      padding: 4px;
+      border-radius: 5px;
+      height: 590px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-nav {
+      display: flex;
+      flex-direction: column;
+      background: #fbfbf9;
+      margin-bottom: 20px;
+      height: 100px;
+      padding: 4px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-link {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------ARTICLE--*/
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      /*align-items: left;*/
+      text-align: justify;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-left: 0px;
+      color: black;
+      text-align: justify;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 12px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      color: #0000ff;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    /*------------------------------------------------------------------------------------------------------IMAGES--*/
+    .block1-img {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+      border: 2px solid white;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      margin: 5px;
+    }
+
+    figcaption {
+      background-color: #222;
+      color: #fff;
+      font: italic smaller sans-serif;
+      text-align: center;
+      width: 100%;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+
+    img {
+      border-radius: 5px;
+    }
+
+/*-------------------------------------------------------------------------------------------- FENETRE MODALE --*/
+
+.float-left {
+      /*.float-left*/
+      padding: 50px;
+
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center !important;
+
+    }
+
+    .btn-open {
+      display: flex;
+      flex-direction: row;
+      justify-content: center !important;
+      height: 30px;
+      width: 120px;
+      border: none;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .btn-open:hover {
+      background-color: rgb(211, 85, 163) !important;
+    }
+
+    /*-------------------------------------------------*/
+
+    .btn-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+
+       .btn-open {/*.link-btn*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 160px; /*150px*/
+        border-radius: 50px;
+        text-decoration: none !important;
+        background-color:mediumorchid!important;/*#0145b5*/
+        color: white;
+      }
+
+      .link-btn:hover {
+        background-color:rgb(211, 85, 163)!important;/*green*/
+      }
+
+    /*-------------------------------------------------*/
+    .modal-header {
+      display: flex;
+      /*margin-bottom: 20px;*/
+      /*font-size: 1.5em;*/
+      font-weight: 600;
+      color: blue;
+      padding: 10px;
+      margin-bottom: 0px;
+      height: 80px;
+      /*justify-content: center;*/
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title-form {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      justify-content: center;
+      width: 100%;
+      font-size: 1.5em;
+    }
+
+    .btn-close {
+      display: flex;
+      flex-direction: row;
+      font-size: 0.9em;
+    }
+
+    form {
+      margin-bottom: 50px;
+    }
+
+    .wording {
+      /*.wording*/
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+    }
+
+    label {
+      margin-bottom: 0px;
+      /*50px*/
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 120px;
+    }
+
+
+    /*--------------------------------------------------------------------------------------------------------FOOTER--*/
+
+    .blockfooter {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #7dc95e;
+      color: white;
+      height: 150px;
+      width: 100%;
+    }
+
+    .block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      width: 50%;
+      margin-left: 80px;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    .mention {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    a {
+      display: flex;
+      color: blue;
+      text-decoration: none;
+    }
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+.float-left {
+  padding: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+}
+
+.btn-open {
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+  height: 30px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  background-color: mediumorchid !important;
+  color: white;
+}
+
+.btn-open:hover {
+  background-color: rgb(211, 85, 163) !important;
+}
+
+.modal-header {
+  display: flex;
+  font-weight: 600;
+  color: blue;
+  padding: 10px;
+  height: 80px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-form {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+form {
+  margin-bottom: 50px;
+}
+
+.wording {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+label {
+  margin-bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 120px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <nav class="header">
+    <div class="logo">Entomologie</div>
+
+    <!--OPTION MENU BURGER-->
+    <!--
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle">-->
+    <!--
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle">
+      -->
+
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="./blog.html" title="Blog" class="link-nav m-2">Blog</a>
+
+      <a href="./Agenda.html" title="A propos" class="link-nav m-2">Évènements</a>
+
+      <a href="./qui_somme_nous.html" title="Qui somme nous" class="link-nav m-2">Qui sommes nous ?</a>
+
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </nav>
+
+  <!--FIL D'ARIANE-->
+  <div class="breadcrumb-item">
+    <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+    <a href="../index.html" class="link-rep">Acceuil</a> > calendrier
+  </div>
+  <!--CONTENER-->
+
+  <div class="content">
+    <!--MAIN-->
+    <main class="main">
+      <div class="article">
+        <h2 class="title"><!--CALENDRIER-->Calendrier des Événements 2024 :<br> Explorez et Participez à Nos Activités</h2>
+        <p>
+
+          <!--Introduction :-->
+          Bienvenue sur notre calendrier des événements pour l'année 2024. Découvrez toutes les activités et 
+          événements passionnants que nous avons prévus pour vous cette année. Que vous soyez un passionné de nature, 
+          un amateur de papillons ou simplement curieux de découvrir la beauté et la diversité de notre faune locale, 
+          notre calendrier est conçu pour vous offrir des moments enrichissants et mémorables.
+
+        </p>
+        <p>
+          Présentation du Calendrier :
+          Notre calendrier des événements vous permet de planifier vos visites et de ne manquer aucune des activités 
+          proposées par notre association. Vous trouverez ci-dessous un tableau récapitulatif de tous nos événements 
+          pour l'année 2024. Chaque événement est une occasion unique d'en apprendre davantage sur les papillons et 
+          leur rôle crucial dans nos écosystèmes. Pour chaque événement, vous avez la possibilité de vous 
+          inscrire directement en cliquant sur le bouton "S'inscrire"
+        </p>
+
+      </div>
+
+      <!--BLOCK IMAGE 2-->
+      <div class="block1-img">
+        <div class="article">
+          <!---->
+          <!--
+              <img srcset="../images2/mon-image-S.jpg 300w,
+              ../images2/mon-image-M.jpg 1024w,
+              ../images2/mon-image-L.jpg 1920w" sizes="(max-width: 340px) 300px,
+              (max-width: 1260px) 1000px,
+              1920px" class="card-img-top rounded-3" src="../images2/mon-image.jpg" alt="Un exemple">
+            -->
+          <!---->
+
+          <!-- PHOTO IMAGE -->
+          <div class="section1-img">
+            <!--d-flex align-content-center  align-items-center  justify-content-center -->
+            <figure>
+              <figcaption><!--Capture_d’écran_2023-03-13_230400.jpg-->
+                <img class="card1-img-top rounded-3" src="../images3/102959.jpg" width="250" height="150" alt="image">
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+          <div class="article">
+            <p>
+              Que vous souhaitiez apprendre à créer un jardin accueillant pour les papillons, découvrir leurs 
+              cycles de vie fascinants ou comprendre leur rôle dans l'équilibre écologique, nos événements sont faits pour vous. 
+              Nous nous engageons à offrir des expériences enrichissantes qui vous inspireront à protéger et à 
+              préserver ces créatures délicates et essentielles.
+
+              Pour participer à l'un de nos événements, cliquez simplement sur le bouton "S'inscrire" à côté de 
+              l'événement de votre choix. Une fenêtre modale s'ouvrira pour vous permettre de remplir vos informations et 
+              de confirmer votre inscription.
+            </p>
+         </div>
+
+
+
+        <!----------------------------------------------------------------------------------------------- FORMULAIRE -->
+
+          <!--Formulaire HTML (inscription.html) :-->
+         <form action="inscription.php" method="post">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="nom" required>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required>
+          <button type="submit">Envoyer</button>
+         </form>
+
+
+      <!--FORMULAIRE-->
+      <div class="section-form">
+        <div class="form">
+          <!--
+          <form action="contact.php" method="post"> --> <!--action="inscription.php."--> <!--
+            <div class="title text-dark">Complèter ce formulaire</div>                   -->
+            <!--
+            <div class="form-group">
+              <label for="text">nom</label>
+              <input type="text" class="form-control" id="text" required="required">
+            </div>
+            -->  <!--
+            <div class="form-group">
+              <label for="text">prenom</label>
+              <input type="text" class="form-control" id="text" required="required">
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse e-mail</label>
+              <input id="email" type="email" class="form-control" required="required">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label> -->  <!--<label for="message">Message</label>-->  <!--
+              <textarea id="message" class="form-control" rows="3" required="required"></textarea>
+            </div>
+            <button type="submit" class="click">Valider</button>
+          </form>  -->
+
+          <!----------------------------------------------------------------------------------------------------------->
+          <!-- Formulaire de contact -->
+          <!--<form id="contact-form" action="/submit-contact" method="post">-->
+          <form id="contact-form" action="inscription.php" method="post">
+            <div class="title text-dark">Complèter ce formulaire</div>
+
+            <div class="form-group">
+            <input class="form-control" type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+            <input class="form-control" type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" id="message" name="message" placeholder="Votre message" required></textarea>
+            </div>
+
+            <button type="submit">Envoyer</button>
+
+        </form>
+          <!----------------------------------------------------------------------------------------------------------->
+
+        </div>
+      </div>
+
+
+
+
+
+
+  <!-- Bouton d'inscription -->
+  <div class="float-left">
+    <button class="btn-open btn-primary" data-bs-toggle="modal" data-bs-target="#joinModal">
+      S'inscrire
+    </button>
+  </div>
+
+  <!-- Fenêtre modale -->
+  <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="joinModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <div class="title-form">Formulaire d'inscription</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-light">
+          <form id="registrationForm" action="process_inscription.php" method="post">
+            <label class="wording" for="name">Nom</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+
+            <label class="wording" for="username">Prénom</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+
+            <label class="wording" for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+
+            <label class="wording" for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+          </form>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Fermer
+          </button>
+          <button type="submit" class="btn btn-primary" form="registrationForm">
+            Valider
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+
+
+
+
+
+
+
+    <!-------------------------------------------------------------------------------------------------------- ASIDE -->
+
+    <aside class="aside">
+      <div class="aside-nav">
+        <h5>images</h5>
+        <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+        <a href="./Galerie-index.html">Galerie images</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Évènements</h5>
+        <a href="./calendar.html">Agenda</a>
+        <a href="./assos.html">assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sortie</h5>
+        <a href="./musée.html">Musée</a>
+        <a href="./exposition.html">exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>site web</h5>
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+          target="_blank">Actualité</a>
+
+        <a href="../pages/recherche_wiki.html">recherche wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>identifier</h5>
+        <a href="./identification.html">quel est ce papillon</a>
+        <a href="./fiche-details.html">page lepidoptera</a>
+      </div>
+    </aside>
+
+</div><!--Balise fermante de content-->
+
+
+ <!--FOOTER-->
+ <footer class="blockfooter">
+  <div class="block">
+    <div class="footer d-flex flex-column text-left">
+      <div>
+        <h5 class="text-dark">informations</h5>
+        <a href="../rgpd/mentions_légales.html" class="mention">mention
+          légale</a><!--../obligations_légales/mentions_légales.html-->
+        <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+      </div>
+    </div>
+
+    <div class="footer d-flex flex-column text-left">
+      <div>
+        <h5 class="text-dark">nous contacter</h5>
+        <a href="tel:+336250214" class="contact">06 25 02 14</a>
+        <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--</container>-->
+
+<!--FENETRE MODALE-2-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+  crossorigin="anonymous"></script>
+<!-- FIN -FENETRE MODALE-2-->
+
+
+
+
+
+
+
+  <!-- Inclure Bootstrap et JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById("registrationForm").onsubmit = function(event) {
+      // Code pour gérer l'envoi du formulaire ici
+      alert("Inscription réussie !");
+      $('#joinModal').modal('hide');
+    }
+  </script>
+</body>
+</html>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------- JavaScript pour la fenêtre modale -->
+<script>
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("openModal");
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  document.getElementById("registrationForm").onsubmit = function(event) {
+    event.preventDefault();
+    // Code pour gérer l'envoi du formulaire ici
+    alert("Inscription réussie !");
+    modal.style.display = "none";
+  }
+</script>
+
+
+
+
+
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nom = $_POST["nom"];
+    $email = $_POST["email"];
+
+    // Connexion à la base de données
+    $servername = "localhost";
+    $username = "votre_nom_utilisateur";
+    $password = "votre_mot_de_passe";
+    $dbname = "votre_base_de_donnees";
+
+    // Créez une connexion
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Vérifiez la connexion
+    if ($conn->connect_error) {
+        die("La connexion a échoué : " . $conn->connect_error);
+    }
+
+    // Préparer et exécuter la requête d'insertion
+    $sql = "INSERT INTO utilisateurs (nom, email) VALUES ('$nom', '$email')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Nouvel enregistrement créé avec succès";
+    } else {
+        echo "Erreur : " . $sql . "<br>" . $conn->error;
+    }
+
+    // Fermer la connexion
+    $conn->close();
+}
+?>
+
+
+
+
+
+
+

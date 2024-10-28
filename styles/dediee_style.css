@@ -1,0 +1,115 @@
+/* Police pour le texte principal */
+body {
+background: lightgoldenrodyellow;
+background-position: 100% 100%;
+font-family: 'Barlow', sans-serif;
+}
+
+/* Titres (headlines) */
+h1, h2, h3, h4, h5, h6, .title {
+font-family: 'Rajdhani', sans-serif;
+}
+
+
+/*------------------------------------------------------------- STRUCTURE CONTENU STYLE --*/
+.content {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+width: 100%;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+/*--MAIN--*/
+.main {
+float: left;
+flex-direction: column;
+width: 70%;
+/*70% du parent "content"*/
+margin-left: 10px;
+background: #fbfbf9;
+align-items: center;
+border-radius: 5px;
+box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+/*--ASIDE--*/
+.aside {
+float: right;
+flex-direction: column;
+width: 26%;
+/*22% du parent "content"*/
+margin-right: 10px;
+padding: 4px;
+border-radius: 5px;
+height: 590px;
+box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+
+
+
+/* Aside navigation styling */
+.aside-nav {
+display: flex;
+flex-direction: column;
+background: #fbfbf9;
+margin-bottom: 20px;
+height: 100px;
+padding: 4px;
+box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+margin-top: 0px;
+}
+
+.aside-link {
+display: flex;
+flex-direction: column;
+border: 2px solid green;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------- RESPONSIVE STRUCTURE CONTENU --*/
+@media screen  and (max-width : 576px) {
+
+.content {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100% !important;
+padding: 0px;/*5px*/
+}
+
+/*.link {
+font-size: 1em;
+}*/
+
+.main,
+.aside {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+width: 100%;
+margin: 0px;
+}
+
+.content,
+.main,
+.aside {
+flex-direction: column;
+width: 100%;
+margin: 0;
+padding: 5px;/*10px*/
+}
+
+.aside {
+padding: 0px;
+margin-top: 10px;
+}
+}
+/*------------------------------------------------------------------------ FIN DU CONTENU --*/
+

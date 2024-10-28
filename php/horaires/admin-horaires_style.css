@@ -1,0 +1,68 @@
+/* admin-0/admin-test_style.css: Style pour le tableau de bord administrateur. */
+.schedule-container {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.day-schedule {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button.update-schedule {
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.update-schedule:hover {
+  background-color: #0056b3;
+}
+
+/*
+5.2 style/admin_style.css
+Pour le style de la page de gestion des horaires :
+*/
+
+/*
+Structure des fichiers
+Votre répertoire de projet devrait ressembler à ceci :
+
+projet
+│
+├── config.php
+├── login.php
+├── admin_dashboard.php
+├── update_schedule.php
+├── logout.php
+├── schedules.json
+└── style
+    ├── login_style.css
+    └── admin_style.css
+*/
+
+/*
+Avec cette structure, vous aurez une application avec une connexion sécurisée 
+pour l'administrateur, la gestion des horaires via AJAX sans recharger la page, 
+et une mise en page simplifiée pour une meilleure expérience utilisateur.
+*/
+

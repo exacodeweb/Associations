@@ -1,0 +1,1538 @@
+<!--
+<!DOCTYPE html>
+<html lang="fr">
+<head>     -->
+    <!-- Métadonnées et liens vers les styles et scripts -->  <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Événements</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">                                                            -->
+    <!--<script src="calendarScript.js" defer></script>-->
+    <!--<script src="../scripts/script.js" defer></script>-->                                                   <!--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+
+    <style>
+    body {
+      background: lightgoldenrodyellow;
+      margin: 0;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+      padding: 10px;
+    }
+
+    .logo {
+      color: white;
+      font-family: "Tangerine", serif;
+      font-weight: 500;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: white;
+      margin-right: 25px;
+    }
+
+    .link-nav {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .link-nav:hover {
+      color: lightblue;
+    }
+
+    .breadcrumb-item {
+      margin: 10px 20px;
+    }
+
+    .link-rep {
+      margin: 0 5px;
+      color: blue;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    .main {
+      flex: 1;
+      min-width: 300px;
+      margin: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+      padding: 10px;
+    }
+
+    /*------------------------------------------------------------------------------------------------------ TEST ----*/
+
+    .aside {
+      flex: 0 1 300px;
+      margin: 10px;
+      padding: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+    }
+
+    /*---------------------------------------------------------------------------------------------------------ASIDE--*/
+
+    .aside-nav {
+      display: flex;
+      flex-direction: column;
+      background: #fbfbf9;
+      margin-bottom: 20px;
+      height: 100px;
+      padding: 4px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-link {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+
+    .article {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      text-align: justify;
+      color: black;
+    }
+
+    .title {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    h2 {
+      color: #0000ff;
+      font-weight: 600;
+    }
+
+    .table-responsive {
+      margin: 20px 0;
+    }
+
+    .modal-header {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-body, .modal-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-open {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      width: 120px;
+      background-color: mediumorchid;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 20px auto;
+    }
+
+    .btn-open:hover {
+      background-color: rgb(211, 85, 163);
+    }
+
+    @media (max-width: 768px) {
+      .header, .menu {
+        flex-direction: column;
+        text-align: center;
+      }
+      .breadcrumb-item {
+        width: 100%;
+        text-align: center;
+      }
+      .main, .aside {
+        width: 100%;
+      }
+    }
+
+
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        .menu {
+          display: flex;
+          flex-direction: column;
+          height: 40px;
+          font-size: 12px;
+          max-width: 100%;
+          text-align: center;
+          background-color: blueviolet;
+          height: auto;
+          margin-right: 15px;
+          margin-left: 10px;
+        }
+      } 
+
+/*-----------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/*footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    /*position: fixed;*/  /*
+    bottom: 0;
+    width: 100%;
+}*/
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table thead, table tbody, table th, table td, table tr {
+        display: block;
+    }
+
+    table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table tr {
+        margin: 0 0 1rem 0;
+    }
+
+    table tr:nth-child(odd) {
+        background: #f2f2f2;
+    }
+
+    table td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    table td:before {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        transform: translateY(-50%);
+        text-align: left;
+        font-weight: bold;
+    }
+
+    table td:before {
+        content: attr(data-label);
+    }
+}                                                                                                                  -->
+<!--
+  </style>
+
+
+</head>
+<body>                                                                                                              -->
+    <!-- Menu de navigation -->                                                             <!--
+    <nav class="header">
+      <div class="logo">Entomologie</div>
+      <div class="menu">
+        <a href="../index.html" class="link-nav m-2">Accueil</a>
+        <a href="../pages/blog.html" class="link-nav m-2">Blog</a>
+        <a href="../pages/Agenda.html" class="link-nav m-2">Évènements</a>
+        <a href="../pages//qui_somme_nous.html" class="link-nav m-2">Qui sommes nous ?</a>
+        <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" class="link-nav m-2">Forum</a>
+        <a href="./contact.html" class="link-nav m-2">Contact</a>
+      </div>
+    </nav>                                                                                  -->
+
+    <!-- Chemin de navigation -->                                                        <!--
+    <div class="breadcrumb-item">
+      <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+      <a href="../index.html" class="link-rep">Acceuil</a> > calendrier
+    </div>
+
+    <div class="content">
+        <main class="main">                                                                  -->
+            <!-- Contenu principal -->                                                       <!--
+            <h2>Calendrier des Événements</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Événement</th>
+                            <th>Description</th>
+                            <th>Inscription</th>
+                        </tr>
+                    </thead>
+                    <tbody id="events-table">                                                     -->
+                        <!-- Lignes d'événements ajoutées par JavaScript -->                     <!---
+                    </tbody>
+                </table>
+            </div>                                                                                     -->
+
+            <!-- Bouton et modal de contact -->                                                    <!--
+            <hr>
+
+            <button type="button" class="btn-open" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Laissez un message
+            </button>
+
+        </main>                                                                                    -->
+
+
+          <!-- Liens supplémentaires -->                                                       <!--
+          <aside class="aside">
+            <div class="aside-nav">
+              <h5>images</h5>
+              <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+              <a href="../pages/Galerie-index.html">Galerie images</a>
+            </div>
+        
+            <div class="aside-nav">
+              <h5>Évènements</h5>
+              <a href="./calendar.html">Agenda</a>
+              <a href="../pages/assos.html">assemblé</a>
+            </div>
+        
+            <div class="aside-nav">
+              <h5>Les sortie</h5>
+              <a href="../pages/musée.html">Musée</a>
+              <a href="../pages/exposition.html">exposition</a>
+            </div>
+        
+            <div class="aside-nav">
+              <h5>site web</h5>
+              <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+                target="_blank">Actualité</a>
+        
+              <a href="../pages/recherche_wiki.html">recherche wikipedia</a>
+            </div>
+        
+            <div class="aside-nav">
+              <h5>identifier</h5>
+              <a href="../pages/identification.html">quel est ce papillon</a>
+              <a href="../fiche-details.html">page lepidoptera</a>
+            </div>
+          </aside>                                                                                            -->
+
+      
+
+        
+        <!-- Informations de pied de page -->                                                               <!--
+        <footer class="blockfooter">
+          <div class="block">
+            <div class="footer d-flex flex-column text-left">
+              <div>
+                <h5 class="text-dark">informations</h5>
+                <a href="../rgpd/mentions_légales.html" class="mention">mention légale</a>
+                <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+              </div>
+            </div>
+
+            <div class="footer d-flex flex-column text-left">
+              <div>
+                <h5 class="text-dark">nous contacter</h5>
+                <a href="tel:+336250214" class="contact">06 25 02 14</a>
+                <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>          -->
+
+          <!--<script src="script.js"></script>-->                                                      <!--
+          <script src="../scripts/script.js"></script>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('../path_to_json/events.json')
+                .then(response => response.json())
+                .then(data => {
+                    const eventsTable = document.getElementById('events-table');
+                    data.forEach(event => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${event.date}</td>
+                            <td>${event.title}</td>
+                            <td>${event.description}</td>
+                            <td><a href="../pages/inscription.html?event=${encodeURIComponent(event.title)}&date=${encodeURIComponent(event.date)}">S'inscrire</a></td>
+                        `;
+                        eventsTable.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Erreur lors du chargement des événements:', error));
+        });
+    </script>
+</body>
+</html>                                                                                                     -->
+
+<!----------------------------------------------------------------------------------------------------------------------
+
+/your_project
+  /data
+    events.json
+  /php
+    submit_inscription.php
+  /scripts
+    calendarScript.js
+  /style
+    style.css
+    inscription_style.css
+  /images3
+    102959.jpg
+  /pages
+    calendar.html
+    inscription.html
+  index.html
+
+  1. Fichier JSON
+Ce fichier contient les détails des événements en format JSON. Il est bien structuré et 
+prêt à être utilisé par le fichier HTML et JavaScript.
+
+2. Fichier calendar.html
+Ce fichier HTML affiche le calendrier des événements et inclut un script JavaScript pour 
+charger les événements à partir du fichier JSON.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Événements</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../scripts/calendarScript.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      body {
+        background: lightgoldenrodyellow;
+        margin: 0;
+      }
+
+      .header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background: mediumorchid;
+        padding: 10px;
+      }
+
+      .logo {
+        color: white;
+        font-family: "Tangerine", serif;
+        font-weight: 500;
+        text-shadow: 4px 4px 4px blue;
+        font-size: 55px;
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: white;
+        margin-right: 25px;
+      }
+
+      .link-nav {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .link-nav:hover {
+        color: lightblue;
+      }
+
+      .breadcrumb-item {
+        margin: 10px 20px;
+      }
+
+      .link-rep {
+        margin: 0 5px;
+        color: blue;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        margin: 5px 0;
+      }
+
+      .main {
+        flex: 1;
+        min-width: 300px;
+        margin: 10px;
+        background: #fbfbf9;
+        border-radius: 5px;
+        box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+        padding: 10px;
+      }
+
+      /*.aside {
+        flex: 0 1 300px;
+        margin: 10px;
+        padding: 10px;
+        background: #fbfbf9;
+        border-radius: 5px;
+        box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+      }*/
+
+      /*--------------------------------------------------------*/
+
+      .aside {
+      flex: 0 1 300px;
+      margin: 10px;
+      padding: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+    }
+
+      .aside-nav {
+      display: flex;
+      flex-direction: column;
+      background: #fbfbf9;
+      margin-bottom: 20px;
+      height: 100px;
+      padding: 4px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-link {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+
+    /*--------------------------------------------------------*/
+
+      .article {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        text-align: justify;
+        color: black;
+      }
+
+      .title {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      h2 {
+        color: #0000ff;
+        font-weight: 600;
+      }
+
+      .table-responsive {
+        margin: 20px 0;
+      }
+
+      .modal-header {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-body, .modal-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 120px;
+        background-color: mediumorchid;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin: 20px auto;
+      }
+
+      .btn-open:hover {
+        background-color: rgb(211, 85, 163);
+      }
+
+
+      /*-- MEDIA QUERY --*/
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        .header {
+          font-size: 12px;
+          display: flex;
+          /*flex-direction: row;*/
+          flex-direction: column;
+          text-align: left;
+          max-width: 100%;
+          /*-----------------*/
+
+        }
+      }
+
+      /*-- SMARTPHONE --*/
+      @media screen and (max-width: 576px) {
+        .link,
+        .link-int,
+        menu {
+          font-size: 12px;
+          max-width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: center;
+          text-align: left;
+          height: 40px;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .link,
+        .link-int,
+        menu {
+          font-size: 12px;
+          max-width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: center;
+          text-align: left;
+          height: 40px;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        .menu {
+          display: flex;
+          flex-direction: column;
+          height: 40px;
+          font-size: 12px;
+          max-width: 100%;
+          text-align: center;
+          background-color: blueviolet;
+          height: auto;
+          margin-right: 15px;
+          margin-left: 10px;
+        }
+      }
+
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <nav class="header">
+      <div class="logo">Entomologie</div>
+      <div class="menu">
+        <a href="../index.html" class="link-nav m-2">Accueil</a>
+        <a href="./blog.html" class="link-nav m-2">Blog</a>
+        <a href="./Agenda.html" class="link-nav m-2">Évènements</a>
+        <a href="./qui_somme_nous.html" class="link-nav m-2">Qui sommes nous ?</a>
+        <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" class="link-nav m-2">Forum</a>
+        <a href="./contact.html" class="link-nav m-2">Contact</a>
+      </div>
+    </nav>
+
+    <div class="breadcrumb-item">
+      <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+      <a href="../index.html" class="link-rep">Accueil</a> > calendrier
+    </div>
+
+    <div class="content">
+      <main class="main">
+        <div class="article">
+          <h2 class="title">Calendrier des Événements 2024 :<br> Explorez et Participez à Nos Activités</h2>
+          <p>Bienvenue sur notre calendrier des événements pour l'année 2024...</p>
+          <p>Présentation du Calendrier...</p>
+        </div>
+
+        <div class="block1-img">
+          <div class="article">
+            <figure>
+              <img class="card1-img-top rounded-3" src="../images3/102959.jpg" width="250" height="150" alt="image">
+              <figcaption>Description de l'image</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="article">
+          <p>Que vous souhaitiez apprendre à créer un jardin accueillant pour les papillons...</p>
+        </div>
+
+        <h2>Calendrier des Événements</h2>
+        <p>Notre calendrier des événements vous permet de planifier vos visites...</p>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Événement</th>
+                <th>Description</th>
+                <th>Inscription</th>
+              </tr>
+            </thead>
+            <tbody id="events-table">
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FENETRE MODAL NE PAS MODIFIER JE VERAIT PLUS TARD -->
+        <button type="button" class="btn-open" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Laissez un message
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contactez-nous</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--
+      <aside class="aside">
+        <div class="aside-nav">
+          <h5>images</h5>
+          <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+          <a href="./Galerie-index.html">Galerie images</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>Évènements</h5>
+          <a href="./calendar.html">Agenda</a>
+          <a href="./assos.html">assemblé</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>Les sortie</h5>
+          <a href="./musée.html">Musée</a>
+          <a href="./exposition.html">exposition</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>site web</h5>
+          <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+            target="_blank">biodiversite-foret</a>
+          <a href="https://www.insectes-net.fr/lepidoptera/lepi1.html" target="_blank">insectes-net</a>
+          <a href="https://lepinet.fr/index.php" target="_blank">lepinet</a>
+          <a href="https://www.papillon-poitou-charentes.org" target="_blank">papillon</a>
+        </div>
+      </aside>-->
+
+          <!-- Liens supplémentaires -->
+          <aside class="aside">
+            <div class="aside-nav">
+              <h5>images</h5>
+              <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+              <a href="../pages/Galerie-index.html">Galerie images</a>
+            </div>
+        
+            <div class="aside-nav">
+              <h5>Évènements</h5>
+              <a href="./calendar.html">Agenda</a>
+              <a href="../pages/assos.html">assemblé</a>
+            </div>
+        
+            <div class="aside-nav">
+              <h5>Les sortie</h5>
+              <a href="../pages/musée.html">Musée</a>
+              <a href="../pages/exposition.html">exposition</a>
+            </div>
+        
+            <div class="aside-nav">
+              <h5>site web</h5>
+              <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+                target="_blank">Actualité</a>
+        
+              <a href="../pages/recherche_wiki.html">recherche wikipedia</a>
+            </div>
+        
+            <div class="aside-nav">
+              <h5>identifier</h5>
+              <a href="../pages/identification.html">quel est ce papillon</a>
+              <a href="../fiche-details.html">page lepidoptera</a>
+            </div>
+          </aside>                          
+
+    </div>
+
+    <!--<footer class="blockfooter">
+      <div>
+        <span>&copy; 2024 entomologie.com Tous droits réservés.</span>
+      </div>
+    </footer>-->
+
+
+        <!-- Informations de pied de page -->
+        <footer class="blockfooter">
+          <div class="block">
+            <div class="footer d-flex flex-column text-left">
+              <div>
+                <h5 class="text-dark">informations</h5>
+                <a href="../rgpd/mentions_légales.html" class="mention">mention légale</a>
+                <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+              </div>
+            </div>
+
+            <div class="footer d-flex flex-column text-left">
+              <div>
+                <h5 class="text-dark">nous contacter</h5>
+                <a href="tel:+336250214" class="contact">06 25 02 14</a>
+                <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('../data/events.json')
+          .then(response => response.json())
+          .then(data => {
+            const eventsTable = document.getElementById('events-table');
+            data.forEach(event => {
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                <td>${event.date}</td>
+                <td>${event.title}</td>
+                <td>${event.description}</td>
+                <td><a href="../pages/inscription.html?event=${encodeURIComponent(event.title)}&date=${encodeURIComponent(event.date)}">S'inscrire</a></td>
+              `;
+              eventsTable.appendChild(row);
+            });
+          })
+          .catch(error => console.error('Erreur lors du chargement des événements:', error));
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Événements</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../scripts/calendarScript.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      body {
+        background: lightgoldenrodyellow;
+        margin: 0;
+      }
+
+      .header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background: mediumorchid;
+        padding: 10px;
+      }
+
+      .logo {
+        color: white;
+        font-family: "Tangerine", serif;
+        font-weight: 500;
+        text-shadow: 4px 4px 4px blue;
+        font-size: 55px;
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: white;
+        margin-right: 25px;
+      }
+
+      .link-nav {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .link-nav:hover {
+        color: lightblue;
+      }
+
+      .breadcrumb-item {
+        margin: 10px 20px;
+      }
+
+      .link-rep {
+        margin: 0 5px;
+        color: blue;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        margin: 5px 0;
+      }
+
+      .main {
+        flex: 1;
+        min-width: 300px;
+        margin: 10px;
+        background: #fbfbf9;
+        border-radius: 5px;
+        box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+        padding: 10px;
+      }
+
+      .aside {
+        flex: 0 1 300px;
+        margin: 10px;
+        padding: 10px;
+        background: #fbfbf9;
+        border-radius: 5px;
+        box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+      }
+
+      .article {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        text-align: justify;
+        color: black;
+      }
+
+      .title {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      h2 {
+        color: #0000ff;
+        font-weight: 600;
+      }
+
+      .table-responsive {
+        margin: 20px 0;
+      }
+
+      .modal-header {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-body, .modal-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 120px;
+        background-color: mediumorchid;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin: 20px auto;
+      }
+
+      .btn-open:hover {
+        background-color: rgb(211, 85, 163);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="header">
+      <div class="logo">Entomologie</div>
+      <div class="menu">
+        <a href="../index.html" class="link-nav">Accueil</a>
+        <a href="./blog.html" class="link-nav">Blog</a>
+        <a href="./Agenda.html" class="link-nav">Évènements</a>
+        <a href="./qui_somme_nous.html" class="link-nav">Qui sommes nous ?</a>
+        <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" class="link-nav">Forum</a>
+        <a href="./contact.html" class="link-nav">Contact</a>
+      </div>
+    </nav>
+
+    <div class="breadcrumb-item">
+      <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+      <a href="../index.html" class="link-rep">Accueil</a> > calendrier
+    </div>
+
+    <div class="content">
+      <main class="main">
+        <div class="article">
+          <h2 class="title">Calendrier des Événements 2024 :<br> Explorez et Participez à Nos Activités</h2>
+          <p>Bienvenue sur notre calendrier des événements pour l'année 2024...</p>
+          <p>Présentation du Calendrier...</p>
+        </div>
+
+        <div class="block1-img">
+          <div class="article">
+            <figure>
+              <img class="card1-img-top rounded-3" src="../images3/102959.jpg" width="250" height="150" alt="image">
+              <figcaption>Description de l'image</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="article">
+          <p>Que vous souhaitiez apprendre à créer un jardin accueillant pour les papillons...</p>
+        </div>
+
+        <h2>Calendrier des Événements</h2>
+        <p>Notre calendrier des événements vous permet de planifier vos visites...</p>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Événement</th>
+                <th>Description</th>
+                <th>Inscription</th>
+              </tr>
+            </thead>
+            <tbody id="events-table">
+            </tbody>
+          </table>
+        </div>
+
+        <button type="button" class="btn-open" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Laissez un message
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contactez-nous</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="aside">
+        <div class="aside-nav">
+          <h5>images</h5>
+          <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+          <a href="./Galerie-index.html">Galerie images</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>Évènements</h5>
+          <a href="./calendar.html">Agenda</a>
+          <a href="./assos.html">assemblé</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>Les sortie</h5>
+          <a href="./musée.html">Musée</a>
+          <a href="./exposition.html">exposition</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>site web</h5>
+          <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+            target="_blank">biodiversite-foret</a>
+          <a href="https://www.insectes-net.fr/lepidoptera/lepi1.html" target="_blank">insectes-net</a>
+          <a href="https://lepinet.fr/index.php" target="_blank">lepinet</a>
+          <a href="https://www.papillon-poitou-charentes.org" target="_blank">papillon</a>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="blockfooter">
+      <div>
+        <span>&copy; 2024 entomologie.com Tous droits réservés.</span>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('../data/events.json')
+          .then(response => response.json())
+          .then(data => {
+            const eventsTable = document.getElementById('events-table');
+            data.forEach(event => {
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                <td>${event.date}</td>
+                <td>${event.title}</td>
+                <td>${event.description}</td>
+                <td><a href="../pages/inscription.html?event=${encodeURIComponent(event.title)}&date=${encodeURIComponent(event.date)}">S'inscrire</a></td>
+              `;
+              eventsTable.appendChild(row);
+            });
+          })
+          .catch(error => console.error('Erreur lors du chargement des événements:', error));
+      });
+    </script>
+  </body>
+</html>
+-->
+
+<!-------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Événements</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../scripts/calendarScript.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+        body {
+            background: lightgoldenrodyellow;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: mediumorchid;
+            padding: 10px;
+        }
+        .logo {
+            color: white;
+            font-family: "Tangerine", serif;
+            font-weight: 500;
+            text-shadow: 4px 4px 4px blue;
+            font-size: 55px;
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: white;
+            margin-right: 25px;
+        }
+        .link-nav {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .link-nav:hover {
+            color: lightblue;
+        }
+        .breadcrumb-item {
+            margin: 10px 20px;
+        }
+        .link-rep {
+            margin: 0 5px;
+            color: blue;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            margin: 5px 0;
+        }
+        .main {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            background: #fbfbf9;
+            border-radius: 5px;
+            box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+            padding: 10px;
+        }
+        .aside {
+            flex: 0 1 300px;
+            margin: 10px;
+            padding: 10px;
+            background: #fbfbf9;
+            border-radius: 5px;
+            box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+        }
+        .aside-nav {
+            display: flex;
+            flex-direction: column;
+            background: #fbfbf9;
+            margin-bottom: 20px;
+            height: 100px;
+            padding: 4px;
+            box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+        }
+        .aside-link {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid green;
+        }
+        .article {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            color: black;
+        }
+        .title {
+            text-align: center;
+            margin: 20px 0;
+        }
+        h2 {
+            color: #0000ff;
+            font-weight: 600;
+        }
+        .table-responsive {
+            margin: 20px 0;
+        }
+        .modal-header {
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-body, .modal-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn-open {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 120px;
+            background-color: mediumorchid;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 20px auto;
+        }
+        .btn-open:hover {
+            background-color: rgb(211, 85, 163);
+        }
+        /*-- MEDIA QUERY --*/
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+            .header {
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                max-width: 100%;
+            }
+        }
+        /*-- SMARTPHONE --*/
+        @media screen and (max-width: 576px) {
+            .link,
+            .link-int,
+            .menu {
+                font-size: 12px;
+                max-width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-content: center;
+                align-items: center;
+                text-align: left;
+                height: 40px;
+            }
+        }
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+            .menu {
+              display: flex;
+              flex-direction: column;
+              height: 40px;
+              font-size: 12px;
+              max-width: 100%;
+              text-align: center;
+              background-color: blueviolet;
+              height: auto;
+              margin-right: 15px;
+              margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="header">
+        <div class="logo">Entomologie</div>
+        <div class="menu">
+            <a href="../index.html" class="link-nav m-2">Accueil</a>
+            <a href="./blog.html" class="link-nav m-2">Blog</a>
+            <a href="./Agenda.html" class="link-nav m-2">Évènements</a>
+            <a href="./qui_somme_nous.html" class="link-nav m-2">Qui sommes nous ?</a>
+            <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" class="link-nav m-2">Forum</a>
+            <a href="./contact.html" class="link-nav m-2">Contact</a>
+        </div>
+    </nav>
+    <div class="breadcrumb-item">
+        <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> > Calendar
+    </div>
+    <div class="content">
+        <main class="main">
+            <div class="article">
+                <h2>Calendrier des événements</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Événement</th>
+                                <th>Date</th>
+                                <th>Inscription</th>
+                            </tr>
+                        </thead>
+                        <tbody id="event-table">
+                            <!-- Les événements seront chargés ici par JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <aside class="aside">
+            <div class="aside-nav">
+                <p>
+                    Bienvenue sur notre calendrier d'événements. Découvrez les prochains événements et inscrivez-vous pour
+                    y participer.
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const events = [
+                // Exemple de données d'événement
+                { title: 'Événement 1', date: '2024-06-01' },
+                { title: 'Événement 2', date: '2024-06-15' },
+                { title: 'Événement 3', date: '2024-07-01' }
+            ];
+
+            const tableBody = document.getElementById('event-table');
+            events.forEach(event => {
+                const row = document.createElement('tr');
+                const titleCell = document.createElement('td');
+                titleCell.textContent = event.title;
+                const dateCell = document.createElement('td');
+
+                // Convertir la date au format d-m-yy
+                const dateParts = event.date.split('-');
+                const formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0].slice(2)}`;
+                dateCell.textContent = formattedDate;
+
+                const registerCell = document.createElement('td');
+                const registerLink = document.createElement('a');
+                registerLink.href = `../pages/inscription.html?event=${encodeURIComponent(event.title)}&date=${event.date}`;
+                registerLink.textContent = "S'inscrire";
+                registerCell.appendChild(registerLink);
+
+                row.appendChild(titleCell);
+                row.appendChild(dateCell);
+                row.appendChild(registerCell);
+
+                tableBody.appendChild(row);
+            });
+        });
+    </script>
+
+
+
+
+<script>/*script en javascript avec get_events.php*/
+  document.addEventListener('DOMContentLoaded', function() {
+      fetch('../php/get_events.php')
+          .then(response => response.json())
+          .then(events => {
+              const tableBody = document.getElementById('event-table');
+              events.forEach(event => {
+                  const row = document.createElement('tr');
+                  const titleCell = document.createElement('td');
+                  titleCell.textContent = event.title;
+                  const dateCell = document.createElement('td');
+
+                  // Convertir la date au format d-m-yy
+                  const dateParts = event.event_date.split('-');
+                  const formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0].slice(2)}`;
+                  dateCell.textContent = formattedDate;
+
+                  const registerCell = document.createElement('td');
+                  const registerLink = document.createElement('a');
+                  registerLink.href = `../pages/inscription.html?event=${encodeURIComponent(event.title)}&date=${event.event_date}`;
+                  registerLink.textContent = "S'inscrire";
+                  registerCell.appendChild(registerLink);
+
+                  row.appendChild(titleCell);
+                  row.appendChild(dateCell);
+                  row.appendChild(registerCell);
+
+                  tableBody.appendChild(row);
+              });
+          });
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,656 @@
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Entomologie">
+  <link rel="stylesheet" href="../style/contact_style.css">
+  <title>ECF-Contact</title>
+
+  <!-- Bootstrap CDN 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+-->
+  <!-- FontAwesome Kit 
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>-->
+
+  <!-- Google Fonts 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">-->
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() { 
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventTitle = urlParams.get('event');
+        const eventDate = urlParams.get('date');
+
+        if (eventTitle) {
+            document.getElementById('event-title').textContent = eventTitle;
+            document.getElementById('event-title-input').value = eventTitle;
+        }
+        if (eventDate) {
+            document.getElementById('event-date').textContent = eventDate;
+            document.getElementById('event-date-input').value = eventDate;
+        }
+    });
+</script>
+
+
+  <style>
+    /*body {
+      background-position: 100% 100%;
+      margin: 0;
+      font-size: 1em;
+    }*/
+
+    /*.header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+      padding: 10px;
+    }*/
+    /*
+    .logo {
+      color: white;
+      font-family: "Tangerine", serif;
+      font-weight: 590;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+      font-weight: 500;
+    }
+
+    .menu a {
+      color: white;
+      margin: 0 10px;
+    }
+
+    .menu a:hover {
+      color: lightblue;
+    }
+
+    .breadcrumb-item {
+      margin: 10px 20px;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      margin: 10px 0;
+      flex-direction: row;
+    }
+
+    main {
+      width: 70%;
+      margin: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .article {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .section-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .form {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-group {
+      width: 90%;
+    }
+    */
+    /*------------------------*/  /*
+    .form-control {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      width: 80%;
+    }                               */
+    /*-----------------------*/
+                                                /*
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      background: mediumorchid;
+      color: white;
+      border: none;
+    }
+
+    button:hover {
+      background: rgb(211, 85, 163);
+    }
+
+    .aside {
+      width: 26%;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+      background: #fbfbf9;
+    }
+
+    .aside h5 {
+      margin-bottom: 10px;
+    }                                              */
+/*
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #7dc95e;
+      color: white;
+      padding: 20px;
+    }
+*/
+
+
+/*
+    @media screen and (max-width: 576px) {
+      .menu {
+        flex-direction: column;
+      }
+
+      .menu a {
+        margin: 5px 0;
+      }
+
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main,
+      .aside {
+        width: 90%;
+        margin: 10px 0;
+      }
+    }*/
+  </style>
+
+</head>
+
+<body>
+  <!-- HEADER --><!--
+  <div class="header">
+    <div class="logo">Entomologie</div>
+    <nav class="menu">
+      <a href="../index.html" class="link-nav">Accueil</a>
+      <a href="./blog.html" class="link-nav">Blog</a>
+      <a href="./Agenda.html" class="link-nav">Évènements</a>
+      <a href="./qui_somme_nous.html" class="link-nav">Qui sommes nous ?</a>
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" class="link-nav">Forum</a>
+      <a href="./contact.html" class="link-nav">Contact</a>
+    </nav>
+  </div>-->
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-item"> 
+    <a href="../pages/Sommaire-index.html" class="link-item">Sommaire</a>
+    <a href="../index.html" class="link-item">Accueil</a> > Contact
+  </div>
+
+
+  <!--<div class="breadcrumb-item">
+    <a href="../pages/Sommaire-index.html" class="link-item">Sommaire</a> >
+    <a href="../pages/calendar.html" class="link-item">calendar</a> > contact
+  </div>-->
+
+  <!-- CONTENT -->
+  <div class="content">
+    <!-- MAIN -->
+    <main class="main">
+      <div class="section-form"> 
+
+        <div class="article"> 
+          <h2 class="title">Pour nous contacter</h2> 
+          <p class="text-center">
+            Nous serions ravis de recevoir vos questions, suggestions ou commentaires.
+            Il vous suffit de remplir ce formulaire et de le valider. Un e-mail de confirmation vous sera envoyé.
+            Merci de prendre le temps de nous contacter. Nous vous répondrons dans les plus brefs délais !
+          </p>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <!--<div class="section-form">-->  
+          <!--<div class="form">-->
+            <form class="form" id="contact-form" action="../php/submit_contact (ok-1).php" method="post"><!--submit-contact-->
+              <div class="title text-dark">Complétez ce formulaire</div>
+
+              <!--<div class="form-group">-->
+             <div class="form-control"> <!---->
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name"  placeholder="Votre nom" required><!--class="form-control"-->
+              <!--</div>-->
+
+              <!--<div class="form-group">--> 
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email"  placeholder="Votre adresse e-mail" required><!--class="form-control"-->
+              <!--</div>-->
+
+              <!--<div class="form-group">-->
+                <label for="email">Message :</label>
+                <textarea id="message" name="message"  rows="4" placeholder="Votre message" required></textarea><!--class="form-control"-->
+              </div><!---->
+
+              <!--<div class="form-group"> -->         
+              <button type="submit" >Envoyer</button><!--class="btn btn-primary" btn btn-primary-->
+              <!-- </div>  -->
+
+              <!--<div class="form-group">
+                <button type="submit">Envoyer</button>
+              </div>-->
+
+            </form>
+          <!--</div>-->
+      </div>
+    </main>
+
+    <!-- ASIDE --> <!--
+    <aside class="aside">
+      <div class="aside-nav">
+        <h5>Images</h5>
+        <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+        <a href="./Galerie-index.html">Galerie images</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Évènements</h5>
+        <a href="./calendar.html">Agenda</a>
+        <a href="./assos.html">Assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sorties</h5>
+        <a href="./musée.html">Musée</a>
+        <a href="./exposition.html">Exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Site web</h5>
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/" target="_blank">Actualité</a>
+        <a href="./recherche_wiki.html">Recherche Wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Identifier</h5>
+        <a href="./identification.html">Quel est ce papillon</a>
+        <a href="./fiche-details.html">Page Lepidoptera</a>
+      </div>
+    </aside>           -->
+  </div>
+
+  <!-- FOOTER --><!--
+  <footer class="footer">
+    <div class="block">
+      <div class="footer-column">
+        <h5 class="text-dark">Informations</h5>
+        <a href="../rgpd/mentions_légales.html" class="mention">Mentions légales</a>
+        <a href="./a-propos-ecf.html" class="mention">À propos de cette ECF</a>
+      </div>
+
+      <div class="footer-column">
+        <h5 class="text-dark">Nous contacter</h5>
+        <a href="tel:+336250214" class="contact">06 25 02 14</a>
+        <a href="mailto:contact@entomologie.fr" class="contact">contact@entomologie.fr</a>
+        <a href="https://www.facebook.com/forum.lepidoptera/" class="contact" target="_blank">Forum</a>
+      </div>
+    </div>-->
+
+    <!--<div class="block">
+      <div class="footer-column">
+        <h5 class="text-dark">Médiateur</h5>
+        <p>Adresse: 10 rue Louis-Flecher 67114 Eschau</p>
+        <p>Web: <a href="https://www.france-mediation.fr/" target="_blank">france-mediation.fr</a></p>
+      </div>
+    </div>
+  </footer>-->
+
+  <!-- JavaScript Bootstrap -->  <!--
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqLyyGVJrP5XLaVZxtD5qvJgOsvN0CLNyc9T+1nwGniQctm5r5" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqLyyGVJrP5XLaVZxtD5qvJgOsvN0CLNyc9T+1nwGniQctm5r5" crossorigin="anonymous"></script>
+  -->
+</body>
+
+</html>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <link rel="stylesheet" href="../styles/contact_style.css">
+  <title>ECF-Contact</title>
+
+  <!-- Bootstrap CDN -->
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+
+  <!-- FontAwesome Kit -->
+  <!--<script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>-->
+
+  <!-- Google Fonts -->
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">-->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() { 
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventTitle = urlParams.get('event');
+        const eventDate = urlParams.get('date');
+
+        if (eventTitle) {
+            document.getElementById('event-title').textContent = eventTitle;
+            document.getElementById('event-title-input').value = eventTitle;
+        }
+        if (eventDate) {
+            document.getElementById('event-date').textContent = eventDate;
+            document.getElementById('event-date-input').value = eventDate;
+        }
+    });
+  </script>
+
+  <style>
+    /* Placez ici les styles spécifiques de la page si nécessaire */
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <!--<div class="header">
+    <div class="logo">Entomologie</div>
+    <nav class="menu">
+      <a href="../index.html" class="link-nav">Accueil</a>
+      <a href="./blog.html" class="link-nav">Blog</a>
+      <a href="./agenda.html" class="link-nav">Évènements</a>
+      <a href="./qui_sommes_nous.html" class="link-nav">Qui sommes nous ?</a>
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" class="link-nav">Forum</a>
+      <a href="./contact.html" class="link-nav">Contact</a>
+    </nav>
+  </div>-->
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-item"> 
+    <a href="../pages/sommaire.html" class="link-item">Sommaire</a> >
+    <a href="../index.html" class="link-item">Accueil</a> > Contact
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <!-- MAIN -->
+    <main class="main">
+      <div class="section-form"> 
+        <div class="article"> 
+          <h2 class="title">Pour nous contacter</h2> 
+          <p class="text-center">
+            Nous serions ravis de recevoir vos questions, suggestions ou commentaires.
+            Il vous suffit de remplir ce formulaire et de le valider. Un e-mail de confirmation vous sera envoyé.
+            Merci de prendre le temps de nous contacter. Nous vous répondrons dans les plus brefs délais !
+          </p>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <form class="form" id="contact-form" action="../php/submit_contact.php" method="post">
+          <div class="title text-dark">Complétez ce formulaire</div>
+          
+          <div class="form-control">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+
+          <div class="form-control">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+          </div>
+
+          <div class="form-control">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+          </div>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- ASIDE -->
+    <!--<aside class="aside">
+      <div class="aside-nav">
+        <h5>Images</h5>
+        <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+        <a href="./galerie-index.html">Galerie images</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Évènements</h5>
+        <a href="./agenda.html">Agenda</a>
+        <a href="./assos.html">Assemblée</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sorties</h5>
+        <a href="./musee.html">Musée</a>
+        <a href="./exposition.html">Exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Site web</h5>
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/" target="_blank">Actualité</a>
+        <a href="./recherche_wiki.html">Recherche Wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Identifier</h5>
+        <a href="./identification.html">Quel est ce papillon</a>
+        <a href="./fiche_details.html">Page Lepidoptera</a>
+      </div>
+    </aside>-->
+  </div>
+
+  <!-- FOOTER -->
+  <!--<footer class="footer">
+    <div class="block">
+      <div class="footer-column">
+        <h5 class="text-dark">Informations</h5>
+        <a href="../rgpd/mentions_legales.html" class="mention">Mentions légales</a>
+        <a href="./a-propos-ecf.html" class="mention">À propos de cette ECF</a>
+      </div>
+
+      <div class="footer-column">
+        <h5 class="text-dark">Nous contacter</h5>
+        <a href="tel:+336250214" class="contact">06 25 02 14</a>
+        <a href="mailto:contact@entomologie.fr" class="contact">contact@entomologie.fr</a>
+        <a href="https://www.facebook.com/forum.lepidoptera/" class="contact" target="_blank">Forum</a>
+      </div>
+    </div>
+  </footer>-->
+
+  <!-- JavaScript Bootstrap -->
+  <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqLyyGVJrP5XLaVZxtD5qvJgOsvN0CLNyc9T+1nwGniQctm5r5" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqLyyGVJrP5XLaVZxtD5qvJgOsvN0CLNyc9T+1nwGniQctm5r5" crossorigin="anonymous"></script>-->
+</body> 
+
+</html>
+
+<!--
+  En-tête (<head>):
+
+Les commentaires pour les CDNs de Bootstrap, FontAwesome et Google Fonts sont maintenus.
+Le script pour récupérer les paramètres URL est conservé et commenté correctement.
+Un espace pour les styles spécifiques à la page est laissé.
+Corps (<body>):
+
+Les sections de l'en-tête, du fil d'Ariane (breadcrumb), du contenu principal et du pied de page sont 
+commentées pour une meilleure lisibilité.
+Les sections inutilisées (en-tête, barre latérale et pied de page) sont commentées pour une 
+utilisation future possible.
+
+Formulaire de contact:
+
+Le formulaire est stylisé avec des classes CSS (form, form-control) et chaque élément de formulaire 
+est correctement encapsulé.
+L'action du formulaire est mise à jour pour pointer vers ../php/submit_contact.php.
+Cette structure vous permettra d'ajouter et de modifier le contenu facilement tout en 
+maintenant un code propre et lisible.
+-->
+
+<!------------------------------------------------------ SECURISE ---------------------------------------------------->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <link rel="stylesheet" href="../styles/contact_style.css">
+
+  <link rel="stylesheet" href="../php/csrf_token.php">
+  <title>ECF-Contact</title>
+</head>
+
+<body>
+  <div class="breadcrumb-item">
+    <a href="../pages/sommaire.html" class="link-item">Sommaire</a>
+    <a href="../index.html" class="link-item">Accueil</a> > Contact
+  </div>
+
+  <div class="content">
+    <main class="main">
+      <div class="section-form">
+        <div class="article">
+          <h2 class="title">Pour nous contacter</h2>
+          <p class="text-center">
+            Nous serions ravis de recevoir vos questions, suggestions ou commentaires.
+            Il vous suffit de remplir ce formulaire et de le valider. Un e-mail de confirmation vous sera envoyé.
+            Merci de prendre le temps de nous contacter. Nous vous répondrons dans les plus brefs délais !
+          </p>
+        </div>
+
+        <form class="form" id="contact-form" action="../php/submit_contact.php" method="post">
+         <!--<?php
+          session_start();
+          if (empty($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+          }
+          ?>-->
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+          <?php include('../php/csrf_token.php'); ?>
+          <div class="form-control">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-control">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+          </div>
+          <div class="form-control">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
+
+<!--
+  Explication du code:
+1.Génération du token CSRF : Lors du chargement de la page de formulaire (contact.html), 
+  un token CSRF est généré et stocké dans une session PHP. 
+  Ce token est également ajouté au formulaire sous forme de champ caché.
+2.Vérification du token CSRF : Lors de la soumission du formulaire, 
+  le script PHP (submit_contact.php) vérifie que le token CSRF soumis correspond à 
+  celui stocké dans la session. Si ce n'est pas le cas, une erreur est affichée.
+3.Validation et insertion des données : Si le token CSRF est valide, 
+  les données du formulaire sont validées, assainies et insérées dans 
+  la base de données à l'aide de requêtes préparées pour éviter les injections SQL.
+  Avec ces étapes, vous avez mis en place une protection CSRF et assurez la 
+  sécurité des données soumises via le formulaire de contact.
+-->
+
+<!--
+
+
+Générer un CSRF token 
+Supposons que vous utilisez un framework comme Flask en Python pour votre backend. 
+Vous pouvez utiliser des packages comme flask-wtf pour gérer les formulaires et la sécurité CSRF.
+
+Installez Flask et Flask-WTF:
+
+bash
+Copier le code
+pip install Flask Flask-WTF
+Étape 2: Créer un backend pour traiter le formulaire
+Créez un fichier app.py pour votre application Flask:
+
+Créer un backend pour traiter le formulaire
+
+  from flask import Flask, render_template, request, flash, redirect, url_for
+from flask_wtf import FlaskForm
+from wtforms import StringField, TextAreaField, SubmitField
+from wtforms.validators import DataRequired, Email
+from flask_wtf.csrf import CSRFProtect
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'votre_cle_secrete_pour_le_csrf'
+
+csrf = CSRFProtect(app)
+
+class ContactForm(FlaskForm):
+    nom = StringField('Nom', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    message = TextAreaField('Message', validators=[DataRequired()])
+    submit = SubmitField('Envoyer')
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    form = ContactForm()
+    if form.validate_on_submit():
+        nom = form.nom.data
+        email = form.email.data
+        message = form.message.data
+        # Ici, vous pouvez traiter le message, comme l'enregistrer dans une base de données ou envoyer un email
+        flash('Message envoyé avec succès!', 'success')
+        return redirect(url_for('contact'))
+    return render_template('contact.html', form=form)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+-->

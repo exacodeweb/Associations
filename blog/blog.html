@@ -1,0 +1,718 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c-->
+<!DOCTYPE html>
+<html lang="en"><!--ISO 639-1-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <!--<link rel="stylesheet" href="../css/style.css" type="text/css"> -->
+  <title>ECF-blog</title>
+
+  <!--Bootstrap cdn-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+  <!--style de police d'ecriture-->
+  <!--<link href="https://fonts.cdnfonts.com/css/barlow" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/tangerine" rel="stylesheet"> -->
+  <link href="https://fonts.cdnfonts.com/css/rajdhani" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="../style/header_style.css">
+  <link rel="stylesheet" href="../styles/blog_style.css"> <!---->
+  <link rel="stylesheet" href="//../style/contenu_style.css">
+  <link rel="stylesheet" href="//../contenu_blog_style.css">
+  <link rel="stylesheet" href="../style/footer_style.css">
+
+  <!-- font-style -->
+
+  <!--style de police d'ecriture-->
+  <!--<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">-->
+
+  <!--kit icones--> <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+
+  <!--STYLE-CSS-->
+
+  <style>
+    /*-- FONTS --*/
+    /*
+  @font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 500;
+    src: url('assets/fonts/rajdhani-v14-latin-500.woff2') format('woff2'),
+         url('assets/fonts/rajdhani-v14-latin-500.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/barlow-v5-latin-400.woff2') format('woff2'),
+         url('assets/fonts/barlow-v5-latin-400.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 500;
+    src: url('assets/fonts/barlow-v5-latin-500.woff2') format('woff2'),
+         url('assets/fonts/barlow-v5-latin-500.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Tangerine';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/tangerine-v17-latin-regular.woff2') format('woff2'),
+         url('../assets/fonts/tangerine-v17-latin-regular.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Tangerine';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/tangerine-v17-latin-700.woff2') format('woff2'),
+         url('../assets/fonts/tangerine-v17-latin-700.woff') format('woff');
+  }*/
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <!--NAV-BAR-->
+  <!--<container>-->
+
+  <nav class="header">
+    <div class="logo">Ailes-Enchantées</div><!--Entomologie-->
+
+    <!--OPTION MENU BURGER-->
+    <!--
+    <label for="toggle">☰</label>
+    <input type="checkbox" id="toggle">-->
+    <!--
+    <label for="toggle">☰</label>
+    <input type="checkbox" id="toggle">-->
+
+
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="../blog.html" title="Blog" class="link-nav m-2">Blog</a>
+
+      <a href="../pages/agenda.html" title="A propos" class="link-nav m-2">Évènements</a>
+
+      <a href="../pages/proflle_team.html" title="Qui somme nous" class="link-nav m-2">Qui sommes nous
+        ?</a><!--../pages/qui_somme_nous.html-->
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+      <a href="../contact/contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </nav>
+
+  <!--FIL D'ARIANE-->
+  <div class="breadcrumb-item">
+    <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> /
+    <a href="../index.html" class="link-rep">Acceuil</a> / blog
+  </div>
+
+  <!--CONTENT-->
+  <div class="content">
+
+    <!--MAIN-->
+    <main class="main">
+
+      <div class="article">
+        <h2 class="title"><!--BIENVENUE SUR LE BLOG-->Papillons en Lumière : <br>Histoires et Inspirations du Monde des
+          Lépidoptères</h2>
+
+        <p>
+          Bienvenue sur le blog de Papillons en Lumière ! Découvrez un univers fascinant où
+          chaque battement d'aile raconte une histoire unique. Notre blog est dédié à la
+          beauté et à la préservation des papillons. Que vous soyez un amoureux de la nature,
+          un entomologiste passionné ou simplement curieux d'en apprendre davantage sur
+          ces créatures délicates, nous avons quelque chose pour vous. Plongez dans des
+          articles inspirants, des conseils pour créer des jardins favorables aux papillons,
+          et des récits captivants sur les efforts de conservation à travers le monde.
+          Rejoignez-nous et laissez-vous émerveiller par la magie des papillons !
+        </p>
+
+        <br><a class="p-2" href="https://lacristalide.fr/" target="_blank">un peut de poesie</a>
+
+        <div class="btn-card">
+          <!--<a href="../inscriptions/inscription.html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez">s'inscrire--><!--inscrivez-vous ici--><!--
+          </a>-->
+
+          <a href="../pages/calendar.html" class="link-btn text-white my-2 my-sm-0"
+            title="cliquer-adherez">s'inscrire<!--inscrivez-vous ici-->
+          </a>
+        </div>
+      </div>
+
+      <!--LIEN ANCRE-->
+      <a href="#comment-section" class="anchor">Accéder à la section commentaires</a><!-- ml-2-->
+
+      <!--TEXT IMGAGE 1-->
+      <div class="section1"><!--block-parent--><!--class=""-->
+        <div class="text-width-img"> <!--article-->
+          <div class="subtitle"><!--Mon premier article:--> Aglais urticae :<br> Le Petit Nymphale qui Émerveille Nos
+            Jardins</div>
+          <h5>Aglais urticae</h5>
+          <div class="text"><!--Aglais_urticae_(La-Petite-Tortue).jpg-->
+            <img src="../images3/photo1.jpg" alt="image papillon">
+            <p>
+              Bienvenue dans le monde fascinant d'Aglais urticae, plus connu sous le nom de Petit Nymphale.
+              Ce papillon éclatant, avec ses ailes ornées de motifs orange vif, noirs et bleus, est un véritable
+              joyau de nos jardins. De mars à octobre, il apporte une touche de magie et de couleur à nos espaces verts.
+              Dans cet article, nous explorerons le rôle crucial d'Aglais urticae dans nos écosystèmes,
+              son cycle de vie captivant, et les moyens par lesquels nous pouvons encourager sa présence et
+              contribuer à la biodiversité. Préparez-vous à découvrir comment ce petit trésor peut transformer
+              votre jardin en un sanctuaire vibrant et plein de vie.
+
+
+              <stron>Description et Identification</stron><br>
+              Aglais urticae se distingue par ses ailes vibrantes d'orange, agrémentées de motifs noirs et de taches
+              bleues sur les bords. Le dessous de ses ailes est brun foncé, offrant un camouflage efficace lorsqu'il se
+              repose. Ce papillon de taille moyenne a une envergure allant de 45 à 62 mm, le rendant facilement
+              identifiable et admiré pour ses couleurs éclatantes.<br>
+
+              <strong>Période de Vol</strong><br>
+              La période de vol d'Aglais urticae s'étend de mars à octobre, couvrant ainsi le printemps, l'été et le
+              début de l'automne. Durant ces mois, il est courant de le voir se poser sur des fleurs pour se nourrir
+              de nectar, contribuant ainsi à la pollinisation de nombreuses plantes.<br>
+
+              <strong>Rôle Écologique</strong><br>
+              Aglais urticae joue un rôle essentiel dans nos écosystèmes en tant que pollinisateur.
+              En butinant de fleur en fleur, il aide à la reproduction de nombreuses plantes, contribuant à la
+              diversité florale de nos jardins et prairies. Les chenilles de ce papillon se nourrissent principalement
+              d'orties, une plante souvent perçue comme nuisible mais qui est vitale pour plusieurs espèces de
+              papillons. En contrôlant les populations d'orties,
+              Aglais urticae participe à l'équilibre de la végétation locale.<br>
+
+              <strong>Cycle de Vie</strong><br>
+              Le cycle de vie d'Aglais urticae est une véritable merveille de la nature.
+              Après l'accouplement, les femelles pondent leurs œufs sur les orties. Les chenilles éclosent et
+              commencent à se nourrir de ces plantes, passant par plusieurs stades de croissance avant de se
+              transformer en chrysalides. Quelques semaines plus tard, les adultes émergent, prêts à
+              entamer un nouveau cycle de vie. Cette transformation, de l'œuf à l'adulte, illustre
+              la beauté et la complexité des processus naturels.<br>
+
+              <strong>Protection et Préservation</strong><br>
+              Protéger Aglais urticae, c'est aussi préserver les plantes et les habitats dont il dépend.
+              Voici quelques conseils pour favoriser la présence du Petit Nymphale dans votre jardin :
+
+            <ul>
+              <li>Plantez des orties : Créez un habitat favorable en laissant pousser des orties dans une partie de
+                votre jardin.</li>
+              <li>Évitez les pesticides : Utilisez des méthodes de jardinage biologiques pour protéger les papillons et
+                leurs habitats.</li>
+              <li>Créez des zones de repos : Offrez des espaces calmes et ensoleillés où les papillons peuvent se
+                reposer et se nourrir.</li>
+            </ul>
+
+            <strong>Conclusion</strong><br>
+            Aglais urticae, le Petit Nymphale, est plus qu'un simple ornement pour nos jardins. Il est un acteur
+            clé de la biodiversité et un symbole de la résilience de la nature. En accueillant ce papillon dans
+            nos espaces verts, nous contribuons à la préservation de notre environnement et enrichissons nos jardins
+            de couleurs et de vie. Laissez-vous inspirer par le Petit Nymphale et découvrez comment votre
+            jardin peut devenir un sanctuaire pour cette créature délicate et indispensable, tout en contribuant à un
+            écosystème plus riche et plus diversifié.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--TEXT IMGAGE 2-->
+      <div class="section1"><!--block-parent-->
+        <div class="text-width-img">
+          <div class="subtitle"><!--Mon deuxieme article:-->Araschnia levana :<br> Le Papillon Carte-Géographique qui
+            Intrigue Nos Jardins </div>
+          <h5> Araschnia levana </h5>
+          <div class="text">
+            <img src="../images3/Araschnia_levana_(La-carte-géographique).jpg" alt="image papillon">
+            <p>
+              Bienvenue dans le monde mystérieux d'Araschnia levana, communément appelé le papillon carte-géographique.
+              Ce magnifique papillon, aux ailes décorées de motifs orange vif et noirs, est un véritable enchantement
+              pour nos jardins. De la fin du printemps à l'été, il ajoute une touche de couleur et d'intrigue à
+              nos espaces verts, captivant les observateurs attentifs. Dans cet article, nous explorerons le rôle
+              unique d'Araschnia levana dans nos écosystèmes, son cycle de vie fascinant, et les moyens par lesquels
+              nous pouvons encourager sa présence et contribuer à la biodiversité. Préparez-vous à découvrir
+              comment ce papillon énigmatique peut transformer votre jardin en un havre de mystère et de beauté.<br>
+
+              <strong>Description et Identification</strong><br>
+              Araschnia levana est aisément identifiable grâce à ses ailes éclatantes, qui ressemblent à une
+              carte géographique. Au printemps, ses ailes arborent des couleurs orange et noires vives, tandis
+              qu'en été, elles deviennent plus sombres avec des motifs blancs, créant ainsi un contraste saisissant.
+              Ce papillon a une envergure d'environ 40 à 50 mm, en faisant une présence remarquable dans nos
+              jardins.<br>
+
+              <strong>Période de Vol</strong><br>
+              La période de vol d'Araschnia levana s'étend du printemps à l'été, généralement d'avril à septembre.
+              Pendant ces mois, il est possible d'observer ce papillon virevoltant dans les jardins,
+              les prairies et les lisières de forêts, à la recherche de nectar et de partenaires pour se reproduire.<br>
+
+              <strong>Rôle Écologique</strong><br>
+              Araschnia levana joue un rôle essentiel en tant que pollinisateur, contribuant ainsi à la reproduction
+              de nombreuses plantes sauvages. Ses habitudes de butinage aident à maintenir la diversité florale dans
+              nos écosystèmes. De plus, ses chenilles se nourrissent de diverses plantes hôtes, contribuant
+              ainsi à l'équilibre de la végétation.<br>
+
+              <strong>Cycle de Vie</strong><br>
+              Le cycle de vie d'Araschnia levana est fascinant. Après l'éclosion des œufs,
+              les jeunes chenilles commencent à se nourrir des feuilles des plantes hôtes. Elles passent ensuite
+              par plusieurs stades de croissance avant de se transformer en chrysalides. Quelques semaines plus tard,
+              les adultes émergent, prêts à poursuivre le cycle de vie.<br>
+
+              <strong>Protection et Préservation</strong>
+              Protéger Araschnia levana, c'est aussi préserver les habitats naturels et les plantes hôtes dont il
+              dépend.
+              Voici quelques conseils pour favoriser sa présence dans votre jardin :
+            <ul>
+              <li> Plantez des fleurs riches en nectar pour attirer les papillons.</li>
+              <li>Évitez l'utilisation de pesticides qui pourraient nuire aux papillons et à leurs habitats.</li>
+              <li>Créez des zones de repos avec des plantes hôtes pour les chenilles.</li>
+            </ul>
+
+            <strong>Conclusion</strong>
+            Araschnia levana, le papillon carte-géographique, est un trésor de nos jardins, et un acteur essentiel de la
+            biodiversité. En accueillant ce papillon dans nos espaces verts, nous contribuons à préserver la beauté et
+            l'équilibre de nos écosystèmes. Laissez-vous séduire par le mystère d'Araschnia levana et découvrez comment
+            votre jardin peut devenir un sanctuaire pour cette créature fascinante, tout en enrichissant la biodiversité
+            locale.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--TEXT IMGAGE 3-->
+      <div class="section1"><!--block-parent-->
+        <div class="text-width-img">
+          <div class="subtitle"><!--Mon troisième article:--> Brenthis daphne : <br> La Petite Violette qui Embellit Nos
+            Jardins</div>
+          <h5>Brenthis daphne </h5>
+          <div class="text">
+            <img src="../images3/Brenthis_daphne_(Le-Nacré-de-la-ronce).jpg" alt="image papillon">
+            <p>
+              Bienvenue dans l'univers enchanteur de Brenthis daphne, plus connue sous le nom de Petite Violette.
+              Ce papillon délicat et coloré, avec ses ailes ornées de motifs élégants, est un véritable trésor de nos
+              jardins estivaux. De juin à août, il ajoute une touche de charme et de vitalité à nos espaces verts,
+              captivant les regards et éveillant les esprits curieux. Dans cet article,
+              nous explorerons le rôle essentiel de Brenthis daphne dans nos écosystèmes,
+              son cycle de vie fascinant, et les moyens par lesquels nous pouvons favoriser sa présence et
+              contribuer à la biodiversité. Préparez-vous à découvrir comment ce petit joyau peut transformer
+              votre jardin en un sanctuaire vivant et dynamique.<br>
+
+              <strong>Description et Identification</strong><br>
+              Brenthis daphne est facilement reconnaissable grâce à ses ailes orange vives ornées de motifs noirs et
+              bruns.
+              Le dessous de ses ailes présente des nuances plus subtiles de beige et de marron, souvent décorées
+              de taches argentées, ce qui ajoute à son charme et à sa beauté. Ce papillon est de taille moyenne,
+              avec une envergure variant de 40 à 50 mm, ce qui en fait une présence notable mais délicate dans nos
+              jardins.<br>
+
+              <strong>Période de Vol</strong><br>
+              La période de vol de Brenthis daphne s'étend de juin à août. Pendant ces mois d'été, il est possible de
+              l'observer flânant de fleur en fleur, à la recherche de nectar. Ce papillon est particulièrement actif
+              par temps ensoleillé et préfère les prairies fleuries, les lisières de forêt et les jardins bien
+              entretenus.<br>
+
+              <strong>Rôle Écologique</strong><br>
+              Brenthis daphne joue un rôle crucial dans nos écosystèmes en tant que pollinisateur. En butinant de
+              fleur en fleur, il aide à la reproduction de nombreuses plantes sauvages, contribuant ainsi à la
+              diversité florale. Les violettes, qui sont la principale source de nourriture de ses chenilles,
+              bénéficient directement de sa présence. En maintenant ces plantes au sein de leur habitat naturel,
+              Brenthis daphne aide à préserver un équilibre écologique essentiel.<br>
+
+              <strong>Cycle de Vie</strong><br>
+              Le cycle de vie de Brenthis daphne est une merveille de transformation. Les femelles pondent leurs œufs
+              sur les violettes, où les jeunes chenilles émergent pour se nourrir. Après plusieurs stades de
+              croissance, les chenilles se métamorphosent en chrysalides, d'où émerge l'adulte quelques semaines
+              plus tard. Cette transformation spectaculaire nous rappelle la beauté et la complexité des processus
+              naturels.<br>
+
+              <strong>Protection et Préservation</strong><br>
+              Protéger Brenthis daphne, c'est aussi préserver les plantes et les habitats dont il dépend.
+              Voici quelques conseils pour favoriser la présence de la Petite Violette dans votre jardin :
+            <ul>
+              <li>Plantez des violettes : Créez un habitat favorable en plantant des violettes, la principale source de
+                nourriture pour ses chenilles.</li>
+              <li>Évitez les pesticides : Utilisez des méthodes de jardinage biologiques pour protéger les papillons et
+                leurs habitats.</li>
+              <li>Créez des zones sauvages : Laissez une partie de votre jardin à l'état sauvage pour offrir un refuge
+                aux papillons et autres pollinisateurs.</li>
+            </ul>
+
+            <strong>Conclusion</strong>
+            Brenthis daphne, la Petite Violette, est plus qu'un simple ornement pour nos jardins.
+            Elle est un acteur essentiel de la biodiversité et un symbole de la beauté naturelle.
+            En accueillant ce papillon dans nos espaces verts, nous contribuons à la préservation de notre
+            environnement et enrichissons nos jardins de couleurs et de vie. Laissez-vous inspirer par la
+            Petite Violette et découvrez comment votre jardin peut devenir un sanctuaire pour cette
+            créature gracieuse, tout en contribuant à un écosystème plus riche et plus diversifié.
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--<a class="p-2" href="https://lacristalide.fr/" target="_blank">un peut de poesie</a>--><!--site apprenent study-->
+
+      <!-- ARTICLE 4 LIRE LA SUITE -->
+      <section class="p-2 bg-light">
+        <!--<h5>Brenthis daphne </h5>-->
+        <div class="subtitle pb-2"><!--Mes derniers articles-->Brenthis daphne : <br> La Petite Violette qui Embellit
+          Nos Jardins</div>
+        <div><!--article-->
+          <h5>Brenthis daphne </h5>
+          <p>
+
+            Bienvenue dans l'univers enchanteur de Brenthis daphne, plus connue sous le nom de Petite Violette.
+            Ce papillon délicat et coloré, avec ses ailes ornées de motifs élégants, est un véritable trésor de nos
+            jardins estivaux. De juin à août, il ajoute une touche de charme et de vitalité à nos espaces verts,
+            captivant les regards et éveillant les esprits curieux. Dans cet article, nous explorerons le rôle
+            essentiel de Brenthis daphne dans nos écosystèmes, son cycle de vie fascinant, et les moyens par lesquels
+            nous pouvons favoriser sa présence et contribuer à la biodiversité. Préparez-vous à découvrir comment
+            ce petit joyau peut transformer votre jardin en un sanctuaire vivant et dynamique.
+
+          </p>
+        </div><!--article-->
+      </section>
+      <!---->
+      <a
+        href="javascript:document.getElementById('re001').style.display='block';document.getElementById('re001').releaseCapture();">
+        <div class="btn btn-primary mb-3 ml-2 btn-sm">Lire la suite</div><!--role="button"-->
+      </a>
+      <!---->
+      <div id="re001" style="display: none;">
+        <div style="border: 2px solid rgb(128, 128, 128);">
+          <div class="text-width-img">
+            <div class="text"><!--Aglais_urticae_(La-Petite-Tortue)-->
+              <img src="../images3/photo1.jpg" alt="image papillon">
+
+              <strong>Description et Identification</strong><br>
+              Brenthis daphne est facilement reconnaissable grâce à ses ailes orange vives ornées de motifs
+              noirs et bruns. Le dessous de ses ailes présente des nuances plus subtiles de beige et de marron,
+              souvent décorées de taches argentées, ce qui ajoute à son charme et à sa beauté. Ce papillon est de
+              taille moyenne, avec une envergure variant de 40 à 50 mm, ce qui en fait une présence notable mais
+              délicate dans nos jardins.
+              <br>
+              <strong>Période de Vol</strong><br>
+              La période de vol de Brenthis daphne s'étend de juin à août. Pendant ces mois d'été, il est possible
+              de l'observer flânant de fleur en fleur, à la recherche de nectar. Ce papillon est particulièrement
+              actif par temps ensoleillé et préfère les prairies fleuries, les lisières de forêt et les
+              jardins bien entretenus.
+              <br>
+              <strong>Rôle Écologique</strong><br>
+              Brenthis daphne joue un rôle crucial dans nos écosystèmes en tant que pollinisateur.
+              En butinant de fleur en fleur, il aide à la reproduction de nombreuses plantes sauvages,
+              contribuant ainsi à la diversité florale. Les violettes, qui sont la principale source de nourriture
+              de ses chenilles, bénéficient directement de sa présence. En maintenant ces plantes au sein de leur
+              habitat naturel, Brenthis daphne aide à préserver un équilibre écologique essentiel.
+              <br>
+              <strong>Cycle de Vie</strong><br>
+              Le cycle de vie de Brenthis daphne est une merveille de transformation. Les femelles pondent leurs
+              œufs sur les violettes, où les jeunes chenilles émergent pour se nourrir. Après plusieurs stades de
+              croissance, les chenilles se métamorphosent en chrysalides, d'où émerge l'adulte quelques semaines
+              plus tard. Cette transformation spectaculaire nous rappelle la beauté et la complexité des processus
+              naturels.
+              <br>
+              <strong>Protection et Préservation</strong><br>
+              Protéger Brenthis daphne, c'est aussi préserver les plantes et les habitats dont il dépend.
+              Voici quelques conseils pour favoriser la présence de la Petite Violette dans votre jardin :
+              <br>
+
+              <ul>
+                <li><strong>Plantez des violettes :</strong>
+                  Créez un habitat favorable en plantant des violettes, la principale source de nourriture pour ses
+                  chenilles.</li>
+                <li> <strong>Évitez les pesticides :</strong>
+                  Utilisez des méthodes de jardinage biologiques pour protéger les papillons et leurs habitats.</li>
+                <li> <strong>Créez des zones sauvages :</strong>
+                  Laissez une partie de votre jardin à l'état sauvage pour offrir un refuge aux papillons et autres
+                  pollinisateurs.</li>
+              </ul>
+
+              <br>
+              <strong>Conclusion</strong><br>
+              Brenthis daphne, la Petite Violette, est plus qu'un simple ornement pour nos jardins. Elle est un
+              acteur essentiel de la biodiversité et un symbole de la beauté naturelle. En accueillant ce
+              papillon dans nos espaces verts, nous contribuons à la préservation de notre environnement et
+              enrichissons nos jardins de couleurs et de vie. Laissez-vous inspirer par la Petite Violette et
+              découvrez comment votre jardin peut devenir un sanctuaire pour cette créature gracieuse, tout en
+              contribuant à un écosystème plus riche et plus diversifié.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <!---->
+        <a
+          href="javascript:document.getElementById('re001').style.display='none';document.getElementById('re001').releaseCapture();">
+          <!--<div class="btn btn-success mt-3 ml-2 btn-sm">Fermer</div>-->
+          <div class="btn btn-success mt-3 ml-2 btn-sm">Fermer</div><!--role="button" -->
+        </a>
+        <!---->
+      </div>
+      <hr>
+
+      <!--COMMENTAIRE-->
+      <div class="section-form">
+
+        <!-- Section des commentaires -->
+        <div class="commentaires" id="comment-section">
+          <h2>Discuter au sujet des papillons</h2><!--Commentaires-->
+          <div id="zone_commentaires"></div>
+        </div>
+
+        <!-- Formulaire pour ajouter un commentaire -->
+        <div class="form">
+          <!--<form id="comment-form" action="ajouter_commentaire.php" method="post"> --> <!--ajouter_commentaire.php-->
+          <form id="comment-form" action="./ajouter_commentaire.php" method="post"><!--ajouter_commentaire.php-->
+            <h2 class="title text-dark">Ajouter un post</h2><!--Ajouter un commentaire-->
+
+            <div class="form-group">
+              <label for="nom">Votre nom :</label>
+              <input class="form-control" type="text" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-group">
+              <label for="commentaire">Votre commentaire :</label>
+              <textarea class="form-control" id="commentaire" name="commentaire" rows="3" required></textarea>
+            </div>
+
+            <!--<input type="submit" value="Ajouter" class="btn btn-primary">-->
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+          </form>
+        </div>
+
+      </div><!-- BALISE FERMANTE DE SECTION FORM -->
+
+      <!--IMAGE 2-->
+      <div class="section1-img">
+        <div class="article">
+        </div>
+      </div>
+
+      <!-- bouton remonter -->
+      <a href="#">
+        <div class="back-to-top bg-success d-flex align-items-center justify-content-center">
+          remonter
+        </div>
+      </a>
+
+    </main>
+
+    <!--ASIDE-->
+
+    <aside class="aside"><!--d-flex flex-direction-column bolder border-success-->
+      <div class="aside-nav">
+        <h5>images</h5>
+        <a href="#">Banques images</a>
+        <!-- https://www.photospapillons.com/papillons-de-france.php -->
+        <a href="../pages/gallery-index.html">Galerie images</a><!--./Galerie-index.html-->
+      </div>
+
+      <div class="aside-nav"><!-- d-flex flex-direction-column-->
+        <h5>Évènements</h5>
+        <a href="../pages/calendar.html">Agenda</a>
+        <a href="../pages/assos.html">assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sortie</h5>
+        <a href="../php/horaires_bis.php">Musee</a><!--./musée.html-->
+        <a href="../pages/exposition.html">exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>site web</h5>
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+          target="_blank">Actualité</a>
+        <a href="../pages/recherche_wiki.html">recherche wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>identifier</h5>
+        <a href="../pages/identification.html">quel est ce papillon</a>
+        <a href="../pages/fiche-details.html">page lepidoptera</a>
+      </div>
+
+    </aside>
+  </div><!--Fin de content-->
+
+  <!-- bouton remonter -->
+  <a href="#">
+    <div class="back-to-top bg-success d-flex align-items-center justify-content-center">
+      remonter
+    </div>
+  </a>
+
+  <!--MISE A JOUR-->
+  <div class="Time">
+    <p>
+      <Time datetime="2022-08-13T20:00+00:00">Mis a jours le: 16 Fevrier 2023 09:58:38</time>
+    </p>
+  </div>
+
+  <!--FOOTER--><!--
+  <footer class="blockfooter">
+    <div class="block">
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">informations</h5>
+          <a href="../rgpd/mentions_légales.html">mention
+            légale</a> --> <!--../obligations_légales/mentions_légales.html" class="mention--> <!--
+          <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+        </div>
+      </div>
+
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">nous contacter</h5>
+          <a href="tel:+336250214" class="contact">06 25 02 14</a>
+          <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+        </div>
+      </div>
+    </div>
+  </footer>-->
+
+  <!-- FOOTER -->
+  <footer class="blockfooter">
+    <div class="block-ftr"><!---->
+      <div class="content-footer">
+        <div class="footer-1">
+          <div class="mention-1">
+            <h5 class="cl-mention">informations</h5>
+            <a href="../rgpd/mentions_légales.html" class="cl-mention">mention légale</a>
+            <a href="./a-propos-ecf.html" class="cl-mention">A propos de cette ECF</a>
+          </div>
+        </div>
+
+        <div class="footer-2">
+          <div class="mention-2">
+            <h5 class="cl-contact">nous contacter</h5>
+            <a href="tel:+336250214" class="cl-contact">06 25 02 14</a>
+            <a href="mailto:entomologie-asso@example.com" class="cl-contact">Envoyer un courriel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--</container>-->
+
+  <!--<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("../php/recuperer_commentaires.php")
+            .then(response => response.json())
+            .then(data => {
+                const zoneCommentaires = document.getElementById("zone_commentaires");
+                if (data.length > 0) {
+                    data.forEach(commentaire => {
+                        const comDiv = document.createElement("div");
+                        comDiv.className = "com";
+                        comDiv.innerHTML = `<p>${commentaire.text}</p><span>Par ${commentaire.name} le ${commentaire.date}</span>`;
+                        zoneCommentaires.appendChild(comDiv);
+                    });
+                } else {
+                    zoneCommentaires.innerHTML = "Aucun commentaire pour le moment.";
+                }
+            })
+            .catch(error => {
+                console.error("Erreur lors de la récupération des commentaires :", error);
+            });
+    });
+    </!->-->
+
+  <script src="../scripts/comments_script.js"></script><!---->
+</body>
+
+</html>
+
+<!--
+C:\xampp\
+|   config\
+│   └── config.php
+C:\xampp\htdocs\Mon_projet\
+├── index.html
+├── styles/
+│   ├── avis_style.css
+│   ├── calendar_style.css
+│   ├── contact_style.css
+│   ├── inscription_style.css
+│   └── styles.css
+├── scripts/
+│   ├── inscription.js
+│   ├── contact_script.js
+│   ├── comments_script.js
+│   ├── calendar_script.js
+│   ├── avis.js
+│   ├── load-content.js
+│   ├── main.js
+│   ├── papillons.js
+│   ├── gallery.js
+│   └── script.js
+├── data/
+│   ├── content.json
+│   ├── events.json
+│   └── papillons.json
+├── php/
+│   ├── admin_login.php 
+│   ├── ajouter_commentaire.php 
+│   ├── csrf_token.php  
+│   ├── get_events.php
+│   ├── inscription.php
+│   ├── moderate_comments.php 
+│   ├── process_comment.php
+│   ├── process_contact.php
+│   ├── recupeter_commentaires.php
+│   ├── session_init.php
+│   ├── session_init_contact.php
+│   ├── submit_avis.php
+│   ├── submit_contact.php  
+│   └── submit_inscription.php
+├── pages/
+│   ├── agenda.html
+│   ├── a-propos-ecf.html
+│   ├── assos.html
+│   ├── blog.html
+│   ├── calandar.html
+│   ├── contact.html
+│   ├── exposition.html
+│   ├── fiche_details.html
+│   ├── galerie-index.html
+│   ├── identification.html
+│   ├── inscription.html
+│   ├── musée.html
+│   ├── page-dediee.html
+│   ├── qui_somme_nous.html
+│   ├── recherche_wiki.html
+│   ├── sommaire.html
+│   └── thank_you.html
+├── rgpd/
+│   └── mentions_legales.html
+├── images3/
+│   ├── photo1.jpg
+│   ├── photo2.jpg
+│   ├── photo3.jpg
+│   ├── photo4.jpg
+│   ├── photo5.jpg
+│   ├── photo6.jpg
+│   └── photo_.jpg
+└── assets/
+    └── images/
+        ├── insect-biology.jpg
+        ├── insect-habitats.jpg
+        └── ecosystem-roles.jpg
+-->

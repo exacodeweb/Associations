@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie des Papillons-Test</title>
+    <!--<link rel="stylesheet" href="../style/..style(x1).css">-->
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--FontAwesome Kit-->
+    <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+    <link rel="stylesheet" href="../style/header_style.css">
+    <link rel="stylesheet" href="../style/contenu_style.css">
+    <link rel="stylesheet" href="../style/footer_style.css">
+
+      <style>
+        body {
+            background: lightgoldenrodyellow;
+            margin: 0;
+        }
+        /*
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: mediumorchid;
+            padding: 10px;
+        }
+
+        .logo {
+            color: white;
+            margin-left: 10px;
+            font-family: "Tangerine", serif;
+            font-weight: 590;
+            text-shadow: 4px 4px 4px blue;
+            font-size: 55px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: white;
+            margin: 0 10px;
+        }
+
+        .link-nav {
+            color: white;
+            font-size: 16px;
+        }
+
+        .link-nav:hover {
+            color: lightblue;
+        }
+
+        .breadcrumb {
+            width: 400px;
+        }
+
+        .breadcrumb-item {
+            max-width: 100%;
+            background: none;
+            margin-bottom: 10px;
+            margin: 10px 20px;
+        }
+
+        .link-rep {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        */
+
+
+        /*.content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin-left: 10px;
+            background: #fbfbf9;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+        }
+
+        h1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2.0em;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 10px 50px;
+        }
+
+        .card {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid grey;
+        }
+
+        img {
+            border-radius: 5px;
+            height: 150px;
+            max-width: 250px !important;
+        }
+
+        figcaption,
+        #fig {
+            width: 50%;
+        }
+
+        figure,
+        figcaption,
+        .fig {
+            width: 30% !important;
+        }
+
+        h2 {
+            color: #0000ff;
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+
+        h2, p {
+            padding: 5px;
+        }
+
+        p {
+            height: 100px;
+        }
+
+        .button,
+        .submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0 10px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            width: 160px;
+            height: 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            background: mediumorchid;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background: rgb(211, 85, 163);
+        }
+
+        .submit {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .aside {
+            float: right;
+            flex-direction: column;
+            width: 26%;
+            margin-right: 10px;
+            padding: 4px;
+            border-radius: 5px;
+            height: 590px;
+            box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+        }
+
+        .aside-nav {
+            display: flex;
+            flex-direction: column;
+            background: #fbfbf9;
+            margin-bottom: 20px;
+            height: 100px;
+            padding: 4px;
+            box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+        }
+
+        .aside-link {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid green;
+        }
+
+        .mention-1 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            color: blue;
+            padding: 10px;
+            margin-right: 40px;
+        }
+
+        .mention-2 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            color: blue;
+            padding: 10px;
+            margin-left: 40px;
+        }
+
+        .cl-mention {
+            display: flex;
+            flex-direction: row;
+            text-align: left;
+            width: 200px;
+            color: blue;
+        }
+
+        .cl-contact {
+            display: flex;
+            flex-direction: row;
+            text-align: left;
+            width: 200px;
+            color: blue;
+        }*/
+
+
+
+        /*
+        .blockfooter {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: #7dc95e;
+            color: white;
+            height: 125px;
+            width: 100%;
+        }
+
+        .block-ftr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        .content-footer {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: space-around;
+            align-items: center;
+            width: 70%;
+        }
+        */
+        a {
+            color: #0000ff;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 576px) {
+            .header,
+            .menu,
+            .breadcrumb-item,
+            .blockfooter,
+            .block {
+                font-size: 12px;
+            }
+        }
+        
+        /*@media screen and (max-width: 768px) {
+            .header {
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                max-width: 100%;
+                align-content: center;
+            }
+
+            .logo {
+                display: flex;
+                flex-direction: row;
+                font-size: 6.11vh;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: column !important;
+                font-size: 12px !important;
+                max-width: 100%;
+                text-align: center;
+                background-color: blueviolet;
+                margin: 0 10px;
+            }
+
+            .link-nav {
+                font-size: 12px !important;
+            }
+            */
+
+
+            /*.content,
+            .main,
+            .aside {
+                flex-direction: column;
+                width: 100%;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .main {
+                margin: 0;
+                width: auto;
+            }
+
+            .card {
+                width: auto;
+            }
+
+            .button {
+                padding: 8px 16px;
+                font-size: 14px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+          }*/
+
+
+            /*
+            .blockfooter {
+                font-size: 12px;
+                flex-direction: column;
+                justify-content: center !important;
+                align-content: center !important;
+                align-items: center !important;
+                padding: 20px;
+                height: auto;
+            }
+
+            .block,
+            .contact,
+            .mention,
+            .text-dark {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                margin: 0;
+            }
+
+            .content-footer {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mention-1,
+            .mention-2,
+            .cl-mention,
+            .cl-contact {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                margin: 0;
+            }
+        }
+            */
+      </style>
+</head>
+
+<body>
+
+
+  <body>
+    <!--HEADER-->
+    <nav class="header">
+        <div class="logo">Ailes-Enchantées</div>
+        <!--MENU-->
+        <div class="menu">
+            <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+            <a href="./blog.html" title="Blog" class="link-nav m-2">Blog</a>
+            <a href="./Agenda.html" title="Évènements" class="link-nav m-2">Évènements</a>
+            <a href="./qui_somme_nous.html" title="Qui sommes nous" class="link-nav m-2">Qui sommes nous ?</a>
+            <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+            <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+        </div>
+    </nav>
+
+    <!--FIL D'ARIANE-->
+    <div class="breadcrumb-item">
+        <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+        <a href="../index.html" class="link-rep">Acceuil</a> > Galerie
+    </div>
+
+    <!--
+    <header class="header">
+        <div class="logo">
+            <h1>Galerie des Papillons</h1>
+        </div>
+        <nav class="menu">
+            <a class="link-nav" href="../index.html">Accueil</a>
+            <a class="link-nav" href="../pages/galerie.html">Galerie</a>
+            <a class="link-nav" href="../pages/apropos.html">À propos</a>
+            <a class="link-nav" href="../pages/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="../pages/galerie.html">Galerie</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Galerie des Papillons</li>
+        </ol>
+    </div>
+    -->
+    <!--
+    <div class="content">
+        <main class="main">
+            <h2>Galerie des Papillons</h2>
+            <div class="gallery">
+                <figure class="card">
+                    <img src="../images/papillon1.jpg" alt="Papillon 1">
+                    <figcaption>Papillon 1</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/papillon2.jpg" alt="Papillon 2">
+                    <figcaption>Papillon 2</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/papillon3.jpg" alt="Papillon 3">
+                    <figcaption>Papillon 3</figcaption>
+                </figure>
+            </div>
+        </main>
+
+        <aside class="aside">
+            <nav class="aside-nav">
+                <a class="aside-link" href="../pages/apropos.html">À propos</a>
+                <a class="aside-link" href="../pages/contact.html">Contact</a>
+                <a class="aside-link" href="../pages/mentions.html">Mentions légales</a>
+            </nav>
+        </aside>
+    </div>
+    -->
+
+
+
+
+
+
+    <div class="content">
+      <!--<h1>Galerie des Papillons</h1>-->
+      <div class="main">
+    
+        <!---->
+        <div class="article">
+        <h1 class="title">Galerie des Papillons</h1>
+        </div>
+        <div class="gallery"></div>
+        <!---->
+    
+        <!--</div>-->
+    </div>
+        <!--- ASIDE -->
+        <aside class="aside">
+          <div class="aside-nav">
+            <h5>images</h5>
+            <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+            <a href="./Galerie-index.html">Galerie images</a>
+          </div>
+          
+          <div class="aside-nav">
+            <h5>Évènements</h5>
+            <a href="./calendar.html">Agenda</a>
+            <a href="./assos.html">assemblé</a>
+          </div>
+    
+          <div class="aside-nav">
+            <h5>Les sortie</h5>
+            <a href="./musée.html">Musée</a>
+            <a href="./exposition.html">exposition</a>
+          </div>
+    
+          <div class="aside-nav">
+            <h5>site web</h5>
+            <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+              target="_blank">Actualité</a>
+            <a href="./recherche_wiki.html">recherche wikipedia</a>
+          </div>
+    
+          <div class="aside-nav">
+            <h5>identifier</h5>
+            <a href="./identification.html">quel est ce papillon</a>
+            <a href="./fiche-details.html">page lepidoptera</a>
+          </div>
+        </aside>
+
+    <!--- ASIDE --><!--
+    <aside class="aside">
+        <div class="aside-nav">
+            <h5>images</h5>
+            <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+            <a href="./Galerie-index.html">Galerie images</a>
+        </div>
+
+        <div class="aside-nav">
+            <h5>Évènements</h5>
+            <a href="./calendar.html">Agenda</a>
+            <a href="./assos.html">assemblé</a>
+        </div>
+
+        <div class="aside-nav">
+            <h5>Les sortie</h5>
+            <a href="./musée.html">Musée</a>
+            <a href="./exposition.html">exposition</a>
+        </div>
+
+        <div class="aside-nav">
+            <h5>site web</h5>
+            <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/" target="_blank">Actualité</a>
+            <a href="./recherche_wiki.html">recherche wikipedia</a>
+        </div>
+
+        <div class="aside-nav">
+            <h5>identifier</h5>
+            <a href="./identification.html">quel est ce papillon</a>
+            <a href="./fiche-details.html">page lepidoptera</a>
+        </div>
+    </aside>-->
+
+  </div>
+
+    <!-- FOOTER -->
+    <footer class="blockfooter">
+      <div class="block-ftr"><!---->
+            <div class="content-footer">
+              <div class="footer-1">
+                  <div class="mention-1">
+                      <h5 class="cl-mention">informations</h5>
+                      <a href="../rgpd/mentions_légales.html" class="cl-mention">mention légale</a>
+                      <a href="./a-propos-ecf.html" class="cl-mention">A propos de cette ECF</a>
+                  </div>
+              </div>
+      
+              <div class="footer-2">
+                  <div class="mention-2">
+                      <h5 class="cl-contact">nous contacter</h5>
+                      <a href="tel:+336250214" class="cl-contact">06 25 02 14</a>
+                      <a href="mailto:entomologie-asso@example.com" class="cl-contact">Envoyer un courriel</a>
+                  </div>
+              </div>
+            </div>
+      </div>
+    </footer>
+      
+    <script src="../scripts/gallery(3).js"></script>
+</body>
+
+</html>

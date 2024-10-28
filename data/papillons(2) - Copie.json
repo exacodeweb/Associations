@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "Papillon Monarque",
+    "description": "Le papillon monarque est un des papillons les plus connus d'Amérique du Nord.",
+    "image": "monarque.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Papillon Machaon",
+    "description": "Le papillon machaon est un grand papillon de jour.",
+    "image": "machaon.jpg"
+  }
+]
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+[
+  {
+      "id": 1,
+      "name": "Aglais urticae",
+      "commonName": "La petite tortue",
+      "description": "Un papillon commun en Europe.",
+      "image": "../images3/photo1.jpg"
+  },
+  {
+      "id": 2,
+      "name": "Araschnia levana",
+      "commonName": "La carte géographique",
+      "description": "Un papillon commun en Europe.",
+      "image": "../images3/photo3.jpg"
+  }
+  // Ajoutez les autres papillons ici...Araschnia_levana_(La-carte-géographique)
+]

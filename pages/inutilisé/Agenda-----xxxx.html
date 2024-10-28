@@ -1,0 +1,1261 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <title>ECF-Agenda</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome (kit icones)-->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+  <!--style de police d'ecriture-->
+  <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+  <link href="https://fr.allfont.net/allfont.css?fonts=andantino-script" rel="stylesheet" type="text/css">
+  <link href="https://fr.allfont.net/allfont.css?fonts=calligraph" rel="stylesheet" type="text/css">
+
+  <!-- CAROUSEL BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
+    type="text/css">
+
+  <style>
+    /*--------------------------------------------------------------------------------------------------------------*/
+    body {
+      background: lightgoldenrodyellow;
+      background-position: 100% 100%;
+      margin: 0px;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------*/
+    /*
+      .container {
+      /*margin: 0px;*/
+    /*
+      width: 100%;/*
+      }*/
+
+    /*------------------------------------------------------------------------------------------------------ENTETE--*/
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 160px;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+    }
+
+    /*--------------------------------------------------------------------------------------------------BLOCK-LOGO--*/
+    .logo {
+      display: flex;
+      color: white;
+      margin-left: 10px;
+      font-family: "Tangerine", serif;
+      font-weight: 590;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+    }
+
+    /*--------------------------------------------------------------------------------------------------BLOCK-MENU--*/
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 80px;
+      /* 24 / 80 pixels */
+      align-items: center;
+      color: white;
+      margin-right: 25px;
+      margin-left: 10px;
+      /* 24 / 10 pixels */
+    }
+
+    /*------------------------------------------------------------------------------------------------ARRIERE-PLAN--*/
+
+    .link-nav {
+      color: white;
+    }
+
+    .link-nav:hover {
+      color: lightblue;
+    }
+
+    .section-1:hover {
+      /*--agenda--*/
+      background: #f0ffff;
+      /*opacity: 0.5;*/
+    }
+
+    /*------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+
+    .breadcrumb {
+      width: 400px;
+    }
+
+    .breadcrumb-item {
+      max-width: 100%;
+      background: none;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .link-rep {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .calendar {
+      display: flex;
+      flex-direction: row;
+      width: 20%;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------*/
+    .button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------CONTENT--*/
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------MAIN--*/
+    .main {
+      float: left;
+      flex-direction: column;
+      width: 70%;
+      /*70% du parent "content"*/
+      margin-left: 10px;
+      background: #fbfbf9;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    /*----------------------------------------------------------------------------------------------------ARTICLES--*/
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      width: 100%;
+    }
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      /*align-items: left;*/
+      text-align: justify;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 12px;
+      margin-bottom: 50px;
+    }
+
+    .subtitle {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #0000ff;
+    }
+
+    h2 {
+      color: #0000ff;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    h3 {
+      display: flex;
+      justify-content: center;
+    }
+
+    h4 {
+      display: flex;
+      justify-content: center;
+      color: #0000ff;
+    }
+
+    .title,
+    strong {
+      color: #0000ff;
+    }
+
+    hr {
+      height: 2px;
+      color: blue;
+    }
+
+    p {
+      margin-left: 0px;
+      color: black;
+      text-align: justify;
+    }
+
+    /*-------------------------------------------------------------------------------------------------LIEN ANCRES--*/
+
+    .link-page {
+      padding: 20px;
+      width: 20%;
+      font-size: 18.72px;
+      font-weight: 600;
+      margin-bottom: 1px;
+    }
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+      margin-top: 10px;
+      text-decoration: underline;
+      font-size: 1.2em;
+    }
+    /*------------------------------------------------------------------*/
+    .btn-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+
+      .link-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 160px; /*150px*/
+        border-radius: 50px;
+        text-decoration: none !important;
+        background-color:mediumorchid!important;/*#0145b5*/
+        color: white;
+      }
+
+      .link-btn:hover {
+        background-color:rgb(211, 85, 163)!important;/*green*/
+      }
+
+
+    /*------------------------------------------------------------------*/
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 10px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    /*-----------------------------------------------------------------------------------------------BLOCK-E-ICONS--*/
+    .block-e-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .card-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
+
+    /*----------------------------------------------------------------------------------------------BLOCK-1 IMAGES--*/
+    .block1-img {
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+      border: 2px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      height: auto;
+      margin-bottom: 50px;
+    }
+
+    .section-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 270px;
+      margin: 5px;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+      /*--------------------------------------------------*/
+      box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+        rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+      border-radius: 10px 10px 10px 10px;
+      border: 1px solid grey;
+    }
+
+    .subsection {
+      padding: 5px;
+    }
+
+    .card-img-top {
+      height: 100%;
+      width: 270px !important;
+      object-fit: cover;
+    }
+
+    .img-fig {
+      height: 150px;
+      width: 270px;
+    }
+
+    /*---------------------------------------------------------------------------------------------------FIGAPTION--*/
+
+    figure {
+      margin-bottom: 0px;
+    }
+
+    figcaption {
+      /*background-color: #222;*/
+      background-color: #222;
+      /*none*/
+      /*color: #fff;*/
+      color: black;
+      font: italic smaller sans-serif;
+      text-align: center;
+      height: auto;
+      /*150px*/
+      width: 170px;
+      /*100%*/
+      font-size: 15px;
+      border-radius: 5px;
+    }
+
+    img {
+      border-radius: 5px;
+      border: 1px solid blue;
+      /*width: vh;*/
+      object-fit: cover;
+    }
+
+    /*----------------------------------------------------------------------------------------------BLOCK-2 IMAGES--*/
+    .block-2-img {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .section-2 {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      width: 90%;
+      border: 2px solid white;
+      margin-bottom: 30px;
+    }
+
+    .card-img {
+      width: 100%;
+      object-fit: cover;
+      height: 65.89785831960461vh;
+      /*400px*/
+    }
+
+    /*-------------------------------------------------------------------------------------------BAR DE PAGINATION--*/
+    .paging-bar {
+      margin-bottom: 50px;
+    }
+
+    /*----------------------------------------------------------------------------------------------BLOCK-3 IMAGES--*/
+    .block-3 {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      width: 100%;
+      margin-bottom: 100px;
+    }
+
+    .section-3 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 600px;
+      align-content: center;
+      height: auto;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+    }
+
+    /*--------------------------------------------------------------------------------------------------- CAROUSEL--*/
+
+    .ctrl-prev {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #7dc95e;
+      border-radius: 50%;
+      border: 1px solid white;
+      padding: 0px;
+      width: 20px;
+      height: 20px;
+      opacity: 0.7;
+    }
+
+    .ctrl-prev:hover,
+    .carousel-control-prev-icon {
+      opacity: 1;
+    }
+
+    .carousel-control-next-icon {
+      background-color: #7dc95e;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+
+    .content-carousel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .section-carousel {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 90%;
+      padding: 10px;
+      background: #ffff;
+      border-radius: 15px;
+    }
+
+    .d-block {
+      width: 100%;
+      height: 300px;
+    }
+
+    .A {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      color: transparent;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------*/
+
+    .section-5 {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+    }
+
+    .card5-img {
+      width: 170px;
+      /*50px*/
+      height: 100px;
+      /*50px*/
+      background-color: palegreen;
+      /*object-fit: cover;*/
+    }
+
+    .article5 {
+      margin-left: 10px;
+      width: 100%;
+      text-align: justify;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------ASIDE--*/
+    .aside {
+      float: right;
+      flex-direction: column;
+      width: 26%;
+      /*22% du parent "content"*/
+      margin-right: 10px;
+      padding: 4px;
+      border-radius: 5px;
+      height: 590px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-nav {
+      display: flex;
+      flex-direction: column;
+      background: #fbfbf9;
+      margin-bottom: 20px;
+      height: 100px;
+      padding: 4px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-link {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+
+    /*------------------------------------------------------------------------------------------------------FOOTER--*/
+
+    .blockfooter {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #7dc95e;
+      color: white;
+      height: 150px;
+      width: 100%;
+    }
+
+    .block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      width: 50%;
+      margin-left: 80px;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    .mention {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    a {
+      color: #0000ff;
+      text-decoration: none;
+    }
+
+
+    /*--------------------------------------------------------------------------------------------------------------*/
+    .titre {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .title,
+    strong {
+      color: #0000ff;
+    }
+
+    /*-------------------------------------------------------MEDIA QUERY--------------------------------------------*/
+
+    @media screen and (max-width: 320px) and (min-width: 576px) {
+
+      .menu,
+      .breadcrumb-item,
+      .link-nav,
+      nav {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+
+      .link,
+      .link-int,
+      span,
+      menu {
+        font-size: 12px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-content: center;
+        align-items: center;
+        text-align: left;
+        height: 40px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .menu {
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        font-size: 12px;
+        max-width: 100%;
+        text-align: center;
+        background-color: blueviolet;
+        height: auto;
+        margin-right: 15px;
+        margin-left: 10px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 5px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+
+      .main,
+      .aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      .breadgroumb {
+        width: 100%;
+      }
+    }
+
+    /*------------------------------------------------------------------------------------------------------FOOTER--*/
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+
+      .block,
+      .contact,
+      .mention,
+      .text-dark {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      .aside {
+        padding: 0px;
+        margin-top: 10px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+
+      .section-3,
+      .section-5 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .article5 {
+        margin-left: 0px;
+      }
+    }
+
+    @media screen and (min-width: 577px) and (max-width: 900px) {
+
+      .section-3,
+      .section-5 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .article5 {
+        margin-left: 0px;
+      }
+    }
+
+    /*-------------------------------------------------------------------------------------------------- CAROUSEL --*/
+    @media screen and (min-width: 320px) and (max-width: 799px) {
+      .content-carousel {
+        display: flex;
+        flex-direction: column;
+        /*row*/
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0px;
+      }
+
+      .section-carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        /*34.375em*/
+        /*60%*/
+        height: auto;
+      }
+
+      .d-block {
+        width: 100%;
+        height: 200px;
+        /*100px*/
+        /*aspect-ratio: 16/9;*/
+        object-fit: cover;
+      }
+
+      .A {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    /*-- CAROUSEL -->*/
+    @media screen and (min-width: 800px) and (max-width: 1300px) {
+      .content-carousel {
+        display: flex;
+        flex-direction: column;
+        /*row*/
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0px;
+      }
+
+      .section-carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        /*34.375em*/
+        /*60%*/
+        height: auto;
+      }
+
+      .d-block {
+        aspect-ratio: 16/9;
+      }
+
+      .A {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--BLOCK-HEADER-->
+  <!--<container>-->
+  <nav class="header">
+    <div class="logo">Entomologie</div>
+    <!--OPTION MENU BURGER-->
+    <!--
+        <label for="toggle">☰</label>
+        <input type="checkbox" id="toggle">
+      -->
+    <!--
+        <label for="toggle">☰</label>
+        <input type="checkbox" id="toggle">
+      -->
+
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="./blog.html" title="Blog" class="link-nav m-2">Blog</a>
+
+      <a href="./Agenda.html" title="A propos" class="link-nav m-2">Évènements</a>
+
+      <a href="./qui_somme_nous.html" title="Qui somme nous" class="link-nav m-2">Qui sommes nous ?</a>
+      <a href="https://www.facebook.com/forum.lepidoptera/" title="Forum" class="link-nav m-2" target="_blank">Forum</a>
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </nav>
+
+  <!--FIL D'ARIANE-->
+  <div class="breadcrumb-item">
+    <!--VOUS ÊTES ICI:-->
+    <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+    <a href="../index.html" class="link-rep">Acceuil</a> > agenda
+  </div>
+
+  <!--BLOCK-CONTENER-->
+
+  <div class="content">
+    <!--MAIN-->
+    <main class="main">
+      <div class="article">
+        <h2 class="title">JUIN ÉVÈNEMENTS 2022<br> La Métamorphose de l'Aglais urticae</h2>
+        <!--<h4>--><!--ce mois ci: Aglais urticae-puppe--><!--Juin Événements 2023 :--> <!--<br> La Métamorphose de l'Aglais urticae</h4>-->
+        <p>
+          <!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+          asperiores architecto ex ratione eum. Quidem.<br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+          alias molestiae nulla eaque iste praesentium similique culpa ab,
+          vero sit sunt magni, commodi possimus suscipit.-->
+          <p>
+          Bienvenue à notre page dédiée aux événements de juin 2022. Ce mois-ci, nous mettons en avant un 
+          spectacle naturel fascinant : la métamorphose de l'Aglais urticae, également connue sous le nom de 
+          Petite Tortue. Ce papillon, célèbre pour ses couleurs vives et ses motifs distinctifs, 
+          traverse un cycle de transformation impressionnant qui mérite d'être observé et célébré.</p><br>
+          <P>
+          <strong>détaillée</strong> <br>
+          La métamorphose de l'Aglais urticae commence par le stade de la chenille, où elle se nourrit 
+          principalement de feuilles d'ortie. Après plusieurs semaines de croissance, elle entre en phase de chrysalide, 
+          où elle subit une transformation majeure. Enfin, l'adulte émerge avec des ailes éclatantes et colorées, 
+          prêt à explorer et à polliniser nos jardins.<br>
+          
+          <strong>Importance écologique</strong><br>
+          Ce processus n'est pas seulement fascinant à observer, mais il joue également un rôle crucial dans 
+          nos écosystèmes. Les chenilles aident à contrôler la population de leurs plantes hôtes, 
+          tandis que les adultes participent à la pollinisation de nombreuses fleurs sauvages. 
+          En observant et en protégeant l'Aglais urticae, nous contribuons à la biodiversité et à 
+          la santé de notre environnement.<br>
+          
+          <strong>Événement à ne pas manquer</strong><br>
+          Ce mois-ci, prenez le temps de visiter nos jardins et nos espaces naturels pour observer cette 
+          métamorphose incroyable. Participez à nos ateliers et conférences pour en apprendre 
+          davantage sur l'Aglais urticae et d'autres espèces de papillons qui habitent nos régions. Ensemble, 
+          célébrons la beauté et l'importance de ces créatures dans nos vies.
+
+        </p>
+      </div>
+      <!--BLOCK-NAV-->
+      <!--intégrer l'icônes de Bootstrap: calendar-->
+      <p class="card-text">
+
+        <!--intégrer l'icônes de Bootstrap: calendar--><!--
+        <p class="card-text flex-row">-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+          class="bi bi-calendar3 text-primary" viewBox="0 0 16 16">
+          <path
+            d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+          <path
+            d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+        </svg>
+        <!--<a class="md-2" href="./agenda.html">Agenda</a>
+        </p>-->
+
+        <!--aujourd'hui-->
+        <a class="pl-2">Les dates</a><!--href="./calendar.html" -->
+      </p>
+
+      <!--
+      <a class=".link-page w-250 d-flex flex-column text-center" href="./calendar.html">-->
+        <!--<h5 class="link">voir les dates à l'agenda</h5>-->
+      <!--</a>-->
+
+      <div class="btn-card">
+        <a href="./calendar.html"
+          class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez">Agenda<!--inscrivez-vous ici-->
+        </a>
+      </div>
+
+
+      <hr>
+      <!--BLOCK IMAGE 1-->
+      <div class="block1-img">
+        <!--SECTION IMAGE 1-->
+        <div class="section-1">
+          <figure>
+            <figcaption class="img-fig">
+              <img src="../images3/220300.jpg" class="card-img-top rounded-3 w-250 h-150" alt="image chenille">photo:
+              2018
+            </figcaption>
+          </figure>
+
+          <!--article-->
+          <div class="subsection">
+            <p>
+              les dates<br>
+              du --/--/----
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Debitis, qui.
+            </p>
+          </div>
+
+          <div class="btn-card">
+            <a href="#"
+              class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez">-------<!--inscrivez-vous ici-->
+            </a>
+          </div>
+
+        </div>
+        <!--SECTION IMAGE 2-->
+        <div class="section-1">
+          <figure>
+            <figcaption class="img-fig">
+              <img src="../images3/102959.jpg" class="card-img-top rounded-3 w-250 h-150" alt="images chrisalide">photo:
+              2018
+            </figcaption>
+          </figure>
+
+          <!--<article>-->
+          <div class="subsection">
+            <p>
+              les dates<br>
+              du --/--/----
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Debitis, qui.
+            </p>
+          </div>
+
+          <div class="btn-card">
+            <a href="#"
+              class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez">-------<!--inscrivez-vous ici-->
+            </a>
+          </div>
+
+        </div>
+        <!--SECTION IMAGE 3-->
+        <div class="section-1">
+          <figure>
+            <figcaption class="img-fig">
+              <img src="../images3/Aglais_urticae_LC0310.jpg" class="card-img-top rounded-3 w-250 h-150"
+                alt="image papillon photo de: yuichi-kageyama-4ByFHyNdoD4-unsplash">photo: 2018
+              <!--photo de: yuichi-kageyama-4ByFHyNdoD4-unsplash.jpg-->
+            </figcaption>
+          </figure>
+
+          <!--<article>-->
+          <div class="subsection">
+            <p>
+              les dates<br>
+              du --/--/----
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Labore, culpa?
+            </p>
+          </div>
+
+          <div class="btn-card">
+            <a href="#"
+              class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez">-------<!--inscrivez-vous ici-->
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <article>
+        <h4>Aglais urticae-puppe</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+          asperiores architecto ex ratione eum. Quidem.<br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+          alias molestiae nulla eaque iste praesentium similique culpa ab,
+          vero sit sunt magni, commodi possimus suscipit.
+        </p>
+      </article>
+
+      <!--BLOCK IMAGE-2--><!--
+          <div class="section-2">
+            <img
+              class="card-img d-flex align-content-center align-items-center justify-content-center rounded-3"
+              src="../images3/mon-image-N.jpg"
+              alt="Un exemple"
+            >
+          </div>
+        </div>-->
+
+      <!-- CAROUSEL BOUTSTRAP 3 -->
+      <!-- Source: https://getbootstrap.com/docs/5.3/components/carousel/ -->
+      <div class="content-carousel">
+        <div class="section-carousel">
+          <!-- INDICATEURS -->
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <a href="./Galerie-index.html"><!-- lien vers page -->
+                  <img class="d-block" src="../images3/Capture_d’écran_2023-05-24_213845_(1).jpg" alt="First slide"
+                    title="carousel">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="A">First slide label</h5>
+                  <p>
+                    Visiter
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="d-block" src="../images3/102959.jpg" alt="Second slide" title="carousel">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="A">Second slide label</h5>
+                  <!--<p>
+                    galerie photos! cliquer sur l'image
+                  </p>-->
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img class="d-block" src="../images3/conference-5308938_1280_(1).jpg" alt="Third slide"
+                  title="carousel">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="A">-Third slide label</h5>
+                  <p>
+                    cliquer sur l'image
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="">galerie photos</div>
+
+            <!--CONTROL PREV -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <div class="ctrl-prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </div>
+            </a>
+
+            <!--CONTROL NEXT-->
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="btn-group-grid">
+          <a href="./Ressource/Galerie-index-v-bis.html" class="link-btn-grid text-white text-decoration-none"
+            title="occasions">
+            Voir plus !
+          </a>
+        </div>
+      </div>
+
+      <!--IMAGES BLOCK-3-->
+      <div class="block-3">
+        <div class="section-5">
+          <div class="text-width-img"><!--https://picsum.photos/150/100?random=1-->
+            <figure>Récemment !
+              <figcaption>
+                <img src="../images3/butterfly-85628_640Image_par_12019_de_Pixabay.jpg" class="card5-img rounded-3 "
+                  alt="images"><!--w-150 h-80-->
+              </figcaption>
+            </figure>
+            <p class="article5"><!-- class="article5"-->
+              <!--Récemment !<br>-->
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
+              commodi eum consequatur amet illum molestiae incidunt inventore
+              mollitia sint rem. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Neque commodi eum consequatur amet illum
+              molestiae incidunt inventore mollitia sint rem.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-5">
+          <div class="text-width-img"><!--https://picsum.photos/150/100?random=2-->
+            <figure>Récemment !
+              <figcaption>
+                <img src="../images3/butterfly-3559186_640Image_par_Ralph_de_Pixabay.jpg" class="card5-img rounded-3 "
+                  alt="images"><!--w-150 h-80-->
+              </figcaption>
+            </figure>
+            <p class="article5"><!-- class="article5"-->
+              <!--Récemment !<br>-->
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
+              commodi eum consequatur amet illum molestiae incidunt inventore
+              mollitia sint rem. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Neque commodi eum consequatur amet illum
+              molestiae incidunt inventore mollitia sint rem.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-5">
+          <div class="text-width-img"><!--https://picsum.photos/250/150?random=3-->
+            <figure>Atelier decouverte
+              <figcaption>
+                <img src="../images3/Parnassius_apollo_(Le-Grand-Apollon).jpg" class="card5-img rounded-3"
+                  alt="images"><!--w-25 h-100-->
+              </figcaption>
+            </figure>
+            <p class="article5">
+              <!--Atelier decouverte<br>-->
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
+              commodi eum consequatur amet illum molestiae incidunt inventore
+              mollitia sint rem. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Neque commodi eum consequatur amet illum
+              molestiae incidunt inventore mollitia sint rem.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <hr class="bg-success w-50">
+      <!---->
+      <article>
+        <h4 class="subtitle">Sciences participatives</h4>
+        <p>
+          Participé a l'operation de Rescencement des papillons, aidez les
+          scientifiques dans la connaissances des papillons Pour participer,
+          c’est très simple, nul besoin d’être un spécialiste ! Le comptage
+          des papillons peut s’effectuer dans un jardin privé, public ou sur
+          un balcon. Une fois que vous avez localisé et décrit votre jardin,
+          vous pouvez commencer à observer.
+          <a class="d-flex w-250 flex-column" href=" https://www.sciences-participatives-au-jardin.org/edito/papillons"
+            target="_blank">Rescencement des papillons</a>
+        </p>
+      </article>
+    </main>
+
+    <!--ASIDE-->
+    <aside class="aside">
+      <div class="aside-nav">
+        <h5>images</h5>
+        <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+        <a href="./Galerie-index.html">Galerie images</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Évènements</h5>
+        <a class="md-2" href="./calendar.html">Agenda</a><!--https://calendar.google.com/calendar/u/0/r?pli=1-->
+        <a href="./assos.html">assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sortie</h5>
+        <a href="./musée.html">Musée</a>
+        <a href="./exposition.html">exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>site web</h5>
+
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+          target="_blank">Actualité</a>
+
+        <a href="./recherche_wiki.html">recherche wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>identifier</h5>
+        <a href="./identification.html">quel est ce papillon</a>
+        <a href="./fiche-details.html">page lepidoptera</a>
+      </div>
+    </aside>
+  </div>
+  <!--fin de content-->
+
+  <!--FOOTER-->
+  <footer class="blockfooter">
+    <div class="block">
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">informations</h5>
+          <a href="../rgpd/mentions_légales.html" class="mention">mention
+            légale</a><!--../obligations_légales/mentions_légales.html-->
+          <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+        </div>
+      </div>
+
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">nous contacter</h5>
+          <a href="tel:+336250214" class="contact">06 25 02 14</a>
+          <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--</container>-->
+
+  <!-- Fichiers Jasvascripts, positionné en fin de document pour optimiser les temps de chargement-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- POPPER BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+
+  <!-- JS BOUTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

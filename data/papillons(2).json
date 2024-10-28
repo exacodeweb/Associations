@@ -1,0 +1,28 @@
+
+[
+
+  {
+      "id": 1,
+      "name": "Aglais urticae",
+      "commonName": "La petite tortue",
+      "description": "Un papillon commun en Europe.",
+      "image": "../images3/photo1.jpg"
+  },
+
+  {
+      "id": 2,
+      "name": "Araschnia levana - Test",
+      "commonName": "La carte géographique",
+      "description": "Un papillon commun en Europe.",
+      "image": "../images3/photo2.jpg"
+  },
+
+  {
+    "id": 3,
+    "name": "Brenthis daphne",
+    "commonName": "La carte géographique",
+    "description": "Un papillon commun en Europe.",
+    "image": "../images3/Brenthis_daphne_(Le-Nacré-de-la-ronce).jpg"
+}
+
+]

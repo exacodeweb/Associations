@@ -1,0 +1,92 @@
+
+
+
+name: Deploy to PlanetHoster
+
+on:
+  push:
+    branches:
+      - main  # Le déploiement se fait quand vous poussez sur la branche 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install SSH key
+      uses: webfactory/ssh-agent@v0.5.3 ## Charge la clé SSH pour se connecter à PlanetHoster.
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Sync files to PlanetHoster
+      run: |
+        rsync -avz --delete-after --exclude='.git' ./ \
+        user@ftp.votre-domaine-planetHoster:/chemin/vers/dossier
+        
+
+##----------------------------------------------------------------------------------------##
+
+name: Deploy to PlanetHoster
+
+# On peut déclencher le workflow automatiquement ou manuellement
+on:
+  push:
+    branches:
+      - main  # Déploiement automatique sur la branche principale
+  workflow_dispatch:  # Permet le déclenchement manuel
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2 ## Cela récupère votre code dans le dépôt GitHub.
+
+    - name: Install SSH key
+      uses: webfactory/ssh-agent@v0.5.3 ## Charge la clé SSH pour se connecter à PlanetHoster.
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Sync files to PlanetHoster
+      run: |
+        rsync -avz --delete-after --exclude='.git' ./ \
+        user@ftp.votre-domaine-planetHoster:/chemin/vers/dossier
+
+##--------------------------------------------------------------------------------------##
+name: Deploy to PlanetHoster
+
+on:
+  workflow_dispatch:  # Permet de déclencher manuellement
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2 ## Cela récupère votre code dans le dépôt GitHub.
+
+    - name: Install SSH key
+      uses: webfactory/ssh-agent@v0.5.3 ## Charge la clé SSH pour se connecter à PlanetHoster.
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Sync modified files to PlanetHoster
+      run: |
+        rsync -avz --delete --exclude='.git' ./ \
+        user@ftp.votre-domaine-planetHoster:/chemin/vers/dossier
+
+  ##----------------------------------------------------------------------------------------##
+  
+  # Comment Lancer le Workflow Manuellement
+  # Accédez à GitHub : Allez dans votre dépôt, puis dans l’onglet Actions.
+  # Sélectionnez le Workflow : Choisissez le workflow (dans cet exemple, "Deploy to PlanetHoster").
+  # Cliquez sur "Run workflow" : En haut à droite, vous verrez un bouton "Run workflow" si vous avez configuré workflow_dispatch. En cliquant dessus, vous pourrez lancer le déploiement manuellement.
+  # Avantages du Déclenchement Manuel
+  # Flexibilité : Vous contrôlez exactement quand le déploiement est effectué, pratique pour tester ou déployer à des moments précis.
+  # Sécurité : Moins de risques d'erreurs de déploiement si des modifications sont en cours ou si vous voulez effectuer des vérifications préalables.
+  # Cela vous offre donc la flexibilité de choisir entre des déploiements automatiques ou manuels, selon vos besoins de gestion de projet.

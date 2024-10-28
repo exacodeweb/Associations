@@ -1,0 +1,429 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c--><!--! pb balise: lang="en"-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Entomologie">
+  <!--<link rel="stylesheet" href="../css/fichierstyle-17.css" type="text/css"> -->
+  <title>ECF-mention-légales</title>
+  <!--
+  <link
+  rel="stylesheet"
+  href="./mentions-legales-style.css"
+  type="text/css"
+>
+
+<link
+  rel="stylesheet"
+  href="./media-mentions-legales.css"
+  type="text/css"
+>-->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+  <!--kit icones--> <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+  <!--style de police d'ecriture-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+  <style>
+    .content {
+      margin-top: 10px;
+      margin: 10px 10px;
+      margin-top: 0px;
+    }
+
+    /*------------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+    .breadcrumb {
+      display: flex;
+      width: 100%;
+      margin: 0px 0px 0px 0px;
+      /* haut droite bas gauche */
+    }
+
+    .breadcrumb-item {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+
+      align-items: center;
+      margin: 10px 0px 10px 0px;
+      /* haut droite bas gauche */
+      background: none;
+    }
+
+    #link-rep {
+      margin-right: 5px;
+      margin-left: 5px;
+      text-decoration: none;
+    }
+
+    #link-rep:hover {
+      color: red;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------- SECTION --*/
+    /*.main {
+  margin-top: 200px;
+}*/
+
+    /*.section {
+  margin-top: 50px;
+}*/
+    /*--------------------------------------------------------------------------------------------------------- ARTICLE --*/
+
+    article {
+      margin: 0px;
+    }
+
+    h3 {
+      text-align: center;
+      padding: 20px;
+      color: #000fff;
+    }
+
+    h4 {
+      color: #000fff;
+    }
+
+    .subtitle {
+      color: #000fff;
+      font-weight: 500;
+      font-size: 1em;
+    }
+
+    /*--Bloqué Le copier coller risque de modifier la page--*/
+    .post blockquote {
+      -webkit-user-select: text !important;
+      -moz-user-select: text !important;
+      -ms-user-select: text !important;
+      user-select: text !important;
+    }
+
+    hr {
+      background-color: grey;
+      font-weight: bold;
+      height: 1px;
+    }
+
+    /*-------------------------------------------------------------------------------------------------- FENETRE MODALE --*/
+
+    .float-left {
+      padding: 50px;
+    }
+
+    .modal-header {
+      display: flex;
+      font-weight: 600;
+      color: blue;
+      padding: 10px;
+      margin-bottom: 0px;
+      height: 80px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title-form {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      justify-content: center;
+      width: 100%;
+      font-size: 1.5em;
+    }
+
+    .btn-close {
+      display: flex;
+      flex-direction: row;
+      font-size: 0.9em;
+    }
+
+    form {
+      margin-bottom: 50px;
+    }
+
+    .wording {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+    }
+
+    label {
+      margin-bottom: 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------- BOUTON --*/
+
+    button {
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 120px;
+    }
+
+    /*--source: https://www.universblogger.com/2020/05/desactiver-clic-droit-copier-coller-image.html--*/
+
+
+    /*---------------------------------------------------------MEDIA QUERY------------------------------------------------*/
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      .breadcrumb {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .breadcrumb-item {
+        width: 100%;
+        background: none;
+        margin: 10px 0px 10px 0px;
+        /* haut droite bas gauche */
+        /*rajouter en option*/
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .link-rep {
+        margin-right: 5px;
+        margin-left: 5px;
+        text-decoration: none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="content">
+
+    <!--FIL D'ARIANE-->
+    <div class="breadcrumb-item">
+      <a href="../index.html" id="link-rep">Acceuil</a> > <!--<a href="./mentions_légales.html" 
+      id="link-rep">informations</a> >--> <!--&gt;--> Mentions-légales
+    </div>
+    <!---->
+
+    <!--<div class="main">-->
+    <div class="section">
+      <article class="articles">
+        <h3 class="title">Exemple de Mentions-légales</h3><!-- EXEMPLE DE MENTION LEGALES -->
+
+        <!--<h4 class="subtitle">source: mdm web docs</h4>-->
+        <p>Le présent site web est accessible depuis l"adresse (url) est edité par: <br>
+          immatriculée au registtre du .... N° <br>
+        </p>
+      </article>
+      <!--
+      <div class="articles">
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+        -->
+      <article class="article">
+        <h4>Conception du site</h4>
+        <p>le site web a ete conçue par: Giet franck (Apprenant Studi digital campus live)</p>
+        <p>Non:</p>
+        <p>siret N°</p>
+        <p>adresse:</p>
+        <p>Ville:</p>
+        <p>code postal-ville:</p>
+        <p>Pays:</p>
+        <p>Téléphone:</p>
+        <p>Fax:</p>
+      </article>
+
+      <hr>
+      <article class="article">
+        <h4>Hebergeur </h4>
+        <p>L'hébergeur du site web est:</p>
+        <p>adresse:</p>
+        <p>code postal-ville</p>
+        <p>Pays</p>
+      </article>
+
+      <hr>
+      <article class="article">
+        <h4>identité </h4>
+        <p>nom du site web : Entomologie</p><!--< Nom du site >-->
+        <p>adresse : http://nom du site.domaine &gt;</p>
+        <p>propriétaire : propriétaire &gt;</p>
+        <p>responsable de publication : nom du contact &gt; </p>
+        <p>hébergement : hébergeur &gt;</p>
+      </article>
+    </div>
+    <!--</div>-->
+
+    <!-- source: https://www.legalstart.fr/fiches-pratiques/proteger-une-creation/mentions-legales/ -->
+    <article class="article">
+      <h4>Mentions Légales exemple</h4>
+      Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il
+      est précisé aux utilisateurs du Site l'identité des différents intervenants dans le cadre de sa réalisation et de
+      son suivi.
+    </article>
+
+    <article class="article">
+      <h4>Édition du site </h4>
+      Le site legalstart.fr est édité par la société Yolaw S.A.S., au capital social de 11 051,85 € euros, immatriculée
+      au Registre du commerce et des sociétés de Paris sous le n° 753 892 926 et dont le siège social est situé 50, rue
+      d'Hauteville, 75010, Paris (Siret n° 753 892 926 00035 et TVA intracommunautaire n° FR18753892926).
+    </article>
+
+    <article class="article">
+      <h4>Responsable de publication </h4>
+      Monsieur Pierre Aïdan, Président de 3for2 SAS, elle-même Président de Yolaw SAS.
+    </article>
+
+    <article class="article">
+      <h4>Hébergeur</h4>
+      Le site legalstart.fr est hébergé par la société Heroku Inc., 650 7th Street, San Francisco, CA (tel : +33 1 (877)
+      563-4311). Le stockage des données personnelles des utilisateurs est exclusivement réalisé sur les centres de
+      données ("clusters") de la société Amazon Inc, dont le siège social est situé 10 Terry Avenue North, Seattle, WA.
+      Tous les clusters Amazon sur lesquels les données du Site sont stockées sont localisés dans des Etats membres de
+      l'Union Européenne.
+    </article>
+
+    <article class="article">
+      <h4>Nous contacter </h4>
+      Par téléphone : 01 76 39 00 60
+      Par email : contact@legalstart.fr
+      Par courrier : Legalstart.fr (Yolaw SAS), 50 rue d'Hauteville, 75010 Paris
+    </article>
+
+    <article class="article">
+      <h4>Votre vie privée</h4>
+
+      Le traitement de vos données à caractère personnel est régi par notre Charte du respect de la vie privée
+      conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016 (« RGPD »). Yolaw SAS a
+      désigné un Délégué à la Protection des Données (DPO) auprès de la CNIL (Désignation N° DPO-1777). Les coordonnées
+      de notre Délégué à la Protection des Données sont les suivantes:
+    </article>
+
+    Me Yaël Cohen-Hadria - Cabinet Marvell Avocats
+    Adresse : 7 avenue Ingres, 75016 PARIS France
+    Tél : 0153431313
+    Email : ycohenhadria@marvellavocats.com
+
+    Pour toute question concernant vos données personnelles ou si vous souhaitez supprimer votre Compte, merci de nous
+    contacter à l’adresse suivante: Yolaw SAS, 50 rue d'Hauteville, 75010 Paris (en indiquant "Vie Privée - Protection
+    des Données") ou par email à privacy@legalstart.fr.
+
+    <article class="article">
+      <h4>En savoir plus</h4>
+      Cliquez ici pour en savoir plus sur les mentions légales obligatoires.
+    </article>
+
+    <article class="article">
+      <h4>Index de l'égalité hommes-femmes</h4>
+      L'index de l'égalité hommes-femmes 2023 de Legalstart est de 86 (période de référence 2022). Découvrez le détail
+      du calcul en cliquant ici.
+    </article>
+
+    <!-- FOOTER -->
+    <footer>
+
+      <!-- FENETRE MODALE -->
+      <div class="float-left">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#joinModal" type="submit">
+          me contacter
+        </button>
+      </div>
+
+      <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="joinModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-light">
+
+              <div class="title-form">formulaire de contact</div>
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body bg-light">
+              <form>
+                <label class="wording" for="name">Nom</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="" required>
+
+                <label class="wording" for="name">Prenom</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder=""
+                  required><!-- placeholder="Saisissez votre prenom"-->
+
+                <label class="wording" for="email">e-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="" required>
+
+                <label class="wording" for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+              </form>
+            </div>
+
+            <span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="joinModalLabel"></span>
+            <span id="joinModalLabel"><!--J'accepte les termes et conditions.--></span>
+
+            <div class="bouton">
+              <div class="modal-footer bg-light">
+                <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">
+                  Fermer
+                </button>
+
+                <button type="submit" class="btn btn-primary" value="envoyer">
+                  valider
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--FIN DE FENETRE MODALE-->
+    </footer>
+  </div>
+
+
+  <!--script pour  les fenetres modale-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

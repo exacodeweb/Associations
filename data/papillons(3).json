@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Aglais urticae", "commonName": "La petite tortue", "description": "Un papillon commun en Europe.", "image": "photo1.jpg", "classe": "insecte", "ordre": "lépidoptera" },
+  { "id": 2, "name": "Araschnia levana", "commonName": "La carte géographique", "description": "Un papillon commun en Europe.", "image": "photo2.jpg", "classe": "insecte", "ordre": "lépidoptera"  },
+  { "id": 3, "name": "Brenthis daphne", "commonName": "Le Nacré de la ronce", "description": "Un papillon commun en Europe.", "image": "photo3.jpg", "classe": "insecte", "ordre": "lépidoptera"  },
+
+  { "id": 1, "name": "Inachis io", "commonName": "Paon du jour", "description": "Un papillon commun en Europe.", "image": "photo4.jpg", "classe": "insecte", "ordre": "lépidoptera" },
+  { "id": 2, "name": "Melitaea cinxia", "commonName": "La Mélitée du plantain", "description": "Un papillon commun en Europe.", "image": "photo5.jpg", "classe": "insecte", "ordre": "lépidoptera"  },
+  { "id": 3, "name": "Papilio machaon", "commonName": "Le grand porte queue", "description": "Un papillon commun en Europe.", "image": "photo6.jpg", "classe": "insecte", "ordre": "lépidoptera"  }
+
+
+]
+

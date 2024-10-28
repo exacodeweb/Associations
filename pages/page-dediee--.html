@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insectes-1</title>
+  <!--<link rel="stylesheet" href="path/to/your/main.css">-->
+  <!--<link rel="stylesheet" href="../style/style.css">-->
+  <link rel="stylesheet" href="../style/style.css">
+
+  <script src="scripts/load-content.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+
+  <style>
+    /* Styles additionnels ici */
+    body {
+  /*background: lightgoldenrodyellow;*/
+  background-position: 100% 100%;
+  margin: 0px;
+  font-size: 1em; /* Utilisation de l'unité relative em pour la taille de police de base */
+}
+label {
+    font-weight: bold;
+  }
+/*------------------------------------------------------------------------------------------------------ENTETE--*/
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 160px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: mediumorchid;
+}
+
+/*------------------------------------------------------------------------------------------------SECTION-LOGO--*/
+.logo {
+  display: flex;
+  color: white;
+  margin-left: 10px;
+  font-family: "Tangerine", serif;
+  font-weight: 590;
+  text-shadow: 4px 4px 4px blue;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+/*------------------------------------------------------------------------------------------------SECTION-MENU--*/
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+  color: white;
+  margin-right: 25px;
+  margin-left: 10px;
+}
+
+/*------------------------------------------------------------------------------------------------ARRIERE-PLAN--*/
+/*
+  a:hover {
+    text-decoration: none;
+    color: white;/*deepskyblue*/
+/*
+  }*/
+
+.link-nav {
+  color: white;
+}
+
+.link-nav:hover {
+  color: lightblue;
+  /*text-decoration: none;*/
+}
+
+.link-page {
+  margin: 5px;
+}
+
+/*------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+.breadcrumb {
+  width: 400px;
+}
+
+.breadcrumb-item {
+  max-width: 100%;
+  background: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.link-rep {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/*-----------------------------------------------------------------------------------------------------CONTENT--*/
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/*--------------------------------------------------------------------------------------------------------MAIN--*/
+
+main {
+  float: left;
+  flex-direction: column;
+  width: 70%;
+  /*70% du parent "content"*/
+  margin-left: 10px;
+  background: #fbfbf9;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+  /*-----------------------------------*/
+  p,.text-center {
+    width: 90%;
+    text-align: justify;
+  }
+  /*-----------------------------------*/
+
+.link {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.link-page {
+  padding: 20px;
+  width: 20%;
+  font-size: 18.72px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+h2 {
+  color: #0000ff;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+h4 {
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 50px;
+
+  /*font-family: 'Montserrat Light', arial;*/
+  /*DisneyPark*/
+  /* PT Sans*/
+  /*Andantino script*/
+  /*Calligraph*/
+  /*Montserrat Light*/
+  font-size: 1.5em;
+  /*font-weight: 600;*/
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 10px;
+  /*10px*/
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------------------------------------------FORMULAIRE--*/
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid grey;
+  /*grey*/
+  border-radius: 5px;
+  background-color: #f8f9f8;
+}
+
+.form-group {
+  width: 90%;
+}
+
+form,
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}
+
+textarea {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}
+
+button,
+.submit[type=submit] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 160px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: mediumorchid;/*#0145b5*/
+  /*#007bff*/
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: rgb(211, 85, 163);/*green*/
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------------------------------------- FORMULAIRE TEST --*/
+/*
+h1 {
+color: #333;
+}
+
+form {
+background: #fff;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+display: block;
+margin-top: 10px;
+}
+
+input, textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+button {
+margin-top: 10px;
+padding: 10px 15px;
+background: #007BFF;
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+button:hover {
+background: #0056b3;
+}
+*/
+/*-------------------------------------------------------------------------------------------------------ASIDE--*/
+
+.aside {
+  float: right;
+  flex-direction: column;
+  width: 26%;
+  /*22% du parent "content"*/
+  margin-right: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  height: 590px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+.aside-nav {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbf9;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 4px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+.aside-link {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+}
+
+/*------------------------------------------------------------------------------------------------------FOOTER--*/
+
+.blockfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #7dc95e;
+  color: white;
+  height: 150px;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 80px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.mention {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 200px;
+  color: blue;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 200px;
+  color: blue;
+}
+
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+/*-------------------------------------------------------MEDIA QUERY--------------------------------------------*/
+
+@media screen and (max-width: 320px) and (min-width: 576px) {
+
+  .menu,
+  .breadcrumb-item,
+  .link-nav,
+  nav {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .link,
+  .link-int,
+  span,
+  menu {
+    font-size: 12px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+    height: 40px;
+  }
+}
+
+/*@media screen and (min-width: 320px) and (max-width: 576px) {
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      font-size: 12px;
+      max-width: 100%;
+      text-align: center;
+    }
+  }*/
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    font-size: 12px;
+    max-width: 100%;
+    text-align: center;
+    background-color: blueviolet;
+    height: auto;
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+  .main,
+  .aside {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 992px) {
+
+  .form,
+  form {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .breadgroumb {
+    width: 90%;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------FOOTER--*/
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+  .block,
+  .contact,
+  .mention,
+  .text-dark {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .aside {
+    padding: 0px;
+    margin-top: 10px;
+  }
+}
+
+  </style>
+  <!--Bootstrap cdn-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!--kit icones-->
+  <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+  <!--style de police d'ecriture-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+
+<body>
+  <nav class="header">
+    <div class="logo">Entomologie</div>
+    <div class="menu">
+      <a href="../index.html" title="Accueil" class="link-nav">Accueil</a>
+      <a href="./blog.html" title="Blog" class="link-nav m-2">Blog</a>
+      <a href="./Agenda.html" title="Évènements" class="link-nav m-2">Évènements</a>
+      <a href="./qui_somme_nous.html" title="Qui sommes nous ?" class="link-nav m-2">Qui sommes nous ?</a>
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </nav>
+
+  <!--<nav class="header">
+    <div class="logo">Entomologie</div>                 -->
+
+    <!--OPTION MENU BURGER-->
+    <!--
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle">-->
+    <!--
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle">-->   <!--
+
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="./blog.html" title="Blog" class="link-nav m-2"><span>Blog</span></a>
+
+      <a href="./Agenda.html" title="A propos" class="link-nav m-2">Évènements</a>
+
+      <a href="./qui_somme_nous.html" title="Qui somme nous" class="link-nav m-2">Qui sommes nous ?</a>
+
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </nav>   -->
+
+  <!-- FIL D'ARIANE -->
+  <div class="breadcrumb-item">
+    <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+    <a href="../index.html" class="link-rep">Acceuil</a> > exposition
+  </div>
+
+  <!-- CONTENER -->
+
+  <div class="content">
+    <!--MAIN-->
+    <main class="main">
+
+  <section id="main-content" class="section-dedicated">
+    <h2>Bienvenue à l'Exposition d'Entomologie</h2>
+    <p>Veuillez sélectionner une catégorie pour en savoir plus.</p>
+  </section>
+
+  <script>
+    const content = {
+      biologie: {
+        title: "Biologie des Insectes",
+        image: "../assets/images/Cycle de vie du papillon - Naissance, Reproduction, habitat et bien plus encore ! (1).jpg",/*path/to/insect-biology.jpg*//**/
+        text: `<p>Explorez la biologie des insectes, y compris leurs cycles de vie, leur morphologie et leurs comportements uniques. Les insectes sont les êtres vivants les plus diversifiés de la planète, représentant plus de 80% des espèces animales.</p>
+              <p><strong>Cycles de vie :</strong> Les insectes passent par différents stades de développement, y compris l'œuf, la larve, la nymphe et l'adulte.</p>
+              <p><strong>Morphologie :</strong> Les insectes ont un corps divisé en trois parties : la tête, le thorax et l'abdomen, avec des appendices spécialisés.</p>
+              <p><strong>Comportements :</strong> Les insectes exhibent des comportements fascinants, tels que la pollinisation, la construction de nids et la communication chimique.</p>`
+      },
+      habitats: {
+        title: "Habitats des Insectes",
+        image: "../assets/images/james-wheeler-Ml10OqzzdyI-unsplash (1) (1).jpg",
+        text: `<p>Découvrez les divers habitats des insectes, des forêts tropicales aux déserts arides, et comment ils se sont adaptés à ces environnements. Les insectes peuvent être trouvés dans presque tous les écosystèmes terrestres et aquatiques.</p>
+              <p><strong>Forêts :</strong> Les forêts tropicales abritent une énorme biodiversité d'insectes, jouant un rôle crucial dans les cycles écologiques.</p>
+              <p><strong>Déserts :</strong> Les insectes du désert ont développé des adaptations uniques pour survivre dans des conditions extrêmes.</p>
+              <p><strong>Milieux aquatiques :</strong> De nombreux insectes, comme les libellules et les moustiques, passent une partie de leur vie dans l'eau.</p>`
+      },
+      role: {
+        title: "Rôle des Insectes dans l'Écosystème",
+        image: "../assets/images/beau-papillon-dans-nature (1).jpg",/*path/to/ecosystem-roles.jpg*/
+        text: `<p>Les insectes jouent un rôle crucial dans l'écosystème, notamment dans la pollinisation, la décomposition des matières organiques, et comme source de nourriture pour de nombreuses autres espèces. Leur contribution à la biodiversité et à la santé des écosystèmes est inestimable.</p>
+              <p><strong>Pollinisation :</strong> Les insectes comme les abeilles et les papillons pollinisent une grande variété de plantes, ce qui est essentiel pour la production de fruits et de graines.</p>
+              <p><strong>Décomposition :</strong> Les insectes décomposeurs, comme les coléoptères et les fourmis, recyclent les matières organiques, enrichissant ainsi le sol.</p>
+              <p><strong>Nourriture :</strong> Les insectes servent de source de nourriture pour de nombreux animaux, y compris les oiseaux, les reptiles et les mammifères.</p>`
+      }
+    };
+
+    function loadContent(type) {
+      const mainContent = document.getElementById('main-content');
+      mainContent.innerHTML = `
+        <h2>${content[type].title}</h2>
+        <img src="${content[type].image}" alt="${content[type].title}">
+        ${content[type].text}
+        <a href="../index.html" class="btn-back">Retour à l'accueil</a>
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const type = urlParams.get('type');
+      if (type && content[type]) {
+        loadContent(type);
+      }
+    });
+  </script>
+
+</main>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="blockfooter">
+    <div class="block">
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">informations</h5>
+          <a href="../rgpd/mentions_légales.html" class="mention">mention
+            légale</a><!--../obligations_légales/mentions_légales.html-->
+          <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+        </div>
+      </div>
+
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">nous contacter</h5>
+          <a href="tel:+336250214" class="contact">06 25 02 14</a>
+          <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<!--
+  Rôle du Script dans page-dediee.html
+Dynamique du Contenu : Le script permet de charger dynamiquement le contenu spécifique 
+en fonction du paramètre d'URL type. Par exemple, si l'URL est page-dediee.html?type=biologie, 
+le script chargera les informations relatives à la biologie des insectes.
+
+Réactivité : En intégrant le contenu directement dans le script, 
+il assure que la page affiche instantanément le bon contenu sans avoir 
+besoin de faire un appel réseau supplémentaire pour récupérer les 
+données (ce qui serait le cas si l'on utilisait uniquement content.json).
+-->

@@ -1,0 +1,23 @@
+[
+    {
+        "date": "2024-06-01",
+        "title": "Exposition Papillons",
+        "description": "1- Une exposition sur les papillons rares de notre région."
+    },
+    {
+        "date": "2024-07-15",
+        "title": "Conférence Entomologie",
+        "description": "2- Une conférence avec des experts en entomologie."
+    },
+    {
+        "date": "2024-08-20",
+        "title": "Atelier Photographie",
+        "description": "3- Un atelier pour apprendre à photographier les papillons."
+    },
+    {
+      "date": "2024-12-23",
+      "title": "Assemblée annuelle",
+      "description": "4- discuter des réalisations de l'année et des projets futurs."
+    }
+]
+

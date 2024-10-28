@@ -1,0 +1,184 @@
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insectes</title>
+  <!--<link rel="stylesheet" href="path/to/your/main.css">-->
+  <link rel="stylesheet" href="../style/style.css">
+
+
+  <script src="scripts/load-content.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+
+
+  <style>
+    /* Styles additionnels ici */
+  </style>
+
+
+  <!--Bootstrap cdn-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!--kit icones-->
+  <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+  <!--style de police d'ecriture-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+
+
+
+</head>
+
+<body>
+  <nav class="header">
+    <div class="logo">Entomologie</div>
+    <div class="menu">
+      <a href="../index.html" title="Accueil" class="link-nav">Accueil</a>
+      <a href="./blog.html" title="Blog" class="link-nav m-2">Blog</a>
+      <a href="./Agenda.html" title="Évènements" class="link-nav m-2">Évènements</a>
+      <a href="./qui_somme_nous.html" title="Qui sommes nous ?" class="link-nav m-2">Qui sommes nous ?</a>
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </nav>
+
+
+  <nav class="header">
+    <div class="logo">Entomologie</div>
+
+    <!--OPTION MENU BURGER-->
+    <!--
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle">-->
+    <!--
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle">-->
+
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="./blog.html" title="Blog" class="link-nav m-2"><span>Blog</span></a>
+
+      <a href="./Agenda.html" title="A propos" class="link-nav m-2">Évènements</a>
+
+      <a href="./qui_somme_nous.html" title="Qui somme nous" class="link-nav m-2">Qui sommes nous ?</a>
+
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- FIL D'ARIANE -->
+  <div class="breadcrumb-item">
+    <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+    <a href="../index.html" class="link-rep">Acceuil</a> > exposition
+  </div>
+
+  <!-- CONTENER -->
+
+  <div class="content">
+    <!--MAIN-->
+    <main class="main">
+
+
+
+
+
+  <section id="main-content" class="section-dedicated">
+    <h2>Bienvenue à l'Exposition d'Entomologie</h2>
+    <p>Veuillez sélectionner une catégorie pour en savoir plus.</p>
+  </section>
+
+
+
+  
+  <script>
+    const content = {
+      biologie: {
+        title: "Biologie des Insectes",
+        image: "../assets/images/beau-papillon-dans-nature (1).jpg",/*path/to/insect-biology.jpg*//**/
+        text: `<p>Explorez la biologie des insectes, y compris leurs cycles de vie, leur morphologie et leurs comportements uniques. Les insectes sont les êtres vivants les plus diversifiés de la planète, représentant plus de 80% des espèces animales.</p>
+              <p><strong>Cycles de vie :</strong> Les insectes passent par différents stades de développement, y compris l'œuf, la larve, la nymphe et l'adulte.</p>
+              <p><strong>Morphologie :</strong> Les insectes ont un corps divisé en trois parties : la tête, le thorax et l'abdomen, avec des appendices spécialisés.</p>
+              <p><strong>Comportements :</strong> Les insectes exhibent des comportements fascinants, tels que la pollinisation, la construction de nids et la communication chimique.</p>`
+      },
+      habitats: {
+        title: "Habitats des Insectes",
+        image: "path/to/insect-habitats.jpg",
+        text: `<p>Découvrez les divers habitats des insectes, des forêts tropicales aux déserts arides, et comment ils se sont adaptés à ces environnements. Les insectes peuvent être trouvés dans presque tous les écosystèmes terrestres et aquatiques.</p>
+              <p><strong>Forêts :</strong> Les forêts tropicales abritent une énorme biodiversité d'insectes, jouant un rôle crucial dans les cycles écologiques.</p>
+              <p><strong>Déserts :</strong> Les insectes du désert ont développé des adaptations uniques pour survivre dans des conditions extrêmes.</p>
+              <p><strong>Milieux aquatiques :</strong> De nombreux insectes, comme les libellules et les moustiques, passent une partie de leur vie dans l'eau.</p>`
+      },
+      role: {
+        title: "Rôle des Insectes dans l'Écosystème",
+        image: "path/to/ecosystem-roles.jpg",
+        text: `<p>Les insectes jouent un rôle crucial dans l'écosystème, notamment dans la pollinisation, la décomposition des matières organiques, et comme source de nourriture pour de nombreuses autres espèces. Leur contribution à la biodiversité et à la santé des écosystèmes est inestimable.</p>
+              <p><strong>Pollinisation :</strong> Les insectes comme les abeilles et les papillons pollinisent une grande variété de plantes, ce qui est essentiel pour la production de fruits et de graines.</p>
+              <p><strong>Décomposition :</strong> Les insectes décomposeurs, comme les coléoptères et les fourmis, recyclent les matières organiques, enrichissant ainsi le sol.</p>
+              <p><strong>Nourriture :</strong> Les insectes servent de source de nourriture pour de nombreux animaux, y compris les oiseaux, les reptiles et les mammifères.</p>`
+      }
+    };
+
+    function loadContent(type) {
+      const mainContent = document.getElementById('main-content');
+      mainContent.innerHTML = `
+        <h2>${content[type].title}</h2>
+        <img src="${content[type].image}" alt="${content[type].title}">
+        ${content[type].text}
+        <a href="../index.html" class="btn-back">Retour à l'accueil</a>
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const type = urlParams.get('type');
+      if (type && content[type]) {
+        loadContent(type);
+      }
+    });
+  </script>
+
+
+
+</main>
+</div>
+
+
+  <!-- FOOTER -->
+  <footer class="blockfooter">
+    <div class="block">
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">informations</h5>
+          <a href="../rgpd/mentions_légales.html" class="mention">mention
+            légale</a><!--../obligations_légales/mentions_légales.html-->
+          <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+        </div>
+      </div>
+
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">nous contacter</h5>
+          <a href="tel:+336250214" class="contact">06 25 02 14</a>
+          <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
+
+

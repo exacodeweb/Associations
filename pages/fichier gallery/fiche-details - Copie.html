@@ -1,0 +1,122 @@
+<!DOCTYPE html><!--Test-1-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails Papillon">
+    <title>Détails du Papillon</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <!--Bootstrap cdn-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIqKDJ2t2wf6Oc5zPEU2FbFhgVRHbsrH4PpI65h8zXvlMR9GxFW" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIqKDJ2t2wf6Oc5zPEU2FbFhgVRHbsrH4PpI65h8zXvlMR9GxFW" crossorigin="anonymous">
+    </script>
+        <!-- Contenu de l'en-tête (header) -->
+</head>
+
+<body>
+  <main class="content">
+    <div id="details-container">
+      <!-- Les détails du papillon seront chargés ici dynamiquement -->
+    </div>
+  </main>
+
+  <footer>
+    <!-- Contenu du pied de page (footer) -->
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+
+      if (id) {
+        fetch('../data/papillons(2).json')
+          .then(response => response.json())
+          .then(data => {
+            const papillon = data.find(p => p.id == id);
+            if (papillon) {
+              const detailsContainer = document.getElementById('details-container');
+              const details = `
+                <div>
+                  <h2>${papillon.name}</h2>
+                  <p><strong>Nom scientifique :</strong> ${papillon.name_scientifique}</p>
+                  <p><strong>Période de vols :</strong> ${papillon.periode_vols}</p>
+                  <p><strong>Plante hôte :</strong> ${papillon.plante}</p>
+                  <p><strong>Répartition :</strong> ${papillon.repartition}</p>
+                  <p><strong>Classe :</strong> ${papillon.classe}</p>
+                  <p><strong>Ordre :</strong> ${papillon.ordre}</p>
+                  <p><strong>Famille :</strong> ${papillon.famille}</p>
+                  <p><strong>Genre :</strong> ${papillon.genre}</p>
+                  <p><strong>Espèce :</strong> ${papillon.espece}</p>
+                  <p><strong>Description :</strong> ${papillon.description}</p>
+                  <p><strong>Envergure des ailes :</strong> ${papillon.wingspan}</p>
+                  <img src="../assets/images/${papillon.image}" alt="${papillon.name}">
+                </div>
+              `;
+              detailsContainer.innerHTML = details;
+            } else {
+              detailsContainer.innerHTML = '<p>Papillon non trouvé</p>';
+            }
+          })
+          .catch(error => console.error('Erreur lors de la récupération des détails:', error));
+      } else {
+        document.getElementById('details-container').innerHTML = '<p>Identifiant de papillon non fourni</p>';
+      }
+    });
+  </script>
+
+<script src="../scripts/load-content(2).js"></script>
+
+</body>
+
+</html>
+
+<!--<img src="${papillon.image_principale}" alt="${papillon.name}">-->
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html><!--Test-2-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Details Papillon">
+    <title>Détails du Papillon</title>
+    <!--Bootstrap cdn-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIqKDJ2t2wf6Oc5zPEU2FbFhgVRHbsrH4PpI65h8zXvlMR9GxFW" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIqKDJ2t2wf6Oc5zPEU2FbFhgVRHbsrH4PpI65h8zXvlMR9GxFW" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div id="butterfly-details">
+            <h1 id="butterfly-name"></h1>
+            <img id="butterfly-image" class="img-fluid" alt="Image du papillon">
+            <p id="butterfly-description"></p>
+        </div>
+        <a href="../pages/gallery(2).html" class="btn btn-primary mt-3">Retour à la galerie</a><!--gallery.html-->
+    </div>
+
+    <!--<script src="gallery.js"></script>-->
+    <script src="../scripts/gallery(2).js"></script>
+</body>
+
+</html>

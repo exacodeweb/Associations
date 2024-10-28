@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1",
+    "nom": "La petite tortue",
+    "nom_scientifique": "Aglais urticae-puppe",
+    "image_principale": "../images3/Araschnia_levana_(La-carte-géographique).jpg",
+    "periode_vols": "Printemps à Automne",
+    "plante": "Ortie",
+    "repartition": "Europe, Asie tempérée",
+    "classe": "Insecte",
+    "ordre": "Lépidoptera",
+    "famille": "Nymphalidae",
+    "genre": "Aglais",
+    "espece": "urticae",
+    "nom": "aglais-urticae",
+    "carte_repartition": "../images3/53754_repartition.png"
+  }
+  {
+    "id": "2",
+    "nom": "La petite tortue",
+    "nom_scientifique": "Araschnia_levana",
+    "image_principale": "../images3/Aglais_urticae_LC0310.jpg",
+    "periode_vols": "Printemps à Automne",
+    "plante": "Ortie",
+    "repartition": "Europe, Asie tempérée",
+    "classe": "Insecte",
+    "ordre": "Lépidoptera",
+    "famille": "Nymphalidae",
+    "genre": "Aglais",
+    "espece": "urticae",
+    "nom": "aglais-urticae",
+    "carte_repartition": "../images3/53754_repartition.png"
+  }
+]
+
+[
+  {
+    "id": 1,
+    "name": "Papillon Monarque",
+    "description": "Le papillon monarque est un des papillons les plus connus d'Amérique du Nord.",
+    "wingspan": "8.9–10.2 cm",
+    "image": "monarque.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Papillon Machaon",
+    "description": "Le papillon machaon est un grand papillon de jour.",
+    "wingspan": "6.5–7.8 cm",
+    "image": "machaon.jpg"
+  }
+]

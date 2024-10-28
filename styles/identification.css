@@ -1,0 +1,259 @@
+/* Import Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Rajdhani:wght@400;700&display=swap');
+*/
+/* Styles généraux */
+body {
+  background: lightgoldenrodyellow;
+  background-position: 100% 100%;
+  font-family: 'Barlow', sans-serif;
+  /*line-height: 1.6;*/
+  /*margin: 0px;/*
+  font-size: 1em; /* Utilisation de l'unité relative em pour la taille de police de base */
+  }
+  
+  /* Titres (headlines) */
+  h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'Rajdhani', sans-serif;
+  }
+  
+  /*--CONTENT--*/
+  .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+  
+  /*--MAIN--*/
+  .main {
+  float: left;
+  flex-direction: column;
+  width: 70%;
+  /*70% du parent "content"*/
+  margin-left: 10px;
+  background: #fbfbf9;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+  }
+  
+  /*-------------------------------------------------------------------------------------------------------- ASIDE --*/
+  .aside {
+  float: right;
+  flex-direction: column;
+  width: 26%;
+  /*22% du parent "content"*/
+  margin-right: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  height: 590px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+  }
+  
+  .aside-nav {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbf9;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 4px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+  }
+  
+  .aside-link {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+  }
+  /*----------------------------------------------------------------------------------------------------------------*/
+
+
+
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h2 {
+    color: #0000ff;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+
+  h4 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title,
+  strong {
+    color: #0000ff;
+  }
+
+  hr {
+    height: 2px;
+    color: blue;
+  }
+
+  /*-----------------------------------------------------------------------------------------------BLOCK1-IMG IMAGES--*/
+  .block1-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid white;
+  }
+
+  object {
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 98%;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    margin: 5px;
+  }
+
+  /*
+  .link {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    font-size: 1.2em;
+  }
+  .link-page {
+    padding: 20px;
+    width: 20%;
+    font-size: 18.72px;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }*/
+
+  .btn-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+
+  .link-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 160px;
+    /*150px*/
+    border-radius: 50px;
+    text-decoration: none !important;
+    background-color:mediumorchid!important;/*#0145b5*/
+    color: white;
+  }
+
+  .link-btn:hover {
+    background:rgb(211, 85, 163)!important;/*green */
+  }
+
+  p {
+    margin-left: 0px;
+    color: black;
+  }
+
+
+
+/*---------------------------------------------------------- RESPONSIVE STRUCTURE CONTENU --*/
+@media screen  and (max-width : 576px) {
+
+  .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100% !important;
+  padding: 0px;/*5px*/
+  }
+  
+  /*.link {
+  font-size: 1em;
+  }*/
+  
+  .main,
+  .aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0px;
+  }
+  
+  .content,
+  .main,
+  .aside {
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 5px;/*10px*/
+  }
+  
+  .aside {
+  padding: 0px;
+  margin-top: 10px;
+  }
+  }
+  /*------------------------------------------------------------------------ FIN DU CONTENU --*/
+
+  @media screen  and (max-width: 960px) {/*and (min-width: 320px)*/
+    /*320px*/
+    object {
+      display: flex;
+      max-width: 100%;
+      height: 650px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

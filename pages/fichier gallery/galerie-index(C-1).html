@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie</title>
+  <link rel="stylesheet" href="../style/style.css">
+
+
+
+
+  <style>
+    body {
+      background: lightgoldenrodyellow;
+      margin: 0;
+    }
+
+    .f01 {
+      background-color: #abebc6;
+      color: black;
+      font: italic smaller sans-serif;
+      text-align: center;
+      width: 250px;
+      font-size: 13.28px;
+      border-radius: 5px;
+      border: 1px solid blue;
+    }
+
+    .link-nav {
+      color: white;
+    }
+
+    .link-nav:hover {
+      color: lightblue;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+    }
+
+    .logo {
+      color: white;
+      margin-left: 10px;
+      font-family: "Tangerine", serif;
+      font-weight: 590;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 80px;
+      align-items: center;
+      color: white;
+      margin-right: 25px;
+      margin-left: 10px;
+    }
+
+    .breadcrumb {
+      width: 400px;
+    }
+
+    .breadcrumb-item {
+      max-width: 100%;
+      background: none;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .link-rep {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      margin-left: 10px;
+      background: #fbfbf9;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside {
+      float: right;
+      flex-direction: column;
+      width: 26%;
+      margin-right: 10px;
+      padding: 4px;
+      border-radius: 5px;
+      height: 590px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-nav {
+      display: flex;
+      flex-direction: column;
+      background: #fbfbf9;
+      margin-bottom: 20px;
+      height: 100px;
+      padding: 4px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-link {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 12px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      color: #0000ff;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    .title,
+    strong {
+      color: #0000ff;
+    }
+
+    .section1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: auto;
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+
+    .section-2 {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: 250px;
+      background: #ffff;
+      border: 0px solid grey;
+      margin: 10px;
+      border-radius: 15px;
+      border: 1px solid red;
+      box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+        rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    }
+
+    .subsection {
+      width: 100%;
+    }
+
+    .card-art {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding: 0px;
+      text-align: center;
+    }
+
+    .card-img-top2 {
+      display: flex;
+      background-color: #abebc6;
+      width: 100%;
+      aspect-ratio: 3/2;
+      border-radius: 15px 15px 0px 0px;
+      border: 1px solid grey;
+      padding: 0px;
+      overflow: hidden;
+      background-size: cover;
+    }
+
+    .img {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      margin: 5px;
+    }
+
+    .button,
+    .img {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+    }
+
+    img {
+      border-radius: 5px;
+      height: 150px;
+      width: 250px;
+    }
+
+    .blockfooter {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #7dc95e;
+      color: white;
+      height: 150px;
+      width: 100%;
+    }
+
+    .block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      width: 50%;
+      margin-left: 80px;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    .mention {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 320px) and (min-width: 576px) {
+
+      .menu,
+      .breadcrumb-item,
+      .link-nav,
+      nav {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+
+      .link,
+      .link-int,
+      span,
+      menu {
+        font-size: 12px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-content: center;
+        align-items: center;
+        text-align: left;
+        height: 40px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .menu {
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        font-size: 12px;
+        max-width: 100%;
+        text-align: center;
+        background-color: blueviolet;
+        height: auto;
+        margin-right: 15px;
+        margin-left: 10px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .block {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- Header content here -->
+  </header>
+
+  <main class="content">
+    <div class="title">
+      <h2>Galerie</h2>
+    </div>
+
+    <div class="gallery" id="gallery-container">
+      <!-- Gallery content will be loaded here dynamically -->
+    </div>
+  </main>
+
+  <footer>
+    <!-- Footer content here -->
+  </footer>
+
+  <script src="../scripts/gallery.js"></script><!--../scripts/gallery.js-->
+</body>
+
+</html>

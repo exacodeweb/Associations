@@ -1,0 +1,1043 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c--><!--! pb balise: lang="en"-->
+<!DOCTYPE html>
+<html lang="en">
+  <!--ISO 639-1-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entomologie">
+    <!--Description of my page-->
+    <title>ECF-accueil</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    >
+    <!--kit icones-->
+    <!--my code (64e89a7edd) to use the free fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/64e89a7edd.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--font-style-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine"
+    >
+
+    <!-- STYLE-CSS -->
+    <style>                                                                                                           /*
+      body {
+        /*background: lightgoldenrodyellow;*/                                                                         /*
+        background-position: 100% 100%;
+        margin: 0px;
+        font-size: 1em; /* Utilisation de l'unité relative em pour la taille de police de base */                     /*
+      }                                                                                                               */
+
+
+
+      /*body {
+  
+      }*/
+
+      label {
+        font-weight: bold;
+      }
+
+/* Autres styles CSS */
+
+
+      /*-------------------------------------------------------------------------------------police de substitution.--*/ 
+      /*
+      body{
+        font-family: 'Roboto', Arial, sans-serif;
+      }*/
+      /*--------------------------------------------------------------------------------------------------------------*/
+
+      /*-- on your mind --*/                               /*
+      .header {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 160px;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background: mediumorchid;
+      }                                                         */
+
+      /*-- BLOCK-LOGO --*/                                                                                            /*
+      .logo {
+        display: flex;
+        color: white;
+        margin-left: 10px;
+        font-family: "Tangerine", serif;
+        font-weight: 590;
+        text-shadow: 4px 4px 4px blue;
+        font-size: 55px;
+      }                                                                                                               */
+
+      /*-- BLOCK-MENU --*/                                                                                            /*
+      .menu {
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        align-items: center;
+        color: white;
+        margin-right: 25px;
+        margin-left: 10px;
+      }                                                                                                               */
+
+
+
+
+
+                                                                                                                      /*
+      .link-nav {
+        color: white;
+      }                                                                                                               */
+                                                                                                                      /*
+      .link-nav:hover {
+        color: lightblue;                               
+
+        /*-------------------------------*//*
+        display: flex;
+        flex-direction: row;
+        border: 1px solid white !important;
+        border-radius: 5px;align-items: center;
+        text-decoration: none;
+        -------------------------------*/
+                                                                                                                      /*
+      }                                                                                                               */
+
+      /*-- FIL D'ARIANE --*/ /*
+      .breadcrumb {
+        width: 400px;
+      }
+
+      .breadcrumb-item {
+        max-width: 100%;
+        background: none;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      #link-rep {
+        margin-right: 5px;
+        margin-left: 5px;
+      }*/
+
+      /*--------------------------------------------------------------------------------------------------------------*/
+
+    body {
+      background: lightgoldenrodyellow;
+      background-position: 100% 100%;
+      margin: 0;
+    }
+    /*
+    body {
+      background: lightgoldenrodyellow;
+      background-position: 100% 100%;
+      margin: 0px;
+    }*/
+
+    /* HEADER */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+      padding: 10px;
+    }                            
+
+    .logo {
+      color: white;
+      font-family: "Tangerine", serif;
+      font-weight: 500;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: white;
+      margin-right: 25px;
+    }
+                                                                  
+    .link-nav {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .link-nav:hover {
+      color: lightblue;
+    }
+    /*-------------------------------------------------------------------------------------------------- BREADCRUMB --*/                                                                                                                 
+    .breadcrumb-item {
+      margin: 10px 20px;
+    }
+
+    .link-rep {
+      margin: 0 5px;
+      color: blue;
+    }
+                                                                                                                    /*
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    .main {
+      flex: 1;
+      min-width: 300px;
+      margin: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+      padding: 10px;
+    }
+
+    .aside {
+      flex: 0 1 300px;
+      margin: 10px;
+      padding: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+    }
+
+
+
+
+
+
+
+
+      --------------*/
+
+      /*-- CONTENTENU --*/
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      /*-- MAIN --*/
+      /*.main {
+        float: left;
+        flex-direction: column;
+        width: 70%;
+        /*70% du parent "content"*//*
+        margin-left: 10px;
+        background: #fbfbf9;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+      }*/
+
+
+      .main {
+      flex: 1;
+      min-width: 300px;
+      margin: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+      padding: 10px;
+    }
+
+    /*.aside {
+      flex: 0 1 300px;
+      margin: 10px;
+      padding: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+    }*/
+
+
+
+
+      /*-----------------------------------*/
+
+
+
+      /*-----------------------------------------------*/
+      .section-article {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin-bottom: 20px;
+
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: justify;
+      }
+
+
+      p,.text-center {
+        width: 90%;
+        text-align: justify;
+      }
+
+      /*-----------------------------------------------*/
+      .btn-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+
+      .link-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 160px; /*150px*/
+        border-radius: 50px;
+        text-decoration: none !important;
+        background-color:mediumorchid!important;/*#0145b5*/
+        color: white;
+      }
+
+      .link-btn:hover {
+        background-color:rgb(211, 85, 163)!important;/*green*/
+      }
+
+      /*------------------- TITRE ET SOUS-TITRE --*/
+      .title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 50px;
+      }
+
+      .subtitle {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 15px; /*50px*/
+        color: #0000ff;
+      }
+
+      p {
+        margin-left: 0px;
+        color: black;
+      }
+
+      /*-------------------------*/
+      h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+
+      h2 {
+        color: #0000ff;
+        font-weight: 600;
+        font-size: 1.5em;
+      }
+
+      .title,
+      strong {
+        color: #0000ff;
+      }
+      /*-------------------------*/
+      hr {
+        height: 2px;
+        color: blue;
+      }
+
+      /*-- IMAGES --*/
+      .block-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .section {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 90%;
+        border: 2px solid white;
+        margin-bottom: 30px;
+      }
+
+      img {
+        border-radius: 5px;
+        border: 1px solid blue;
+      }
+
+      .card-img-top {
+        width: 100%;
+        height: 65.89785831960461vh;/*400px*/
+        background-size: auto;
+        object-fit: cover;
+      }
+
+      /*-- FIGAPTION --*/
+      figcaption {
+        background-color: white;
+        color: blue;
+        font: italic smaller sans-serif;
+        text-align: center;
+        width: 100%;
+        font-size: 15px;
+        border-radius: 5px;
+        top: 30px;
+        z-index: 2;
+      }
+
+      /* text Bottom left */
+      .bottom-left {
+        position: absolute;
+        bottom: -178px;
+        left: 726px;
+        color: blue;
+      }
+
+      /* text Centré */
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-2%, -2%);
+        /*translate(-50%, -50%)*/
+      }
+
+      /*-- ASIDE --*/
+      /*.aside {
+        float: right;
+        flex-direction: column;
+        width: 26%;
+        /*22% du parent "content"*//*
+        margin-right: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        height: 590px;
+        box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+      }*/
+
+      /*.aside-nav {
+        display: flex;
+        flex-direction: column;
+        background: #fbfbf9;
+        margin-bottom: 20px;
+        height: 100px;
+        padding: 4px;
+        box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+      }*/
+
+      .aside {
+      flex: 0 1 300px;
+      margin: 10px;
+      padding: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+    }
+
+
+      .aside-link {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid green;
+      }
+
+/*-- ASIDE --*/
+.aside {
+  flex: 0 1 300px;
+  margin: 10px;
+  padding: 10px;
+  background: #fbfbf9;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+}
+
+/* aside desactiver */
+/*.aside {
+  float: right;
+  flex-direction: column;
+  width: 26%;
+  margin-right: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  height: 590px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}*/
+
+.aside-nav {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbf9;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 10px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+.aside-link {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+}
+/*------------------------------------------------*/
+
+      /*-- FOOTER --*/
+      .blockfooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: #7dc95e;
+        color: white;
+        height: 125px;
+        width: 100%;
+      }
+
+      .block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        width: 50%;
+        margin-left: 80px;
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+      }
+
+      h5> .contact, h5>.mention {
+        text-align: left !important;
+      }
+
+      .mention {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        width: 200px;
+        color: blue;
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        width: 200px;
+        color: blue;
+      }
+
+      h5,.text-dark {
+        text-align: left !important;
+      }
+
+      a {
+        color: #0000ff;
+        text-decoration: none;
+      }
+
+      /*-- Copyright --*/
+      .copiryght {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: #7dc95e;
+        color: blue;
+        padding: 5px;
+        width: 100%;
+      }
+
+      /*-- RESPONSIVE --*/
+      /*-- HEADER --*/
+      @media screen /*and (min-width: 220px)*/ and (max-width: 768px) {
+        .header {
+          font-size: 12px;
+          display: flex;
+          /*flex-direction: row;*/
+          flex-direction: column;
+          text-align: left;
+          max-width: 100%;
+          /*-----------------*/ 
+        }
+      }
+
+      
+      @media screen and (max-width: 576px) {
+        .link,
+        .link-int,
+        menu {
+          font-size: 12px;
+          max-width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: center;
+          text-align: left;
+          height: 40px;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .link,
+        .link-int,
+        menu {
+          font-size: 12px;
+          max-width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: center;
+          text-align: left;
+          height: 40px;
+        }
+      }
+
+      @media screen and (min-width: 220px) and (max-width: 768px) {
+        .menu {
+          display: flex;
+          flex-direction: column;
+          height: 40px;
+          font-size: 12px;
+          max-width: 100%;
+          text-align: center;
+          background-color: blueviolet;
+          height: auto;
+          margin-right: 15px;
+          margin-left: 10px;
+        }
+      }
+
+      /*-- CONTENTENU --*/
+      @media screen and (min-width: 220px) and (max-width: 576px) {
+        .content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding: 5px;
+        }
+      }
+
+      @media screen and (min-width: 220px) and (max-width: 576px) {
+        .main,
+        .aside {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 100%;
+          margin: 0px;
+        }
+      }
+
+
+
+      /*-- ASIDE --*/
+      @media screen and (min-width: 220px) and (max-width: 576px) {
+        .aside {
+          padding: 0px;
+          margin-top: 10px;
+        }
+      }
+
+      @media screen and (min-width: 220px) and (max-width: 576px) {
+        .conteneur {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
+      @media screen and (min-width: 220px) and (max-width: 576px) {
+        .bandeauTitre,
+        h1 {
+          color: #000000;
+          font-weight: bold;
+          letter-spacing: 1px;
+          position: relative;
+          top: -365px;
+          font-size: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      @media screen and (min-width: 220px) and (max-width: 576px) {
+        .bandeauTexte {
+          color: #f6f4f1;
+          letter-spacing: 1px;
+          line-height: 14px;
+          position: relative;
+          top: -353px;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      /*-- FOOTER --*/
+      @media screen and (min-width: 220px) and (max-width: 576px) {
+        .blockfooter {
+         /*display: flex; 
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          background: #7dc95e;
+          color: white;
+          height: 125px;
+          width: 100%;*/
+
+
+         
+          font-size: 12px;
+          display: flex;
+          /*flex-direction: row;*/
+          flex-direction: column;
+          /*text-align: left;*/
+          width: 100%;
+
+          justify-content: center !important;
+          align-content: center !important;
+          align-items: center !important;   
+          padding: 20px;  
+          height: auto;        
+          
+        }
+
+      /*-- FOOTER --*/
+      @media screen and (min-width: 220px) and (max-width: 576px) {
+        .block,
+        .contact,
+        .mention,
+        .text-dark {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          width: 100%;
+          margin: 0px; 
+        }
+      }
+
+/*
+        .block {
+          display: flex;
+          /*justify-content: space-around;*/ /*
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          /*margin-left: 80px;*/
+
+/*
+
+          border: 1px solid red;
+          justify-content: center !important;
+          align-content: center !important;
+          align-items: center;          
+        }
+*/
+        .footer {
+          padding: 10px;          
+        }
+/*
+        .mention,.contact {
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+          justify-content: center;
+          width: 200px;
+          color: blue;
+        }                      */
+      }
+  
+
+    </style>
+  </head>
+
+  <body> 
+    <!-- NAV-BAR --><!-- En-tête -->
+    <!--<div class="container"> -->                                                                                 <!--
+    <div class="header">
+      <div class="logo">Entomologie</div>
+      <div class="menu">
+
+        <a href="#" title="Accueil" class="link-nav m-2">Accueil</a>
+
+        <a href="./pages/blog.html" title="Blog" class="link-nav m-2">Blog</a>
+        <a href="./pages/Agenda.html" title="Évènements" class="link-nav m-2"
+          >Évènements</a
+        >
+
+        <a
+          href="./pages/qui_somme_nous.html"
+          title="Qui somme nous"
+          class="link-nav m-2"
+          >Qui sommes nous ?</a
+        >
+        <a
+          href="https://www.facebook.com/forum.lepidoptera/"
+          target="_blank"
+          title="Forum"
+          class="link-nav m-2"
+          >Forum</a
+        >
+        <a href="./pages/contact.html" title="Contact" class="link-nav m-2"
+          >Contact</a
+        >
+      </div>
+    </div>                                                                                                           -->
+
+    <!--FIL D'ARIANE--><!-- Fil d'Ariane -->                                                                        <!--
+    <div class="breadcrumb-item">
+      <a href="./pages/Sommaire-index.html" id="link-rep">Sommaire </a> >
+      Acceuil
+    </div>                                                                                                           -->
+
+
+
+    <nav class="header">
+      <div class="logo">Ailes-Enchantées</div><!--Entomologie-->
+      <div class="menu">
+        <a href="./index.html" class="link-nav m-2">Accueil</a>
+        <a href="./pages/blog.html" class="link-nav m-2">Blog</a>
+        <a href="./pages/Agenda.html" class="link-nav m-2">Évènements</a>
+        <a href="./pages/qui_somme_nous.html" class="link-nav m-2">Qui sommes nous ?</a>
+        <a href="https:/www.facebook.com/forum.lepidoptera/" target="_blank" class="link-nav m-2">Forum</a>
+        <a href="./pages/contact.html" class="link-nav m-2">Contact</a>
+      </div>
+    </nav>
+  
+    <div class="breadcrumb-item">
+      <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> >
+      <a href="../index.html" class="link-rep">Acceuil</a> <!-- > --> <!--calendrier-->
+    </div>
+
+
+
+
+    <!-- CONTENT -->
+    <div class="content">
+      <!-- MAIN --><!-- Contenu principal -->
+      <main class="main">
+        <div class="section-article">
+          <h2 class="title">BIENVENUE SUR le SITE <br>Ailes-Enchantées.fr</h2><!--BIENVENUE SUR L'ASSOCIATION -->
+          <p class="text-center">
+            <!--
+            Bonjour à tous, ce site est un site fictif en construction?, soyer
+            indulgent,<br>
+            Bonne navigation sur notre site.<br>-->
+            Ce site est actuellement en construction, nous vous remercions donc pour votre indulgence. 
+            Nous travaillons activement pour vous offrir une expérience optimale. Bonne navigation sur notre site !
+
+          </p>
+
+            <!--LIGNE SEPARATRICE-->
+            <div class="content-ligne">
+              <div class="hr "></div>
+            </div>
+
+            <p class="text-center">
+
+              <!--
+              Vous pouvez aussi, si vous le souhaitez, me dire en commentaire, à l'adresse suivante:<br> mon.site@exemple.com --> <!--alt.r7-5csbfsu@yopmail.com--><!--
+              ce que vous pensez de ce site, merci pour votre contribution.-->  
+              
+              Vous pouvez aussi, si vous le souhaitez, nous faire part de vos commentaires <!--à l'adresse suivante :--> 
+              <!--narasseiprebroi-4867@yopmail.com--><!--franck16600@gmail.com--><!--mon.site@exemple.com-->. Nous vous remercions pour votre contribution précieuse.
+
+            </p>
+
+
+          <br>
+          <p class="text-center">
+            <!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            asperiores architecto ex ratione eum. Quidem. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Cumque alias molestiae nulla
+            eaque iste praesentium similique culpa ab, vero sit sunt magni,
+            commodi possimus suscipit.<br>-->
+
+            <!--Ailes-Enchantées.fr est dédié à la promotion des arts créatifs et aux initiatives culturelles. 
+            Nous visons à soutenir les artistes et à encourager la participation culturelle à 
+            travers divers projets et événements. 
+            Restez à l'écoute pour plus de mises à jour et de contenus inspirants !-->
+
+            Notre Mission
+            Ailes-Enchantées.fr est dédié à la protection et à la promotion des papillons. Nous visons à 
+            sensibiliser le public à l'importance de ces magnifiques insectes et à encourager leur 
+            préservation à travers divers projets éducatifs et événements. Restez à l'écoute pour plus de 
+            mises à jour et de contenus fascinants sur les papillons !
+          </p>
+
+          <div class="btn-card"><!-- ./pages/inscription-(desactiver).html -->
+            <a href="./pages/inscription-(desactiver).html"
+              class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez"><!--s'inscrire ici-->Adherez ! clickez ici<!--inscrivez-vous ici-->
+            </a>
+          </div>
+        </div>
+
+        <!--BLOCK IMAGE 2 --><!-- Bloc image -->
+        <div class="block-img"><!-- block-img -->
+          <div class="section"> <!-- section -->
+            <img
+              class="card-img-top d-flex align-content-center align-items-center justify-content-center rounded-3"
+              src="./images3/mon_image_de_fond.jpg"
+              alt="Image"
+            >Image par Ronny Overhate de Pixabay<!--Image par Ronny Overhate de Pixabay-->
+          </div>
+        </div>
+
+        <!-- ACTUALITE --><!-- Actualité -->
+        <div class="section-article">
+          <h5 class="subtitle">
+            Friend of the Earth a lancé une campagne de<br>recensement des
+            papillons dans le monde
+          </h5>
+          <p>
+            Afin de participer à ce recensement mondial, il suffit de prendre
+            une photographie des papillons que chacun observe et de se trouver
+            suffisamment près de l'insecte pour permettre son identification,
+            mais à une distance raisonnable pour ne pas le déranger. Il faut
+            ensuite envoyer la photographie par
+            <a
+              href="https://www.futura-sciences.com/tech/telecharger/whatsapp-132"
+              target="_blank"
+              >l'application WhatsApp
+            </a>
+            (+39 351 252 2520) en précisant les coordonnées GPS de la prise de
+            vue. Friend of the Earth enverra en retour l'identification de
+            l'espèce photographiée et ajoutera cette observation à sa base de
+            données. Un héros des Papillons sera désigné sur les réseaux sociaux
+            chaque mois pour avoir fourni le plus grand nombre de photographies
+            !
+          </p>
+        </div>
+
+        <div class="btn-card"><!-- ./pages/inscription-(desactiver).html -->
+          <a href="./pages/inscription-(desactiver).html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez"><!--s'inscrire ici-->Laisser un avis<!--inscrivez-vous ici-->
+          </a>
+        </div>
+
+      </main>
+
+      <!--ASIDE--><!-- Barre latérale -->
+      <aside class="aside">
+        <div class="aside-nav">
+          <h5>images</h5><!--https://www.photospapillons.com/papillons-de-france.php-->
+          <a
+            href="https://www.photospapillons.com/papillons-de-france.php"
+            target="_blank"
+            >Banques images</a
+          >
+          <a href="./pages/Galerie-index.html">Galerie images</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>Évènements</h5>
+          <a href="./pages/calendar.html">Agenda</a>
+          <a href="./pages/assos.html">assemblé</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>Les sortie</h5>
+          <a href="./pages/musée.html">Musée</a>
+          <a href="./pages/exposition.html">exposition</a>
+        </div>
+
+        <div class="aside-nav">
+          <h5>sur le web</h5>
+
+          <a
+            href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+            target="_blank"
+            >Actualité</a
+          >
+          <a href="./pages/recherche_wiki.html">recherche wikipedia</a> 
+        </div>
+
+        <div class="aside-nav">
+          <h5>identifier</h5>
+          <a href="./pages/identification.html">quel est ce papillon</a>
+          <a href="./pages/fiche-details.html">page lepidoptera</a>
+        </div>
+
+        <div class="btn-card">
+          <a href="./pages/inscription-(desactiver).html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez">Laisser un avis
+          </a>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- FOOTER --><!-- Pied de page -->
+    <footer class="blockfooter">
+      <div class="block">
+        <div class="footer d-flex flex-column "><!--text-left-->
+          <div>
+            <h5 class="text-dark">informations</h5>
+            <a
+              href="./rgpd/mentions_légales.html"
+              class="mention"
+              >mention légale</a
+            >
+            <a href="./pages/a-propos-ecf.html" class="mention"
+              >A propos de cette ECF</a
+            >
+          </div>
+        </div>
+
+        <div class="footer d-flex flex-column "><!--text-left-->
+          <div>
+            <h5 class="text-dark">nous contacter</h5>
+            <a href="tel:+336250214" class="contact">06 25 02 14</a>
+            <a href="mailto:entomologie-asso@example.com" class="contact"
+              >Envoyer un courriel</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src=""></script>
+  </body>
+</html>
+ 

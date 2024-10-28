@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails du Papillon</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+  <header>
+    <!-- Contenu de l'en-tête (header) -->
+  </header>
+
+  <main class="content">
+    <div id="details-container">
+      <!-- Les détails du papillon seront chargés ici dynamiquement -->
+    </div>
+  </main>
+
+  <footer>
+    <!-- Contenu du pied de page (footer) -->
+  </footer>
+
+  <!-- Inclusion du script JavaScript pour gérer les détails du papillon -->
+  <!--<script src="../scripts/gallery.js"></script>-->
+  <script src="../scripts/gallery(2).js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Récupérer les paramètres de l'URL
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id'); // Obtenir l'identifiant du papillon à partir des paramètres
+
+      // Appeler la fonction pour afficher les détails du papillon
+      afficherDetailsPapillon(id);
+    });
+
+    // Réutiliser la fonction afficherDetailsPapillon définie dans gallery.js
+    function afficherDetailsPapillon(id) {
+      fetch('../data/papillons(2).json') // Effectuer une requête pour obtenir le fichier JSON
+        .then(response => response.json()) // Convertir la réponse en format JSON
+        .then(data => {
+          const papillon = data.find(p => p.id == id); // Trouver le papillon correspondant à l'identifiant
+          if (papillon) {
+            const detailsContainer = document.getElementById('details-container');
+            // Créer le contenu des détails du papillon
+            const details = `
+              <div>
+                <h2>${papillon.name}</h2>
+                <p>${papillon.description}</p>
+                <p>Envergure : ${papillon.wingspan}</p>
+                <img src="../assets/images/${papillon.image}" alt="${papillon.name}">
+              </div>
+            `;
+            detailsContainer.innerHTML = details; // Ajouter le contenu à l'élément des détails
+          } else {
+            console.error('Papillon non trouvé');
+          }
+        })
+        .catch(error => console.error('Erreur lors de la récupération des détails:', error)); // Gérer les erreurs
+    }
+  </script>
+</body>
+
+</html>

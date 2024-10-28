@@ -1,0 +1,392 @@
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <link rel="stylesheet" href="../style/avis_style.css">
+  <title>ECF-Contact</title>
+</head>
+<body>                                   -->
+  <!-- BREADCRUMB --> <!--
+  <div class="breadcrumb-item"> 
+    <a href="../pages/sommaire.html" class="link-item">Sommaire</a> >
+    <a href="../index.html" class="link-item">Accueil</a> > Avis
+  </div>
+  <div class="content">
+    <main class="main">
+      <div class="section-form">
+        <div class="article">
+          <h2 class="title">Laisser un Avis</h2>
+          <p class="text-center">
+            Nous serions ravis de recevoir vos questions, suggestions ou commentaires.
+            Il vous suffit de remplir ce formulaire et de le valider. Un e-mail de confirmation vous sera envoyé.
+            Merci de prendre le temps de nous contacter. Nous vous répondrons dans les plus brefs délais !
+          </p>
+        </div>
+
+        <form class="form" id="contact-form" action="../php/submit_avis.php" method="post">
+          <?php
+          session_start();
+          if (empty($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+          }
+          ?>
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+          <?php include('../php/csrf_token.php'); ?>
+          <div class="form-control">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-control">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+          </div>
+          <div class="form-control">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+</html>              -->
+
+<!--
+LA TABLE CREER EN DB
+
+Pour améliorer l'expérience utilisateur en collectant les avis et en 
+permettant aux utilisateurs de laisser une note par étoiles, 
+vous pouvez suivre ces étapes supplémentaires pour afficher les avis sur votre site. 
+Cela inclut la collecte des avis, le stockage dans la base de données et l'affichage des avis.
+
+
+sql
+Copier le code
+CREATE TABLE avis (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    note INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-->
+
+<!-------------------------------------------------------------------------------------------------------------------->
+
+<!--<?php
+session_start();
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>-->
+
+
+<!--<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+echo "Token CSRF généré: " . $_SESSION['csrf_token'];
+
+?>-->
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<?php
+include 'path/to/../php/session_init.php'; <!--// Mettez le chemin correct vers le fichier session_init.php-->
+?>
+
+<!DOCTYPE html>
+
+
+<!--<?php
+session_start();
+
+// Vérification du démarrage de la session
+if (session_status() == PHP_SESSION_ACTIVE) {
+    echo "Session démarrée avec succès.<br>";
+} else {
+    echo "Erreur : La session n'a pas pu être démarrée.<br>";
+}-->
+
+<!--// Génération du token CSRF si nécessaire
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>-->
+
+                                      <!--// Génération du token CSRF si nécessaire
+                                      if (empty($_SESSION['csrf_token'])) {
+                                          $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                                      }
+                                      ?>-->
+
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <link rel="stylesheet" href="../style/test_avis-2_style.css">
+  <title>ECF-Contact</title>
+
+
+
+
+</head>
+<body>
+
+
+    <!-- Afficher le token pour le débogage -->
+    <!--<p>Token CSRF généré: <?php echo $_SESSION['csrf_token']; ?></p>-->
+
+
+  <!-- Breadcrumb navigation -->
+  <div class="breadcrumb-item"> 
+    <a href="../pages/sommaire.html" class="link-item">Sommaire</a> >
+    <a href="../index.html" class="link-item">Accueil</a> > Avis
+  </div>
+  <div class="content">
+    <main class="main">
+      <div class="section-form">
+        <div class="article">
+          <h2 class="title">Laisser un Avis</h2>
+          <p class="text-center">
+            Nous serions ravis de recevoir vos questions, suggestions ou commentaires.
+            Il vous suffit de remplir ce formulaire et de le valider. Un e-mail de confirmation vous sera envoyé.
+            Merci de prendre le temps de nous contacter. Nous vous répondrons dans les plus brefs délais !
+          </p>
+        </div>
+
+          <!--<?php
+          session_start();
+          if (empty($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+          }
+          ?>-->
+                                    <!--<?php
+                                    // Démarre la session et génère un token CSRF si nécessaire
+                                    session_start();
+                                    if (empty($_SESSION['csrf_token'])) {
+                                        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                                    }
+                                    ?>-->
+
+        <!-- Formulaire pour soumettre un avis -->
+        <form class="form" id="contact-form" action="../php/submit_avis.php" method="post">
+          <!-- Champ caché pour le token CSRF -->
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+          <?php include('../php/csrf_token.php'); ?>
+          <div class="form-control">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-control">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+          </div>
+          <div class="form-control">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="../scripts/avis_script.js"></script>
+
+</body>
+</html>     
+
+<!--
+  Explications du code :
+Session :
+
+session_start() démarre la session PHP pour utiliser les tokens CSRF stockés dans la session.
+Vérification du token CSRF :
+
+Le script vérifie que la méthode de requête est POST et que le token CSRF envoyé via le 
+formulaire correspond au token stocké dans la session.
+Connexion à la base de données :
+
+Les paramètres de connexion (host, dbname, username, password) sont définis.
+new PDO est utilisé pour établir une connexion à la base de données.
+Récupération et filtration des données :
+
+filter_input est utilisé pour récupérer et nettoyer les données envoyées par le 
+formulaire (name, email, message).
+Insertion des données dans la base de données :
+
+Une instruction préparée ($stmt->prepare) est utilisée pour insérer les 
+données dans la table avis.
+Les données sont liées et exécutées.
+Redirection en cas de succès :
+
+Si l'insertion est réussie, l'utilisateur est redirigé vers la page de 
+remerciement thank_you.html.
+Gestion des erreurs :
+
+Les erreurs de connexion et d'insertion sont gérées et affichées.
+Vérifications supplémentaires
+Chemin correct pour la redirection :
+
+Assurez-vous que le fichier thank_you.html est bien situé dans le dossier pages.
+Si vous obtenez toujours une erreur "Not Found", testez l'URL directement 
+dans le navigateur pour vous assurer que le fichier existe et est accessible.
+Permissions de fichiers :
+
+Assurez-vous que les fichiers et dossiers ont les permissions nécessaires pour être accessibles par le serveur web.
+Avec cette configuration, le formulaire d'avis devrait fonctionner correctement et 
+rediriger vers la page de remerciement après la soumission.
+-->
+<!--
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entomologie">
+    <link rel="stylesheet" href="../style/avis_style.css">
+    <title>ECF-Contact</title>
+</head>
+<body>                                -->
+    <!-- BREADCRUMB -->     <!--
+    <div class="breadcrumb-item"> 
+        <a href="../pages/sommaire.html" class="link-item">Sommaire</a> >
+        <a href="../index.html" class="link-item">Accueil</a> > Avis
+    </div>
+    <div class="content">
+        <main class="main">
+            <div class="section-form">
+                <div class="article">
+                    <h2 class="title">Laisser un Avis</h2>
+                    <p class="text-center">
+                        Nous serions ravis de recevoir vos questions, suggestions ou commentaires.
+                        Il vous suffit de remplir ce formulaire et de le valider. Un e-mail de confirmation vous sera envoyé.
+                        Merci de prendre le temps de nous contacter. Nous vous répondrons dans les plus brefs délais !
+                    </p>
+                </div>
+                <form class="form" id="contact-form" action="../php/submit_avis.php" method="post">
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                    <div class="form-control">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>   -->
+
+
+<!--<?php
+session_start();
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <link rel="stylesheet" href="../style/avis_style.css">
+  <title>ECF-Contact</title>
+</head>
+
+<body>
+  <!-- Breadcrumb navigation -->
+  <div class="breadcrumb-item"> 
+    <a href="../pages/sommaire.html" class="link-item">Sommaire</a> >
+    <a href="../index.html" class="link-item">Accueil</a> > Avis
+  </div>
+
+  <div class="content">
+    <main class="main">
+      <div class="section-form">
+        <div class="article">
+          <h2 class="title">Laisser un Avis</h2>
+          <p class="text-center">
+            Nous serions ravis de recevoir vos questions, suggestions ou commentaires.
+            Il vous suffit de remplir ce formulaire et de le valider. Un e-mail de confirmation vous sera envoyé.
+            Merci de prendre le temps de nous contacter. Nous vous répondrons dans les plus brefs délais !
+          </p>
+        </div>
+
+
+        <!-- Affichage du token CSRF pour le débogage -->
+                              <p><!--Token CSRF dans le formulaire :--> <!--<?php echo $_SESSION['csrf_token']; ?>--></p>
+        <form class="form" id="contact-form" action="../php/submit_avis.php" method="post">
+          <!--<?php
+          session_start();
+          if (empty($_SESSION['csrf_token'])) {
+              $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+          }
+          ?>-->
+
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                                                            <!--<?php include('../php/csrf_token.php'); ?>-->
+
+          <div class="form-control">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-control">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+          </div>
+          <div class="form-control">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+          </div>
+
+          <div class="form-control">
+            <label for="note">Note :</label>
+            <input type="number" id="note" name="note"  placeholder="Votre note (1-5)" min="1" max="5">
+          </div><!--class="form-control"-->
+
+
+          <button type="submit">Envoyer</button>
+        </form>
+        <!-- Section d'affichage des erreurs -->
+        <div id="error-message" class="mt-3 text-danger"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../scripts/avis_script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+
+
+<!----------------------------------------------------------------->
+
+<!--
+  Explications :
+Lien vers l'inscription :
+
+Chaque bouton "S'inscrire" renvoie à inscription.html avec les paramètres event et date dans l'URL.
+Récupération des paramètres :
+
+Dans inscription.html, les paramètres de l'URL sont récupérés et utilisés pour pré-remplir le formulaire.
+Formulaire d'inscription :
+
+Le formulaire contient des champs cachés (hidden) pour transmettre les informations de l'événement lors de la soumission.
+Avec cette configuration, lorsque l'utilisateur clique sur "S'inscrire" pour un événement particulier, 
+les informations pertinentes sont passées à la page d'inscription, 
+où elles peuvent être utilisées pour afficher des détails ou pré-remplir un formulaire.
+-->
+
+<!--
+  Explications
+Formulaire HTML :
+
+Le formulaire envoie les données via la méthode POST à submit_inscription.php.
+Les informations sur l'événement sont passées en tant que champs cachés (hidden).
+Script PHP (submit_inscription.php) :
+
+Ce script récupère les données du formulaire envoyées via POST.
+Il se connecte à une base de données MySQL.
+Il insère les données de l'inscription dans une table nommée inscriptions.
+Une fois l'insertion réussie, il affiche un message de confirmation. En cas d'erreur, il affiche un message d'erreur.
+-->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription à l'événement</title>
+    <link rel="stylesheet" href="../style/inscription_style.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventTitle = urlParams.get('event');
+            const eventDate = urlParams.get('date');
+
+            if (eventTitle) {
+                document.getElementById('event-title').textContent = eventTitle;
+                document.getElementById('event-title-input').value = eventTitle;
+            }
+            if (eventDate) {
+                document.getElementById('event-date').textContent = eventDate;
+                document.getElementById('event-date-input').value = eventDate;
+            }
+        });
+    </script>
+
+    <!--<script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const eventTitle = urlParams.get('event');
+          const eventDate = urlParams.get('date');
+
+          if (eventTitle) {
+              document.getElementById('event-title').textContent = eventTitle;
+              document.getElementById('event-title-input').value = eventTitle;
+          }
+          if (eventDate) {
+              document.getElementById('event-date').textContent = eventDate;
+              document.getElementById('event-date-input').value = eventDate;
+          }
+      });
+    </script>-->
+
+</head>
+<body>
+    <h2>Inscription à l'événement</h2>
+    <p>Vous vous inscrivez pour l'événement :</p>
+    <p><strong>Événement :</strong> <span id="event-title"></span></p>
+    <p><strong>Date :</strong> <span id="event-date"></span></p>
+
+    <form action="../php/submit_inscription.php" method="POST">
+        <input type="hidden" name="event_title" id="event-title-input">
+        <input type="hidden" name="event_date" id="event-date-input">
+
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <!--<a href="../php/submit_inscription.html?event=Observation%20de%20l'Aglais%20urticae&date=2024-06-01">S'inscrire à l'événement</a>-->
+        <button type="submit">S'inscrire</button>
+    </form>
+</body>
+</html>
+
+<!--------------------------------------------------->
+
+<!--------------------------------------------------->
+<!--
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription à l'événement</title>
+    <link rel="stylesheet" href="../style/inscription_style.css">  -->  <!--../style/style.css--><!--../style/inscription_style.css-->
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventTitle = urlParams.get('event');
+            const eventDate = urlParams.get('date');
+
+            if (eventTitle) {
+                document.getElementById('event-title').textContent = eventTitle;
+                document.getElementById('event-title-input').value = eventTitle;
+            }
+            if (eventDate) {
+                document.getElementById('event-date').textContent = eventDate;
+                document.getElementById('event-date-input').value = eventDate;
+            }
+        });
+    </script>    -->
+
+<!--<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const eventTitle = urlParams.get('event');
+      const eventDate = urlParams.get('date');
+
+      if (eventTitle) {
+          document.getElementById('event-title').textContent = eventTitle;
+          document.getElementById('event-title-input').value = eventTitle;
+      }
+      if (eventDate) {
+          document.getElementById('event-date').textContent = eventDate;
+          document.getElementById('event-date-input').value = eventDate;
+      }
+  });
+</script>-->
+<!--
+<style>
+  .section-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border: 1px solid grey;
+    /*grey*/
+    border-radius: 5px;
+    background-color: #f8f9f8;
+  }
+  
+  .form-group {
+    width: 90%;
+  }
+  
+  form,
+  label,
+  input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    height: 25px;
+    text-align: left;
+    width: 80%;
+  }
+  
+  textarea {
+    height: 25px;
+    text-align: left;
+    width: 80%;
+  }
+  
+  
+  button,
+  .submit[type=submit] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: mediumorchid;/*#0145b5*/
+    /*#007bff*/
+    color: white;
+    border: none;
+  }
+  
+  button:hover {
+    background: rgb(211, 85, 163);/*green*/
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  </style>
+</head>
+<body>
+
+    <h2>Inscription à l'événement</h2>
+    <p>Vous vous inscrivez pour l'événement :</p>
+    <p><strong>Événement :</strong> <span id="event-title"></span></p>
+    <p><strong>Date :</strong> <span id="event-date"></span></p>
+
+    <form action="../php/submit_inscription.php" method="POST">
+        <input type="hidden" name="event_title" id="event-title-input">
+        <input type="hidden" name="event_date" id="event-date-input">
+
+
+        <input type="hidden" name="title" id="event-title-input">
+        <input type="hidden" name="date" id="event-date-input">
+
+
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <a href="../php/submit_inscription.html?event=Observation%20de%20l'Aglais%20urticae&date=2024-06-01">S'inscrire à l'événement</a>-->  <!--
+
+        <button type="submit">S'inscrire</button>    -->
+     <!--
+    </form>
+    <h1>Inscription à l'événement</h1>
+
+    <p>Vous vous inscrivez pour l'événement :</p>
+    <p><strong>Événement :</strong> <span id="event-title"></span></p>
+    <p><strong>Date :</strong> <span id="event-date"></span></p>
+
+
+    <form action="../php/submit_inscription.php" method="post">
+        <input type="hidden" name="event_title" value="Observation de l'Aglais urticae">  
+        <input type="hidden" name="event_date" value="01-06-2024"> -->  <!--2024-06-01-->    <!--
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br>
+        <input type="submit" value="S'inscrire">
+    </form>  -->   
+<!--
+</body>
+</html>-->
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------------------------------->
+

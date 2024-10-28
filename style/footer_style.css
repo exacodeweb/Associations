@@ -1,0 +1,163 @@
+/*-- FOOTER --*/
+.blockfooter {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-around;/*center*/
+  align-items: center;
+  align-content: center;
+  background: #7dc95e;
+ /* color: white;/*white*/
+  height: 125px;/*125px*//*auto*/
+  width: 100%;
+}
+
+.block-ftr {
+  display: flex;
+  justify-content: center;/*space-around*//*center*/
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.content-footer {
+  display: flex;
+  flex-direction: row;/*column*/  
+  text-align: center;
+  justify-content: space-around;/**//*center*/ 
+  align-items: center;
+  width: 70%;/*100%*/ 
+}  
+
+.mention-1 {
+display: flex;
+flex-direction: column;/**/ 
+text-align: left;
+width: 250px;/*250px*/
+color: blue;
+padding: 10px;
+margin-left: 90px;/*40px*/
+margin-right: 90px;/**/
+}
+
+.mention-2 {
+display: flex;
+flex-direction: column;
+text-align: center;
+width: 250px;/*250px*/
+color: blue;
+padding: 10px;
+margin-left: 180px;/*40px*/
+margin-right: 0px;/**/
+} 
+
+.cl-mention {
+display: flex;
+flex-direction: column;
+text-align: left !important;
+width: 250px;/*200px*/
+color: blue;
+}
+
+.cl-contact {
+display: flex;
+flex-direction: row;
+text-align: left !important;
+width: 250px;/*200px*/
+color: blue;
+}       
+
+
+/*------------------------------------------------------------------------------------------------------- FOOTER --*/
+@media screen  and (max-width: 576px) { 
+  .blockfooter {
+
+    font-size: 12px;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    justify-content: center !important;
+    align-content: center !important;
+    align-items: center !important;   
+    padding: 20px;  
+    height: auto;        
+  } 
+}
+
+/*--------------------------------------*/
+
+.block-ftr {
+    display: flex;
+    justify-content: center;/*space-around*/ 
+    align-items: center;
+    flex-direction: column; 
+    width: 100%;/*80%*/  
+    margin-left: 0px;/*80px*/   
+  }  
+/*-------------------------------------*/
+
+@media screen  and (max-width: 768px) {   /*576px*/                
+.content-footer {/*.section-footer*/
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-1 ,.footer-2 {
+  margin-bottom: 20px !important;
+  padding: 10px !important;
+}
+
+.mention-1 {
+display: flex;
+flex-direction: column;
+
+text-align: center;
+width: auto !important;/*250px*//*100%*/
+color: blue;
+padding: 0px;
+margin-left: 0px !important;
+margin-right: 0px !important;
+}
+
+.mention-2 {
+display: flex;
+flex-direction: column;
+text-align: center;
+width: auto !important;/*250px*//*100%*/
+color: blue;
+
+padding: 0px;/*10px*/
+margin-left: 0px !important;
+margin-right: 0px !important;
+}                                             
+
+.cl-mention {
+display: flex;
+flex-direction: row;
+text-align: center;/*left*/
+justify-content: center;
+width: auto;/*200px*/
+}
+
+.cl-contact {
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+width: auto;/*200px*/
+}                 
+
+.bis {
+font-size: 18px;
+}
+
+/*.mention-1, .mention2, a,.cl-mention {
+  color: black !important;
+}*/
+
+.block-ftr, .content-footer, .footer-1, .footer-2,  h5, .cl-mention, h5, .cl-contact {
+  color: black !important;
+}
+}

@@ -1,0 +1,97 @@
+/*
+body {
+  background-color: lightgoldenrodyellow;
+  background-position: 100% 100%;
+  margin: 0px;*/
+  /*font-family: 'Tangerine';font-size: 22px;*//*
+  font-family: 'Roboto', Arial, sans-serif;*//*
+}*/
+/*------------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+.breadcrumb {
+  width: 400px;
+}
+.breadcrumb-item {
+  max-width: 100%;
+  background: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /*font-size: 16px ;h4 = 16px*/
+}
+.link-rep {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+  .article {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 50px;/*50px*/
+
+    color: #0000ff;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 15px;/*50px*/
+    color: #0000ff;
+  }
+/*-----------------------------------------------------------------------TITRE--*//*
+h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+h2 {
+  color: #0000ff;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.title, strong {
+  color: #0000ff;
+}*/
+/*--------------------------------------------------------------------------------------------------------LIEN ANCRE--*/
+.link {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    font-size: 1.2em;
+  }
+  .link-page {
+    padding: 20px;
+    width: 35%;
+    font-size: 18.72px;
+    font-weight: 600;
+    margin-bottom: 1px; 
+  }
+  p {
+    margin-left: 0px;
+    color: black;
+  }
+
+/*------------------------------------------------------------------------------------------------------MEDIA QUERRY--*/
+/*-- FIL D'ARIANE --*/
+@media screen and (min-width : 320px) and (max-width : 576px) {
+  .breadgroumb {
+    width: 100%;
+  }
+}

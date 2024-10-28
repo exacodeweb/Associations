@@ -1,0 +1,852 @@
+/* Import Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Rajdhani:wght@400;700&display=swap');
+*/
+/* Styles généraux */
+body {
+  background: lightgoldenrodyellow;
+  background-position: 100% 100%;
+  font-family: 'Barlow', sans-serif;
+  /*line-height: 1.6;*/
+  /*margin: 0px;/*
+  font-size: 1em; /* Utilisation de l'unité relative em pour la taille de police de base */
+  }
+  
+  /* Titres (headlines) */
+  h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'Rajdhani', sans-serif;
+  }
+  
+  /*--CONTENT--*/
+  .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+  
+  /*--MAIN--*/
+  .main {
+  float: left;
+  flex-direction: column;
+  width: 70%;
+  /*70% du parent "content"*/
+  margin-left: 10px;
+  background: #fbfbf9;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+  }
+  
+  /*--ASIDE--*/
+  .aside {
+  float: right;
+  flex-direction: column;
+  width: 26%;
+  /*22% du parent "content"*/
+  margin-right: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  height: 590px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+  }
+
+  /*------------------------------------------------------------------------------------------*/
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 10px 50px;
+    /*width: 100%;*/
+  }
+
+  /*---------------------------------------------*/
+
+  .card {
+    width: auto;/*auto*/
+  }
+
+  .card {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    width: 270px;/*100%*//*auto*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+/*--------------------------------------------*/
+
+.button, .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 10px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*margin-top: 15px;*/
+  /*padding: 10px;*/
+  /*margin-bottom: 20px;*/
+  width: 160px;
+  height: 30px;
+  /*border-radius: 50px;*/
+  /*cursor: pointer;*/
+  /*background: mediumorchid;*/
+  /*color: white;*/
+  /*border: none;*/
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 160px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: mediumorchid;
+  color: white;
+  border: none;
+}
+
+/* Style par défaut pour le bouton */
+.button {
+  padding: 10px 20px; /* Ajuster les marges internes */
+  font-size: 16px; /* Taille de police par défaut */
+  border: none; /* Enlever la bordure par défaut */
+  border-radius: 5px; /* Arrondir les coins */
+  background-color: mediumorchid; /* Couleur de fond    #007bff*/
+  color: #fff; /* Couleur du texte *//*
+  cursor: pointer; /* Curseur en forme de main *//*
+  transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+/* Style pour le hover */
+.button:hover {
+  background-color: rgb(211, 85, 163); /* Couleur de fond au survol   #0056b3*/
+}
+
+button:hover {
+  background: rgb(211, 85, 163);
+}
+
+.submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/*---------------------------------------------*/
+
+  /*-----------------------------------------------------------------------------------ASIDE--*/
+  .aside-nav {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbf9;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 4px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+  }
+  
+  .aside-link {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+  }
+
+
+
+
+
+
+/* Import Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Rajdhani:wght@400;700&display=swap');
+*/
+/* Styles généraux *//*
+body {
+  background: lightgoldenrodyellow;
+  background-position: 100% 100%;
+  font-family: 'Barlow', sans-serif;
+  /*line-height: 1.6;*/
+  /*margin: 0px;/*
+  font-size: 1em; /* Utilisation de l'unité relative em pour la taille de police de base *//*
+}
+
+/* Titres (headlines) *//*
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+
+/*body {
+  background: lightgoldenrodyellow;
+  background-position: 100% 100%;
+  margin: 0px;
+  /*font-family: 'Tangerine';font-size: 22px;*/
+/*}*/
+
+/*.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}*/
+
+
+/*@media screen and (max-width: 208px) {
+  .breadcrumb-item {
+  /*max-width: 100%;
+  background: none;
+  margin: 10px 20px;*//*
+  visibility: collapse;
+  }
+  
+  /*.link-rep {
+  margin-right: 5px;
+  margin-left: 5px;
+  }*//*
+  }*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: black;
+  background: lightgoldenrodyellow;
+}*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*
+.main {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  background: #fbfbf9;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+  padding: 10px;
+}*/
+
+/*----------------------------------------------------*//*
+.main {
+  float: left;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 10px;
+  background: #FBFBF9;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+  padding: 0;
+}*/
+
+
+
+
+.text-primary {
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+/*------------------------------------------------------------------------------------- ARTICLE --*/
+.article {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 0px;/*20px*/
+  width: 100%;
+  }
+  
+  .article {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  
+  /*------------------------------------------*/
+  
+  h1 {
+      display: flex;
+      flex-direction: row;
+
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      font-size: 2.0em;
+  }
+
+  
+  .title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 0px;/*50px*/
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 12px 0 0px;/*12px 0 50px*/
+  }
+  
+  .title,
+  strong {
+    color: #0000ff;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 12px 0 0;
+    color: #0000ff;
+  }
+
+/*--------------------------------------------*/
+
+img {
+  width: 100% !important;
+}
+
+.section1 {
+  margin: 0;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.img {
+display: flex;
+flex-direction: column;
+justify-content: left;
+margin: 5px;
+} 
+
+img {
+border-radius: 5px 5px 5px 5px;
+/*box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.8);  
+/* 2px 4px 10px hsla(0, 0%, 0%, 0.8)*/     
+height: 150px;/*150px*/                
+max-width: 250px !important;/*250px*//*100%*/     
+}
+
+img {
+  border-radius: 5px;
+  height: 150px;
+  max-width: 250px !important;
+}
+
+figcaption,
+#fig {
+    width: 50%;
+}
+
+figure,
+figcaption,
+.fig {
+    width: 30% !important;
+}
+
+/*----------------------------------------------*/
+
+h2 {
+  color: #0000ff;
+  font-weight: 600;
+  font-size: 1.5em;/*1.5em*/
+}
+
+/*h2,
+p {
+  padding: 5px;
+}*/
+
+h2, p {
+  padding: 5px;
+}
+
+/*p {
+  height: 100px;
+}*/
+
+p {
+  height: 100px;
+}
+
+
+
+
+
+/*-----------------------------------------------*/
+.button, .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 10px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 30px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 160px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: mediumorchid;
+  color: white;
+  border: none;
+}
+
+/* Style par défaut pour le bouton */
+.button {
+  padding: 10px 20px; /* Ajuster les marges internes */
+  font-size: 16px; /* Taille de police par défaut */
+  border: none; /* Enlever la bordure par défaut */
+  border-radius: 5px; /* Arrondir les coins */
+  background-color: mediumorchid; /* Couleur de fond    #007bff*/
+  color: #fff; /* Couleur du texte */
+  cursor: pointer; /* Curseur en forme de main */
+  transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+/* Style pour le hover */
+.button:hover {
+  background-color: rgb(211, 85, 163); /* Couleur de fond au survol   #0056b3*/
+}
+
+button:hover {
+  background: rgb(211, 85, 163);
+}
+
+.submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/*-- RESPONSIVE --*/
+@media screen and (max-width: 768px) {
+  /*.header {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    align-content: center;
+
+
+    justify-content: center;
+  }
+
+  .logo {
+      display: flex;
+      flex-direction: row;
+      font-size: 6.11vh;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-left: 0px;
+  }
+  */
+/*
+  .menu {
+      display: flex;
+      flex-direction: column !important;
+      font-size: 12px !important;
+      max-width: 100%;
+      text-align: center;
+      background-color: blueviolet;
+      margin: 0 10px;
+  }
+
+  .link-nav {
+      font-size: 12px !important;
+  }
+  */
+
+
+  /*.content,
+  .main,
+  .aside {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+  }
+
+  .main {
+      margin: 0;
+      width: auto;
+  }
+
+  .card {
+      width: auto;
+  }
+
+  .button {
+      padding: 8px 16px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+  }*/
+}
+
+
+@media screen  and (max-width : 576px) {/*and (min-width : 320px)*/
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0px;/*5px*/
+  }
+
+  /*.link {
+    font-size: 1em;
+  }*/
+
+  .main,
+  .aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .content,
+  .main,
+  .aside {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 5px;/*10px*/
+  }
+
+  /*------------------------------------------------------------------------------CARD IMAGES--*/
+  .card {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    width: auto;/*100%*/
+  
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  
+  
+  /*------------------------------------------------CARD IMAGES--*/
+  /*.card {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid grey;
+  }*/
+  
+  /*.card {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-1 {
+    margin: 0;
+  }
+  */
+  
+  /*--------------------------------------*/
+  /*.card {
+    width: auto;/*auto*//*
+  }*/
+  
+  /*.card {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    width: auto;*//*100%*//*
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  /*.aside {
+    padding: 0px;
+    margin-top: 10px;
+  }*/
+
+  .aside {
+    padding: 10px;
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+      position: absolute;
+      top: 50px; /* Positionnement selon votre design pour les grands écrans */
+      left: 50px;
+      /* autres styles */
+  }
+}
+
+/* Médias queries pour les petits écrans */
+@media (max-width: 768px) {
+
+  /*.gallery {
+    margin: 0px;
+  }*/
+
+    h1 {
+        position: static; /* Change la position à static pour les petits écrans */
+        margin: 20px auto; /* Centrer le titre horizontalement */
+        text-align: center; /* Centrer le texte */
+        /* autres ajustements possibles */
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {/* and (min-width: 220px)*/
+/*20/06/2024 .main,
+.aside {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+width: 100%;
+margin: 0px;
+
+padding: 5px;
+} */
+
+/*-------------------------------------- Test 18/06/2024 --*/
+/*20/06/2024 .main {
+flex: 1;
+min-width: 100px;
+margin: 10px;
+background: #fbfbf9;
+border-radius: 5px;
+box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+padding: 5px;/*10px*/ /*
+} */
+
+h2 {
+  font-size: 2.25vw;
+}
+
+/*20/06/2024 .aside {
+  margin-top: 10px;
+  /*width: 100%;*//*
+} */
+}
+
+
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+  .header,
+  .menu,
+  .breadcrumb-item,
+  .blockfooter,
+  .block {
+      font-size: 12px;
+  }
+}
+
+
+
+
+
+
+/*
+@media (max-width: 768px) {
+    .card {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid grey;
+      width: auto;/*100%*//*
+    
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
+    
+    
+    /*--------------------------------------------------*//*
+    
+    .card {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid grey;
+    }
+    
+    /*        .card {
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid grey;
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .section-1 {
+                margin: 0;
+            }
+    */
+    
+    /*--------------------------------------*//*
+    .card {
+      width: auto;/*auto*//*
+    }
+    
+    .card {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid grey;
+      width: auto;/*100%*//*
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
+    }*/
+
+
+
+
+/*-----------------------------------------------*/
+
+
+/*-----------------------------------------------*/
+
+/*.aside {
+  flex: 0 1 300px;
+  margin: 10px;
+  padding: 10px;
+  background: #fbfbf9;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+}*/
+
+/* Aside navigation styling *//*
+.aside-nav {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbf9;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 4px;/*4px*//*
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+
+  margin-top: 0px;
+}
+
+.aside-link {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+}*/
+
+/*20/06/2024 @media screen and (max-width: 768px) {
+  .content,
+  .main,
+  .aside {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 5px;/*10px*/ /*
+  }
+
+.content {
+width: 100% !important;
+}
+  .main {
+      margin: 0px;/*10px*/  /*
+      width: auto;
+  }
+
+}*/
+/*------------------------------------------------*/
+
+/*20/06/224 @media screen  and (max-width: 768px) {/*and (min-width: 320px)*/ /*
+.main {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+align-content: center;
+height: auto;
+border: 1px solid blue;
+background: #fbfbf9;
+border-radius: 5px;
+margin-left: 0px !important;
+margin-right: 0px !important;/*20px*/ /*
+width: 100% !important;/*99%*/ /*
+}
+
+
+
+
+
+
+}*/
+/*--====--*/
+
+
+

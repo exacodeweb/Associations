@@ -1,0 +1,656 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--, shrink-to-fit=no-->
+  <!--Ils permettent ainsi d'indiquer que la largeur du viewport est celle de l'écran, à sa taille réelle. 
+        C'est sur ces information que se baseront les media queries par la suite.-->
+  <meta name="description" content="Entomologie">
+  <!--<link rel="stylesheet" href="../css/fichierstyle-13.css" type="text/css"> -->
+  <title>ECF-litterature</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous">
+  </script> <!--polices d'ecriture-->
+
+  <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"> <!--polices d'ecriture-->
+
+
+  <!--STYLE-CSS-->
+  <style>
+    body {
+      background: lightgoldenrodyellow;
+    }
+
+    .box-shadow-menu {
+      position: relative;
+      padding-left: 1.25em;
+    }
+
+    .box-shadow-menu:before {
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      width: 1em;
+      height: 0.15em;
+      background: black;
+      box-shadow:
+        0 0.25em 0 0 black,
+        0 0.5em 0 0 black;
+    }
+
+    /*------------------------------------------------------------------------------------------------------HEADER--*/
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 160px;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+    }
+
+    /*---------------------------------------------------------------------------------------------------BLOCK-NAV--*/
+
+    .logo {
+      display: flex;
+      color: white;
+      margin-left: 10px;
+      font-family: 'Tangerine', serif;
+      font-weight: 590;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------*/
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 80px;
+      align-items: center;
+      color: white;
+      margin-right: 25px;
+      margin-left: 10px;
+    }
+
+    /*------------------------------------------------------------------------------------------------ARRIERE-PLAN--*/
+    /*
+      a:hover {
+        text-decoration: none;
+        color: white;/*deepskyblue*/
+    /*
+      }*/
+
+    .link-nav {
+      color: white;
+      text-decoration: none;
+    }
+
+    .link-page {
+      margin: 5px;
+    }
+
+    /*------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+    .breadcroumb {
+      width: 400px;
+    }
+
+    .breadcrumb-item {
+      max-width: 100%;
+      background: none;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .link-rep {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------CONTENT--*/
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    hr {
+      height: 2px;
+      color: blue;
+    }
+
+    .block-nav {
+      width: 600px;
+      height: 25px;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+
+    /*------------------------------------------------------------------------------------------------------IMAGES--*/
+
+    .block1-img {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+      border: 2px solid white;
+      flex-wrap: wrap;
+      flex: 1;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      width: 210px;
+      margin: 5px;
+      justify-content: space-around;
+    }
+
+    /*----------------------------------------------------------------------------------------------IMAGES BLOCK-2--*/
+
+    .block2-img {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .section2 {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      width: 90%;
+      border: 2px solid white;
+      margin-bottom: 30px;
+    }
+
+    img {
+      border-radius: 5px;
+      border: 1px solid blue;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 65.89785831960461vh;
+      object-fit: cover;
+    }
+
+    /*---------------------------------------------------------------------------*/
+    .article {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    p {
+      margin-left: 0px;
+      color: black;
+      text-align: justify;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------MAIN--*/
+    .main {
+      float: left;
+      flex-direction: column;
+      width: 70%;
+      /*70% du parent "content"*/
+      margin-left: 10px;
+      background: #FBFBF9;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    /*-------------------------------------------------------------------------------------------------------ASIDE--*/
+    .aside {
+      float: right;
+      flex-direction: column;
+      width: 22%;
+      /*22% du parent "content"*/
+      margin-right: 10px;
+      padding: 4px;
+      border-radius: 5px;
+      height: 590px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-nav {
+      display: flex;
+      flex-direction: column;
+      background: #FBFBF9;
+      margin-bottom: 20px;
+      height: 100px;
+      padding: 4px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-link {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+
+    /*---------------------------------------------------------------------------------------------------FIGAPTION--*/
+
+    figcaption {
+      font: italic smaller sans-serif;
+      text-align: center;
+      width: 100%;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+
+    img {
+      border-radius: 5px;
+      border: 1px solid blue;
+    }
+
+    /*------------------------------------------------------------------------------------------------------FOOTER--*/
+
+    .blockfooter {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #7dc95e;
+      color: white;
+      height: 150px;
+      width: 100%;
+    }
+
+    .block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      width: 50%;
+      margin-left: 80px;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    .mention {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    a {
+      display: flex;
+      /*z-index: 2;*/
+      color: blue;
+      text-decoration: none;
+    }
+
+    /*-------------------------------------------------------MEDIA QUERY--------------------------------------------*/
+    @media screen and (max-width : 320px) {
+
+      .menu,
+      .breadcrumb-item,
+      .link-nav,
+      nav {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width : 576px) {
+
+      .link,
+      .link-int,
+      span,
+      menu {
+        font-size: 12px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-content: center;
+        align-items: center;
+        text-align: left;
+        height: 40px;
+      }
+    }
+
+    /*@media screen and (min-width : 320px) and (max-width : 576px) {
+        .menu {
+          display: flex;
+          flex-direction: row;
+          height: 40px;
+          font-size: 12px;
+          max-width: 100%;
+          text-align: center;
+        }
+      }*/
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .menu {
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        font-size: 12px;
+        max-width: 100%;
+        text-align: center;
+        background-color: blueviolet;
+        height: auto;
+        margin-right: 15px;
+        margin-left: 10px;
+      }
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------*/
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 5px;
+      }
+    }
+
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+
+      .main,
+      .aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0px;
+      }
+    }
+
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+      .breadgroumb {
+        width: 100%;
+      }
+    }
+
+    /*------------------------------------------------------------------------------------------------------FOOTER--*/
+
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+
+      .block,
+      .contact,
+      .mention,
+      .text-dark {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+      }
+    }
+
+    @media screen and (min-width : 320px) and (max-width : 576px) {
+      .aside {
+        padding: 0px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--<container>-->
+  <nav class="header">
+    <div class="logo">
+      Entomologie
+    </div>
+
+    <!--
+        <label for="toggle">☰</label>
+        <input type="checkbox" id="toggle">-->
+    <!--
+        <label for="toggle">☰</label>
+        <input type="checkbox" id="toggle">-->
+    <!---->
+
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="./blog.html" title="Accueil" class="link-nav m-2">Blog</a>
+
+      <a href="./a-propos-ecf.html" title="Accueil" class="link-nav m-2">A propos</a>
+
+      <a href="./qui_somme_nous.html" title="Accueil" class="link-nav m-2">Qui sommes nous ?</a>
+
+      <a href="#" title="Accueil" class="link-nav m-2">Forum</a>
+
+      <a href="./contact.html" title="Acceuil" class="link-nav m-2">Contact</a>
+
+    </div>
+  </nav>
+
+  <!---FIL D'ARIANE-->
+  <div class="breadcrumb-item">
+    <a href="../Test-Sommaire-index.html" class="link-rep">Sommaire</a> > <a href="../index.html"
+      class="link-rep">Acceuil</a> > livres
+  </div>
+
+  <!--CONTENER-->
+
+  <div class="content">
+
+    <!--MAIN-->
+    <div class="main">
+
+      <div class="article">
+        <h2>Livres du moments</h2>
+        <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio asperiores architecto ex ratione eum.
+          Quidem.<br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Cumque alias molestiae nulla eaque iste praesentium similique culpa ab,
+          vero sit sunt magni, commodi possimus suscipit.
+        </p>
+      </div>
+
+      <div class="block-nav">
+      </div>
+
+      <br>
+      <hr>
+
+      <!--BLOCK IMAGE 1-->
+      <div class="block1-img">
+
+        <div class="section"><!--image-1-->
+
+          <h6>Papillon:</h6>
+          <img src="../images2/Guide-pratique-des-papillons-de-France.jpg" class="card-img-top rounded-3" height="300"
+            width="350" alt="livre papillon"><a href="#"></a><!--yuichi-kageyama-->
+
+          <div class="article">
+            <a href="#">Guide pratique des papillons</a>
+            <p>39.00 €</p>
+          </div>
+        </div>
+        <div class="section "><!--image-2-->
+
+          <h6>Papillon:</h6>
+          <img src="../images2/Guide-des-plus-beaux-papillons-et-leurs-fleurs-favorites.jpg"
+            class="card-img-top rounded-3" height="300" width="350" alt="livre papillon">
+          <div class="article">
+            <a href="#">Guide des plus beau papillons </a>
+            <p>15.90 €</p>
+          </div>
+        </div>
+
+        <div class="section ">
+          <h6>Papillon:</h6>
+          <img src="../images2/Petit-guide-des-papillons.jpg" class="card-img-top rounded-3" height="300" width="350"
+            alt="livre papillon">
+          <!-- Aglais urticae-puppe-->
+          <!--yuichi-kageyama-4ByFHyNdoD4-unsplash.jpg-->
+          <div class="article">
+            <a href="#">Le Petit guide des papillons First editions<!--nature--></a>
+            <p>3.99 €</p>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!--BLOCK IMAGE 2-->
+      <!--
+          <div class="block1-img">
+            <div class="article">
+        -->
+      <!--
+          <img srcset="../images2/mon-image-S.jpg 300w,
+          ../images2/mon-image-M.jpg 1024w,
+          ../images2/mon-image-L.jpg 1920w"
+          sizes="(max-width: 340px) 300px,
+          (max-width: 1260px) 1000px,
+          1920px"class="card-img-top rounded-3 "
+          src="../images2/mon-image.jpg" alt="Un exemple" />-->
+      <!--
+
+            </div>
+          </div>
+        -->
+
+      <!--BLOCK IMAGE-2-->
+      <div class="block2-img">
+        <div class="section2"><!--section2-->
+          <img class="card-img d-flex align-content-center align-items-center justify-content-center rounded-3"
+            src="../images3/mon-image-N.jpg" alt="livre papillon">
+        </div>
+      </div>
+
+    </div><!--fin de main-->
+
+    <!--</div>fin de content-->
+
+    <!--ASIDE-->
+    <aside class="aside">
+
+      <div class="aside-nav">
+        <h5>images</h5>
+        <a href="https://www.photospapillons.com/papillons-de-france.php">Banques images</a>
+        <a href="../pages/Galerie-index.html">Galerie images</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Évènements</h5>
+        <a href="./calendar.html">Agenda</a>
+        <a href="./assos.html">assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sortie</h5>
+        <a href="./musée.html">Musée</a>
+        <a href="./exposition.html">exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>site web</h5>
+        <a href="http://www.clubrosalia.com/">clubrosalia</a>
+        <a href="./recherche_wiki.html">recherche wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>identifier</h5>
+        <a href="./identification.html">quel est ce papillon</a>
+        <a href="./fiche-details.html">page lepidoptera</a>
+      </div>
+
+    </aside>
+  </div><!--fin de main-->
+
+  <!--FOOTER-->
+  <footer class="blockfooter">
+    <div class="block">
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">informations</h5>
+          <a href="../rgpd/mentions_légales.html" class="mention">mention
+            légale</a><!--../obligations_légales/mentions_légales.html-->
+          <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+        </div>
+      </div>
+
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">nous contacter</h5>
+          <a href="tel:+336250214" class="contact">06 25 02 14</a>
+          <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--</container>-->
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

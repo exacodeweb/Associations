@@ -1,0 +1,601 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <!--<link rel="stylesheet" href="../css/fichierstyle-14.css" type="text/css"> -->
+  <title>ECF-identification1</title>
+
+  <!--Bootstrap cdn-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!--kit icones-->
+  <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+  <!--style de police d'ecriture-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+  <style>
+    body {
+      background: lightgoldenrodyellow;
+      background-position: 100% 100%;
+      margin: 0px;
+      /*font-family: 'Tangerine';font-size: 22px;*/
+    }
+
+    /*----------------------------------------------------------------------------------------------------------HEADER--*/
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 160px;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      background: mediumorchid;
+    }
+
+    /*------------------------------------------------------------------------------------------------------BLOCK-LOGO--*/
+    .logo {
+      display: flex;
+      color: white;
+      margin-left: 10px;
+      font-family: "Tangerine", serif;
+      font-weight: 590;
+      text-shadow: 4px 4px 4px blue;
+      font-size: 55px;
+      font-weight: 500;
+    }
+
+    /*------------------------------------------------------------------------------------------------------BLOCK-MENU--*/
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 80px;
+      align-items: center;
+      color: white;
+      margin-right: 25px;
+      margin-left: 10px;
+    }
+
+    /*----------------------------------------------------------------------------------------------------ARRIERE-PLAN--*/
+    /*
+  a:hover {
+    text-decoration: none;
+    color: white;/*deepskyblue*/
+    /*
+  }*/
+
+    .link-nav {
+      color: white;
+    }
+
+    .link-nav:hover {
+      color: lightblue;
+      /*text-decoration: none;*/
+    }
+
+    /*----------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+    .breadcrumb {
+      width: 400px;
+    }
+
+    .breadcrumb-item {
+      max-width: 100%;
+      background: none;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .link-rep {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------CONTENT--*/
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    /*------------------------------------------------------------------------------------------------------------MAIN--*/
+    main {
+      float: left;
+      flex-direction: column;
+      width: 70%;
+      /*70% du parent "content"*/
+      margin-left: 10px;
+      background: #fbfbf9;
+      border-radius: 5px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    /*---------------------------------------------------------------------------------------------------------ARTICLE--*/
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 12px;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0000ff;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    h4 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .title,
+    strong {
+      color: #0000ff;
+    }
+
+    hr {
+      height: 2px;
+      color: blue;
+    }
+
+    /*-----------------------------------------------------------------------------------------------BLOCK1-IMG IMAGES--*/
+    .block1-img {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      border: 2px solid white;
+    }
+
+    object {
+      border: 1px solid blue;
+      border-radius: 5px;
+      width: 98%;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      width: 170px;
+      margin: 5px;
+    }
+
+    /*
+  .link {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    font-size: 1.2em;
+  }
+  .link-page {
+    padding: 20px;
+    width: 20%;
+    font-size: 18.72px;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }*/
+
+    .btn-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 20px;
+    }
+
+    .link-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      width: 160px;
+      /*150px*/
+      border-radius: 50px;
+      text-decoration: none !important;
+      background-color: #0145b5 !important;
+      color: white;
+    }
+
+    .link-btn:hover {
+      background: green !important;
+    }
+
+    p {
+      margin-left: 0px;
+      color: black;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------ASIDE--*/
+    .aside {
+      float: right;
+      flex-direction: column;
+      width: 26%;
+      /*22% du parent "content"*/
+      margin-right: 10px;
+      padding: 4px;
+      border-radius: 5px;
+      height: 590px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-nav {
+      display: flex;
+      flex-direction: column;
+      background: #fbfbf9;
+      margin-bottom: 20px;
+      height: 100px;
+      padding: 4px;
+      box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+    }
+
+    .aside-link {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------FOOTER--*/
+
+    .blockfooter {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #7dc95e;
+      color: white;
+      height: 150px;
+      width: 100%;
+    }
+
+    .block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      width: 50%;
+      margin-left: 80px;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    .mention {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      width: 200px;
+      color: blue;
+    }
+
+    a {
+      display: flex;
+      color: blue;
+      text-decoration: none;
+    }
+
+    /*-------------------------------------------------------MEDIA QUERY------------------------------------------------*/
+
+    @media screen and (max-width: 320px) and (min-width: 576px) {
+
+      .menu,
+      .breadcrumb-item,
+      .link-nav,
+      nav {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+
+      .link,
+      .link-int,
+      span,
+      menu {
+        font-size: 12px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-content: center;
+        align-items: center;
+        text-align: left;
+        height: 40px;
+      }
+    }
+
+    /*@media screen and (min-width: 320px) and (max-width: 576px) {
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      font-size: 12px;
+      max-width: 100%;
+      text-align: center;
+    }
+  }*/
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .menu {
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        font-size: 12px;
+        max-width: 100%;
+        text-align: center;
+        background-color: blueviolet;
+        height: auto;
+        margin-right: 15px;
+        margin-left: 10px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 5px;
+      }
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 960px) {
+      content {
+        display: flex;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+
+      .main,
+      .aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      .breadgroumb {
+        width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 960px) {
+
+      /*320px*/
+      object {
+        display: flex;
+        max-width: 100%;
+        height: 650px;
+      }
+    }
+
+    /*----------------------------------------------------------------------------------------------------------FOOTER--*/
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+
+      .block,
+      .contact,
+      .mention,
+      .text-dark {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+      .aside {
+        padding: 0px;
+        margin-top: 10px;
+      }
+    }
+
+    /*------------------------------------------------------------------------------------------------------------------*/
+  </style>
+
+</head>
+
+<body>
+  <!--HEADER-->
+  <!--<container>-->
+
+  <div class="header">
+    <div class="logo">Entomologie</div>
+
+    <!--OPTION MENU BURGER-->
+    <!--
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle">-->
+    <!--
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle">-->
+
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="./blog.html" title="Blog" class="link-nav m-2">Blog</a>
+
+      <a href="./Agenda.html" title="A propos" class="link-nav m-2">Évènements</a>
+
+      <a href="./qui_somme_nous.html" title="Qui somme nous" class="link-nav m-2">Qui sommes nous ?</a>
+
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </div>
+
+  <!--FIL D'ARIANE-->
+  <div class="breadcrumb-item">
+    <a href="./Sommaire-index.html" class="link-rep">Sommaire</a> >
+    <a href="../index.html" class="link-rep">Acceuil</a> > identification
+  </div>
+  <!--CONTENER-->
+
+  <div class="content">
+    <!--MAIN-->
+    <main class="main">
+      <div class="article">
+        <h2 class="title">IDENTIFICATION</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+          asperiores architecto ex ratione eum. Quidem. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Cumque alias molestiae nulla
+          eaque iste praesentium similique culpa ab, vero sit sunt magni,
+          commodi possimus suscipit.
+        </p>
+
+        <!--<a
+            class=".link-page w-250 d-flex flex-column text-center"
+            href="./inscription.html"
+            >
+            <h5 class="link">inscrivez-vous ici</h5>
+          </a>-->
+
+        <div class="btn-card">
+          <a href="./calendar.html" class="link-btn text-white my-2 my-sm-0">inscrivez-vous ici
+          </a>
+        </div>
+
+
+      </div>
+
+      <!--BLOCK IMAGE 2-->
+      <div class="block1-img">
+        <object width="800" height="600" data="../resources/fiches-identification-obj-compressed.pdf"
+          type="application/pdf"></object>
+      </div>
+    </main>
+
+    <!--ASIDE-->
+
+    <aside class="aside">
+      <div class="aside-nav">
+        <h5>images</h5>
+        <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+        <a href="./Galerie-index.html">Galerie images</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Évènements</h5>
+        <a href="./calendar.html">Agenda</a>
+        <a href="./assos.html">assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sortie</h5>
+        <a href="./musée.html">Musée</a>
+        <a href="./exposition.html">exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>site web</h5>
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+          target="_blank">Actualité</a>
+        <a href="./recherche_wiki.html">recherche wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>identifier</h5>
+        <a href="./identification.html">quel est ce papillon</a>
+        <a href="./fiche-details.html">page lepidoptera</a>
+      </div>
+    </aside>
+  </div>
+
+  <!--FOOTER-->
+  <footer class="blockfooter">
+    <div class="block">
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">informations</h5>
+          <a href="../rgpd/mentions_légales.html" class="mention">mention
+            légale</a><!--../obligations_légales/mentions_légales.html-->
+          <a href="./a-propos-ecf.html" class="mention">A propos de cette ECF</a>
+        </div>
+      </div>
+
+      <div class="footer d-flex flex-column text-left">
+        <div>
+          <h5 class="text-dark">nous contacter</h5>
+          <a href="tel:+336250214" class="contact">06 25 02 14</a>
+          <a href="mailto:entomologie-asso@example.com" class="contact">Envoyer un courriel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--</container>-->
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

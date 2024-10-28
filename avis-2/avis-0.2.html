@@ -1,0 +1,299 @@
+<?php
+session_start();
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../xx1style/xxxabx-test_avis_style.css">
+  <title>ECF-Contact</title>
+</head>
+<body>
+  <div class="breadcrumb-item"> 
+    <a href="../pages/sommaire.html" class="link-item">Sommaire</a> >
+    <a href="../index.html" class="link-item">Accueil</a> > Avis
+  </div>
+  <div class="content"><!--container mt-5-->
+    <main class="main">
+      <div class="section-form">
+        <div class="article">
+          <h2 class="title">Laisser un Avis</h2>
+          <p class="text-center">
+            Nous serions ravis de recevoir vos questions, suggestions ou commentaires.
+            Il vous suffit de remplir ce formulaire et de le valider. Un e-mail de confirmation vous sera envoyé.
+            Merci de prendre le temps de nous contacter. Nous vous répondrons dans les plus brefs délais !
+          </p>
+        </div>
+        <!-- Affichage du token CSRF pour le débogage -->
+        <p><!--Token CSRF dans le formulaire :--> <?php echo $_SESSION['csrf_token']; ?></p>
+        <form class="form" id="contact-form">
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+          <div class="form-group">
+            <?php include('../php/csrf_token.php'); ?>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name"  placeholder="Votre nom" required>
+          </div><!--class="form-control"-->
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email"  placeholder="Votre adresse e-mail" required>
+          </div><!--class="form-control"-->
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message"  rows="4" placeholder="Votre message" required></textarea>
+          </div><!--class="form-control"-->
+          <div class="form-group">
+            <label for="note">Note :</label>
+            <input type="number" id="note" name="note"  placeholder="Votre note (1-5)" min="1" max="5">
+          </div><!--class="form-control"-->
+          <button type="submit" >Envoyer</button><!--class="btn btn-primary"-->
+        </form>
+        <!-- Section d'affichage des erreurs -->
+        <div id="error-message" class="mt-3 text-danger"></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!--<script>
+    $(document).ready(function() {
+      $('#contact-form').on('submit', function(event) {
+        event.preventDefault(); // Empêche l'envoi du formulaire traditionnel
+
+        var formData = $(this).serialize(); // Sérialise les données du formulaire
+        var errorMessage = '';
+
+        // Validation côté client
+        if ($('#name').val().trim() === '') {
+          errorMessage += 'Le nom est requis.<br>';
+        }
+        if ($('#email').val().trim() === '') {
+          errorMessage += 'L\'email est requis.<br>';
+        }
+        if ($('#message').val().trim() === '') {
+          errorMessage += 'Le message est requis.<br>';
+        }
+        if (errorMessage) {
+          $('#error-message').html(errorMessage);
+          return;
+        }
+
+        // Envoi du formulaire via AJAX
+        $.ajax({
+          type: 'POST',
+          url: '../php/submit_avis.php',
+          data: formData,
+          success: function(response) {
+            if (response.trim() === 'success') {
+              window.location.href = '../pages/thank_you.html';/*test_thank_you.html*/
+            } else {
+              $('#error-message').html(response);
+            }
+          },
+          error: function() {
+            $('#error-message').html('Une erreur est survenue lors de l\'envoi du formulaire.');
+          }
+        });
+      });
+    });
+  </script>-->
+<script src="../scripts/avis_script.js"></script>
+</body>
+</html>
+
+<style>
+  body {
+    background-position: 100% 100%;
+    margin: 0;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .breadcrumb-item {
+    width: 100%;
+    background: none;
+    margin: 10px;
+    float: left;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center; 
+    padding: 0;
+  }
+  
+  .link-item {
+    margin: 0 5px;
+  }
+  
+  /*.breadcrumb-item {
+    margin: 0 5px;
+  }*/
+  
+  
+  .content {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;/*90%*/
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;/*20px*/
+  }
+  
+  .main {
+    flex-direction: column;
+    width: 100% !important;
+    padding: 0px;/*20px*/
+    background: #fbfbf9;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 40px rgba(128, 128, 128, 0.2); 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  h2 {
+    color: #0000ff;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 12px 0 20px;/*12px 0 50px*/
+    font-size: 1.5em;
+  }
+  
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    width: 50%;
+  }
+  
+  .section-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #f8f9f8;
+    padding: 10px;
+  }
+  
+  /*
+  .form-group {
+    width: 90%;
+    padding: 10px;
+  }*/
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+  
+    background-color: #f8f9f8;
+    height: auto;
+    border: none;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  input {
+    height: 25px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: white !important;  /*#fbfbf9*/
+    border: 1px solid grey !important;
+  }
+  
+  textarea {
+    width: 100%;
+    background-color: white !important;  /*#fbfbf9*/
+    border: 1px solid grey !important;
+  }
+  
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: mediumorchid;
+    color: white;
+    border: none;
+  }
+  
+  button:hover {
+    background: rgb(211, 85, 163);
+  }
+  
+  
+    /* Responsive Design */
+  @media screen and (max-width: 576px) {
+    .content {
+        width: 100%;
+        padding: 5px;
+    }
+  
+    .main {
+        width: 90%;
+        border: 1px solid red;
+        padding: 20px;
+    }
+  
+    .article {
+      width: 100% !important;
+    }
+  
+    .form {
+        width: 100%;
+    }
+  
+    .form-control {
+        width: 100%;
+    }
+  
+    input {
+        width: 100%;
+    }
+  }
+  </style>

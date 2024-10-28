@@ -1,0 +1,84 @@
+ /*----------------------------------------------------------------------------------------------------FORMULAIRE--*/
+ .section-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid grey;
+  /*grey*/
+  border-radius: 5px;
+  background-color: #f8f9f8;
+}
+
+.form-group {
+  width: 90%;
+}
+
+form,
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}
+
+textarea {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}
+
+button:hover {
+  background: green;
+}
+
+button,
+.submit[type=submit] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 160px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #0145b5;
+  color: white;
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,618 @@
+/*body {
+  /*background: lightgoldenrodyellow;*//*
+  background-position: 100% 100%;
+  margin: 0px;
+  font-size: 1em; /* Utilisation de l'unité relative em pour la taille de police de base *//*
+}
+label {
+    font-weight: bold;
+  }*/
+
+
+/* Police pour le texte principal */
+body {
+  background: lightgoldenrodyellow;
+  background-position: 100% 100%;
+  font-family: 'Barlow', sans-serif;
+  }
+
+  /* Titres (headlines) */
+  h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'Rajdhani', sans-serif;
+  }
+    
+/*------------------------------------------------------------------------------------------------------ENTETE--*/
+/*
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 160px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: mediumorchid;
+}*/
+
+/*------------------------------------------------------------------------------------------------SECTION-LOGO--*/
+/*
+.logo {
+  display: flex;
+  color: white;
+  margin-left: 10px;
+  font-family: "Tangerine", serif;
+  font-weight: 590;
+  text-shadow: 4px 4px 4px blue;
+  font-size: 55px;
+  font-weight: 500;
+}*/
+
+/*------------------------------------------------------------------------------------------------SECTION-MENU--*/
+/*
+.menu {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+  color: white;
+  margin-right: 25px;
+  margin-left: 10px;
+}*/
+
+/*------------------------------------------------------------------------------------------------ARRIERE-PLAN--*/
+/*
+  a:hover {
+    text-decoration: none;
+    color: white;/*deepskyblue*/
+/*
+  }*/
+/*
+.link-nav {
+  color: white;
+}
+
+.link-nav:hover {
+  color: lightblue;
+  /*text-decoration: none;*//*
+}
+
+.link-page {
+  margin: 5px;
+}*/
+
+/*------------------------------------------------------------------------------------------------FIL D'ARIANE--*/
+/*
+.breadcrumb {
+  width: 400px;
+}
+
+.breadcrumb-item {
+  max-width: 100%;
+  background: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.link-rep {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+*/
+/*-----------------------------------------------------------------------------------------------------CONTENT--*/
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/*--------------------------------------------------------------------------------------------------------MAIN--*/
+
+main {
+  float: left;
+  flex-direction: column;
+  width: 70%;
+  /*70% du parent "content"*/
+  margin-left: 10px;
+  background: #fbfbf9;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+
+
+
+
+  /*-----------------------------------*/
+  p,.text-center {
+    width: 90%;
+    text-align: justify;
+  }
+  /*-----------------------------------*/
+
+.link {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.link-page {
+  padding: 20px;
+  width: 20%;
+  font-size: 18.72px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+h2 {
+  color: #0000ff;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+
+h4 {
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 50px;
+
+  /*font-family: 'Montserrat Light', arial;*/
+  /*DisneyPark*/
+  /* PT Sans*/
+  /*Andantino script*/
+  /*Calligraph*/
+  /*Montserrat Light*/
+  font-size: 1.5em;
+  /*font-weight: 600;*/
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 10px;
+  /*10px*/
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------------------------------------------FORMULAIRE--*/
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid grey;
+  /*grey*/
+  border-radius: 5px;
+  background-color: #f8f9f8;
+}
+
+.form-group {
+  width: 90%;
+}
+
+form,
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}
+
+textarea {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}
+
+
+button,
+.submit[type=submit] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 160px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: mediumorchid;/*#0145b5*/
+  /*#007bff*/
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: rgb(211, 85, 163);/*green*/
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------------------------------------- FORMULAIRE TEST --*/
+/*
+h1 {
+color: #333;
+}
+
+form {
+background: #fff;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+display: block;
+margin-top: 10px;
+}
+
+input, textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+button {
+margin-top: 10px;
+padding: 10px 15px;
+background: #007BFF;
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+button:hover {
+background: #0056b3;
+}
+*/
+/*-------------------------------------------------------------------------------------------------------ASIDE--*/
+
+.aside {
+  float: right;
+  flex-direction: column;
+  width: 26%;
+  /*22% du parent "content"*/
+  margin-right: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  height: 590px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+.aside-nav {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbf9;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 4px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+.aside-link {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+}
+
+/*------------------------------------------------------------------------------------------------------FOOTER--*/
+
+.blockfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #7dc95e;
+  color: white;
+  height: 150px;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 80px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.mention {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 200px;
+  color: blue;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 200px;
+  color: blue;
+}
+
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+
+
+/*---------------------------------------------------------- RESPONSIVE STRUCTURE CONTENU --*/
+@media screen  and (max-width : 576px) {
+
+  .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100% !important;
+  padding: 0px;/*5px*/
+  }
+  
+  /*.link {
+  font-size: 1em;
+  }*/
+  
+  .main,
+  .aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0px;
+  }
+  
+  .content,
+  .main,
+  .aside {
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 5px;/*10px*/
+  }
+  
+  .aside {
+  padding: 0px;
+  margin-top: 10px;
+  }
+  }
+  /*------------------------------------------------------------------------ FIN DU CONTENU --*/
+  
+
+
+
+/*-------------------------------------------------------MEDIA QUERY--------------------------------------------*/
+
+@media screen and (max-width: 320px) and (min-width: 576px) {
+
+  .menu,
+  .breadcrumb-item,
+  .link-nav,
+  nav {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .link,
+  .link-int,
+  span,
+  menu {
+    font-size: 12px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+    height: 40px;
+  }
+}
+
+/*@media screen and (min-width: 320px) and (max-width: 576px) {
+    .menu {
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      font-size: 12px;
+      max-width: 100%;
+      text-align: center;
+    }
+  }*/
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    font-size: 12px;
+    max-width: 100%;
+    text-align: center;
+    background-color: blueviolet;
+    height: auto;
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+  .main,
+  .aside {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 992px) {
+
+  .form,
+  form {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .breadgroumb {
+    width: 90%;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------FOOTER--*/
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+  .block,
+  .contact,
+  .mention,
+  .text-dark {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .aside {
+    padding: 0px;
+    margin-top: 10px;
+  }
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*//*
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+h1 {
+color: #333;
+}
+
+form {
+background: #fff;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+display: block;
+margin-top: 10px;
+}
+
+input, textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+button {
+margin-top: 10px;
+padding: 10px 15px;
+background: #007BFF;
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+button:hover {
+background: #0056b3;
+}*/
+

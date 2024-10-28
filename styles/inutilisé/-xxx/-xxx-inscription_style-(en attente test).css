@@ -1,0 +1,332 @@
+/*--  ?>
+Fichier style.css
+Voici le contenu de votre fichier CSS tel que vous l'avez fourni :
+
+css
+Copier le code  --*/
+/*.section-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+}*/
+
+/*.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}*/
+
+/*form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: #f8f9f8;
+}*/
+
+/*.form-group {
+  width: 90%;
+}*/
+
+/*form,
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: block;
+  margin-bottom: 10px;
+}*/
+
+/*input {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}*/
+
+/*textarea {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}*/
+
+/*button:hover {
+  background: green;
+}*/
+
+/*button,
+.submit[type=submit] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 160px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #0145b5;
+  color: white;
+  border: none;
+}*/
+
+/*form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}*/
+
+/*--------------------------------------------------------------------------------------------------FORMULAIRE--*/
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid grey;
+  /*grey*/
+  border-radius: 5px;
+  background-color: #f8f9f8;
+}
+
+.form-group {
+  width: 90%;
+}
+
+form,
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}
+
+textarea {
+  height: 25px;
+  text-align: left;
+  width: 80%;
+}
+
+
+button,
+.submit[type=submit] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 160px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: mediumorchid;/*#0145b5*/
+  /*#007bff*/
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: rgb(211, 85, 163);/*green*/
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.main {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  background: #fbfbf9;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/*form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}*/
+
+.block {
+  width: 80%;
+}
+
+/*.form-group {
+  margin-bottom: 15px;
+}*/
+
+/*.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}*/
+
+/*.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}*/
+
+.form-group button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*.form-group button:hover {
+  background-color: #0056b3;
+}*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 5px 0;
+}*/
+
+/*.main {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  background: #fbfbf9;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+  padding: 10px;
+  border: 1px solid red;
+}*/
+
+
+/*.form-group button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}*/
+
+/*.form-group button:hover {
+  background-color: #0056b3;
+}*/
+
+label, input {
+width: 100%;
+}

@@ -1,0 +1,238 @@
+
+/* Import Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Rajdhani:wght@400;700&display=swap');
+*/
+/* Styles généraux */
+/*body {
+
+}*/
+
+body {
+  background: lightgoldenrodyellow;
+  background-position: 100% 100%;
+  font-family: 'Barlow', sans-serif;
+  /*line-height: 1.6;*/
+  /*margin: 0px;/*
+  font-size: 1em; /* Utilisation de l'unité relative em pour la taille de police de base */
+}
+
+/* Titres (headlines) */
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+
+/*body {
+  background: lightgoldenrodyellow;
+  background-position: 100% 100%;
+  margin: 0px;
+  /*font-family: 'Tangerine';font-size: 22px;*/
+/*}*/
+
+/*.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: black;
+  background: lightgoldenrodyellow;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*
+.main {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  background: #fbfbf9;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+  padding: 10px;
+}*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.main {
+  float: left;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 10px;
+  background: #FBFBF9;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+  padding: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*  19/06/2024 */
+.aside {
+  float: right;
+  flex-direction: column;
+  width: 26%;
+  /*22% du parent "content"*/
+  margin-right: 10px;
+  padding: 4px;/*4px*/
+  border-radius: 5px;
+  height: 100%;/*590px*/
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+/*.aside {
+  flex: 0 1 300px;
+  margin: 10px;
+  padding: 4px;/*10px*//*
+  background: #fbfbf9;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+  height: 100% !important;
+}*/
+
+/* Aside navigation styling *//*
+.aside-nav {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbf9;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 4px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+
+  margin-top: 0px;
+}*/
+
+/*.aside-link {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+}*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*.aside {
+  float: right;
+  flex-direction: column;
+  width: 26%;
+  /*22% du parent "content"*/ /*
+  margin-right: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  height: 590px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*.aside-nav {
+  display: flex;
+  flex-direction: column;
+  background: #FBFBF9;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 4px;
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}*/
+
+/*.aside-link {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+}*/
+
+/*  19/06/2024 */
+.aside {
+  float: right;
+  flex-direction: column;
+  width: 26%;
+  /*22% du parent "content"*/
+  margin-right: 10px;
+  padding: 4px;/*4px*/
+  border-radius: 5px;
+  height: 100%;/*590px*/
+  box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+}
+
+  .aside-nav {
+    display: flex;
+    flex-direction: column;
+    background: #fbfbf9;
+    margin-bottom: 20px;
+    height: 100%;
+    padding: 4px;
+    box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.2);
+  }
+
+  .aside-link {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid green;
+  } /**/
+
+
+/*-- RESPONSIVE --*/
+@media screen  and (max-width : 576px) {/*and (min-width : 320px)*/
+  /*.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+  }*/
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0px;/*5px*/
+  }
+
+  /*.link {
+    font-size: 1em;
+  }*/
+
+  .main,
+  .aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .content,
+  .main,
+  .aside {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 5px;/*10px*/
+  }
+
+
+  .aside {
+    padding: 0px;
+    margin-top: 10px;
+  }
+
+  .aside {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+
+}

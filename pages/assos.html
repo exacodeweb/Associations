@@ -1,0 +1,385 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+
+  <title>ECF-Assemblé</title>
+
+  <link rel="stylesheet" href="../style/header_style.css" type="text/css">
+  <link rel="stylesheet" href="../styles/assoc_style.css" type="text/css">
+  <link rel="stylesheet" href="../style/footer_style.css" type="text/css">
+
+  <!--Bootstrap cdn-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!--style de police d'ecriture-->
+  <link href="https://fonts.cdnfonts.com/css/rajdhani" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+
+  <!--kit icones--> <!--mon code (64e89a7edd) pour utilisé les icones free fontawesome-->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+  <!--style de police d'ecriture-->
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Rajdhani:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!--STYLE-CSS-->
+
+  <!-- ajouter du form inscription -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const eventTitle = urlParams.get('event');
+      const eventDate = urlParams.get('date');
+
+      if (eventTitle) {
+        document.getElementById('event-title').textContent = eventTitle;
+        document.getElementById('event-title-input').value = eventTitle;
+      }
+      if (eventDate) {
+        document.getElementById('event-date').textContent = eventDate;
+        document.getElementById('event-date-input').value = eventDate;
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <!--HEADER-->
+  <!--<container>-->
+
+  <nav class="header">
+    <div class="logo">Ailes-Enchantées</div><!-- Entomologie -->
+    <div class="menu">
+
+      <a href="../index.html" title="Accueil" class="link-nav m-2">Accueil</a>
+
+      <a href="./blog.html" title="Blog" class="link-nav m-2">Blog</a>
+      <a href="./Agenda.html" title="A propos" class="link-nav m-2">Évènements</a>
+      <a href="../pages/proflle_team.html" title="Qui somme nous" class="link-nav m-2">Qui sommes nous
+        ?</a><!--./qui_somme_nous.html-->
+      <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum" class="link-nav m-2">Forum</a>
+      <a href="./contact.html" title="Contact" class="link-nav m-2">Contact</a>
+    </div>
+  </nav>
+
+  <!--FIL D'ARIANE-->
+  <div class="breadcrumb-item">
+    <a href="../pages/Sommaire-index.html" class="link-rep">Sommaire</a> /
+    <a href="../index.html" class="link-rep">Acceuil</a> / Assemblé
+  </div>
+
+  <!--CONTENER-->
+
+  <div class="content">
+
+    <div class="main">
+      <!-- Introduction -->
+      <section class="intro">
+        <h2 class="title">ASSEMBLÉE ANNUELLE<br>Réunion de l'association</h2>
+        <h4>Le bilan annuel</h4>
+        <p>
+          L'assemblée annuelle de notre association s'est déroulée avec succès, réunissant tous nos membres pour
+          discuter des réalisations de l'année passée et des projets futurs.
+        </p>
+      </section>
+
+      <!-- Ordre du Jour -->
+      <section class="agenda">
+        <h3>Ordre du Jour</h3>
+        <ul>
+          <li>9h00 - Accueil et inscription</li>
+          <li>9h30 - Introduction par le président</li>
+          <li>10h00 - Présentation du rapport annuel</li>
+          <li>11h00 - Discussions et questions</li>
+          <li>12h00 - Déjeuner</li>
+          <li>13h30 - Ateliers et groupes de travail</li>
+          <li>16h00 - Clôture de l'assemblée</li>
+        </ul>
+      </section>
+
+      <!-- Documents et Ressources -->
+      <section class="resources">
+        <h3>Documents et Ressources</h3>
+        <ul>
+          <li><a href="path/to/annual_report.pdf">Rapport annuel 2023</a></li>
+          <li><a href="path/to/financial_statement.pdf">Bilan financier 2023</a></li>
+          <li><a href="path/to/meeting_minutes.pdf">Procès-verbal de l'assemblée 2022</a></li>
+        </ul>
+      </section>
+
+      <!-- Formulaire de Participation -->
+      <section class="registration">
+        <h3>Formulaire de Participation</h3>
+
+        <!-- desactiver -->
+        <!--<form action="submit_form.php" method="POST">-->
+
+        <!-- ajouter du form inscription-->
+        <form action="../php/submit_inscription.php" method="POST">
+
+          <!-- ajouter du form inscription -->
+          <div class="title text-dark">Complétez ce formulaire</div>
+          <input type="hidden" name="event_title" id="event-title-input">
+          <input type="hidden" name="event_date" id="event-date-input">
+
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required>
+          <!--<label for="questions">Questions ou sujets à aborder :</label>
+      <textarea id="questions" name="questions" rows="3"></textarea> -->
+          <button class="submit" type="submit">S'inscrire</button>
+        </form>
+      </section>
+
+      <!-- Galerie de Photos -->
+      <section class="gallery">
+        <h3>Galerie de Photos</h3>
+        <div class="photo"><!-- ../images3/conference-5308938_1280_(1).jpg -->
+          <img src="../images3/conference-5308938_1280_(2).jpg" alt="Photo de l'assemblée précédente" width="200px"
+            height="100"><!-- path/to/photo1.jpg -->
+          <p>Assemblée générale 2022</p>
+        </div>
+        <div class="photo">
+          <img src="../images3/a well dressed executive principal training a room (1) (1).webp"
+            alt="Atelier de discussion" width="200px" height="100"><!-- path/to/photo2.jpg -->
+          <p>Atelier de discussion 2023</p><!--../images3/1.jpg-->
+        </div>
+      </section>
+
+      <!-- Informations de Contact -->
+      <section class="contact">
+        <div class="contact-info">
+          <h4>Président du Club</h4>
+          <p>Andre Durand<br>10 rue des Fleurs<br>Saint Barege</p>
+          <p>Téléphone : 01 23 45 67</p>
+        </div>
+        <div class="contact-info">
+          <h4>Trésorier</h4>
+          <p>Marcel Gérard<br>1 avenue des Platanes<br>Saint Barege</p>
+          <p>Téléphone : 01 23 98 76</p>
+        </div>
+      </section>
+
+      <!-- Carte de Localisation -->
+      <section class="map">
+        <h3>Lieu de l'Assemblée</h3>
+        <!--<iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999387271482!2d2.2922923156752205!3d48.858844079287895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fefc2e59e23%3A0x40b82c3688c9460!2sEiffel+Tower!5e0!3m2!1sen!2sfr!4v1623232395131!5m2!1sen!2sfr"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="map">
+          <a href="https://www.google.com/maps" target="_blank" class="link-rep">Réserver votre plan de la ville ici
+            !</a>
+        </div>
+      </section>
+
+      <!-- Section FAQ -->
+      <section class="faq">
+        <h3>FAQ</h3>
+        <div class="question">
+          <h4>Comment puis-je m'inscrire à l'assemblée ?</h4>
+          <p>Vous pouvez vous inscrire en remplissant le formulaire de participation ci-dessus.</p>
+        </div>
+        <div class="question">
+          <h4>Quels sont les frais de participation ?</h4>
+          <p>La participation à l'assemblée est gratuite pour tous les membres de l'association.</p>
+        </div>
+      </section>
+
+      <!-- Partenaires et Sponsors -->
+      <section class="sponsors">
+        <h3>Partenaires et Sponsors</h3>
+        <div class="sponsor">
+          <img src="../images3/logo canada nature no word minimalist green (1).webp"
+            alt="Logo du sponsor 1"><!--path/to/logo1.png-->
+          <p>Sponsor 1</p>
+        </div>
+        <div class="sponsor">
+          <img src="../images3/1 (1).jpg" alt="Logo du sponsor 2"><!--path/to/logo2.png format 100x52-->
+          <p>Sponsor 2</p>
+        </div>
+      </section>
+
+      <!-- Commentaires et Témoignages -->
+      <section class="testimonials">
+        <h3>Témoignages</h3>
+        <div class="testimonial">
+          <p>"L'assemblée annuelle a été un moment fort de notre année, merci à tous pour votre participation !"</p>
+          <p>- Jean Dupont</p>
+        </div>
+        <div class="testimonial">
+          <p>"Une organisation parfaite et des discussions enrichissantes. Hâte de participer à la prochaine assemblée."
+          </p>
+          <p>- Marie Martin</p>
+        </div>
+      </section>
+    </div>
+
+    <!--ASIDE-->
+
+    <aside class="aside">
+      <div class="aside-nav">
+        <h5>images</h5>
+        <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+        <a href="../pages/gallery-index.html">Galerie
+          images</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Évènements</h5>
+        <a href="./calendar.html">Agenda</a>
+        <a href="./assos.html">assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sortie</h5>
+        <a href="../php/horaires_bis.php">Musée</a><!--./musée.html-->
+        <a href="./exposition.html">exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>site web</h5>
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+          target="_blank">Actualité</a>
+
+        <a href="./recherche_wiki.html">recherche wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>identifier</h5>
+        <a href="./identification.html">quel est ce papillon</a>
+        <a href="./fiche-details.html">page lepidoptera</a>
+      </div>
+
+    </aside>
+  </div><!--fin de content-->
+
+  <!-- FOOTER -->
+  <footer class="blockfooter">
+    <div class="block-ftr">
+      <div class="content-footer">
+        <div class="footer-1">
+          <div class="mention-1">
+            <h5 class="cl-mention">informations</h5>
+            <a href="../rgpd/mentions_légales.html" class="cl-mention">mention légale</a>
+            <a href="./a-propos-ecf.html" class="cl-mention">A propos de cette ECF</a>
+          </div>
+        </div>
+
+        <div class="footer-2">
+          <div class="mention-2">
+            <h5 class="cl-contact">nous contacter</h5>
+            <a href="tel:+336250214" class="cl-contact">06 25 02 14</a>
+            <a href="mailto:entomologie-asso@example.com" class="cl-contact">Envoyer un courriel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--</container>-->
+
+</body>
+</html>
+
+
+<!--
+Pour concevoir une page web dédiée à la présentation de l'assemblée annuelle 
+d'une association, voici les éléments essentiels et supplémentaires 
+que vous pourriez inclure :
+
+Éléments Essentiels
+Introduction
+
+Titre de la page
+Brève introduction expliquant l'objectif de l'assemblée
+Date et lieu de l'assemblée
+Section Événements
+
+Description des événements passés et futurs
+Images et légendes des réunions précédentes
+Compte-rendu succinct des discussions et décisions importantes
+Informations de Contact
+
+Détails des membres clés de l'association (président, trésorier, etc.)
+Adresses, numéros de téléphone, et emails
+Éléments Additionnels
+Ordre du Jour
+
+Liste détaillée des points à aborder pendant l'assemblée
+Horaires et intervenants
+Documents et Ressources
+
+Liens vers des documents importants (rapports annuels, bilans financiers, procès-verbaux des réunions précédentes)
+Téléchargements de fichiers PDF ou Word
+Formulaire de Participation
+
+Formulaire d'inscription pour participer à l'assemblée
+Option pour soumettre des questions ou des sujets à aborder
+Galerie de Photos
+
+Album photo des événements passés
+Légendes et descriptions des images
+Section Actualités
+
+Dernières nouvelles et mises à jour de l'association
+Annonces spéciales concernant l'assemblée
+Carte de Localisation
+
+Carte interactive montrant le lieu de l'assemblée
+Instructions pour y accéder (transports en commun, parking, etc.)
+Section FAQ
+
+Réponses aux questions fréquemment posées sur l'assemblée
+Informations pratiques pour les participants (logement, repas, etc.)
+Partenaires et Sponsors
+
+Liste des partenaires et sponsors de l'association
+Logos et descriptions des contributions
+Commentaires et Témoignages
+
+Témoignages des membres sur les précédentes assemblées
+Section pour les visiteurs pour laisser des commentaires ou des retours
+-->
+
+<!--
+Explications et Conseils
+Ordre du Jour : Fournissez une vue d'ensemble des activités prévues pour la journée. 
+Cela aide les participants à se préparer et à savoir à quoi s'attendre.
+
+Documents et Ressources : Offrez des liens téléchargeables pour les documents pertinents, 
+permettant aux membres d'examiner les informations à l'avance.
+
+Formulaire de Participation : Facilitez l'inscription en ligne et 
+la soumission de questions ou de sujets de discussion.
+
+Galerie de Photos : Montrez les événements passés pour encourager 
+la participation et montrer l'engagement de l'association.
+
+Section FAQ : Répondez aux questions courantes pour aider 
+les membres à obtenir rapidement les informations nécessaires.
+
+Partenaires et Sponsors : Mettez en valeur les partenaires et 
+sponsors pour reconnaître leur soutien et encourager de futures collaborations.
+
+Commentaires et Témoignages : Ajoutez des retours positifs pour 
+montrer l'impact et le succès des assemblées précédentes.
+
+En incluant ces éléments, vous offrez une page complète et 
+informative qui peut répondre aux besoins de vos membres et encourager 
+la participation à votre assemblée annuelle.
+-->

@@ -1,0 +1,15 @@
+# Assurez-vous qu'il n'y a pas d'espaces supplémentaires avant ou après le nom du fichier.
+# Si le fichier a déjà été ajouté à votre dépôt Git, 
+# vous devrez d'abord le retirer de l'index avec la commande suivante :
+# ! git rm --cached "readme (en cours).md"
+
+# .gitignore
+
+# Ignorer le fichier .env
+.env
+
+# Ignorer le fichier de README en cours
+readme (en cours).md
+
+# Ignorer le fichier Projet Ailes Enchantées.docx
+Projet Ailes Enchantées.docx

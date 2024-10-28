@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie des Papillons</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+    <style>
+        body {
+            background: lightgoldenrodyellow;
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: mediumorchid;
+            padding: 10px;
+            color: white;
+        }
+
+        .logo {
+            margin-left: 10px;
+            font-family: "Tangerine", serif;
+            text-shadow: 4px 4px 4px blue;
+            font-size: 55px;
+            font-weight: 500;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            margin-right: 25px;
+        }
+
+        .menu a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            color: lightblue;
+        }
+
+        .breadcrumb {
+            width: 100%;
+            margin: 10px 0;
+            background: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .breadcrumb-item {
+            margin: 0 5px;
+        }
+
+        .breadcrumb-item a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            background: #fbfbf9;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+            margin: 10px;
+        }
+
+        .title {
+            text-align: center;
+            margin: 12px 0 50px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 10px;
+        }
+
+        .card {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid grey;
+            width: 45%;
+            text-align: center;
+        }
+
+        .card img {
+            border-radius: 5px;
+            width: 100%;
+            height: auto;
+        }
+
+/*-------------------------------------------------*/
+
+.img {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: 5px;
+      } 
+
+
+        img {
+        border-radius: 5px 5px 5px 5px;
+        /*box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.8);  
+        /* 2px 4px 10px hsla(0, 0%, 0%, 0.8)*/  
+        height: 150px;
+        width: 250px;
+      }
+
+/*------------------------------------------------*/
+
+        h1, h2, p {
+            padding: 5px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #0000ff;
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+
+        .button a {
+            display: inline-block;
+            padding: 10px;
+            margin: 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            background: mediumorchid;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button a:hover {
+            background: rgb(211, 85, 163);
+        }
+
+/*---------------------------------*/
+
+button/*,
+.submit[type=submit]*/ {/*
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 15px;
+  padding: 10px !important;
+  margin-bottom: 20px;*/
+  width: 160px;
+  height: 30px;
+  border-radius: 50px !important;
+  cursor: pointer;
+  background: mediumorchid;
+
+  color: white;
+  border: none;
+}
+
+  /*#007bff*/
+/*#0145b5*/
+/*
+button:hover {
+  background: rgb(211, 85, 163);/*green*//*
+}*/
+
+
+.submit {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-top: auto;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+
+
+/*--------------------------------*/
+
+        .aside {
+            width: 26%;
+            margin: 10px;
+            padding: 4px;
+            border-radius: 5px;
+            box-shadow: 0 0 40px rgba(128, 128, 128, 0.2);
+            background: #fbfbf9;
+        }
+
+        .aside-nav {
+            margin-bottom: 20px;
+        }
+
+        .aside-nav h5 {
+            margin: 10px 0;
+        }
+
+        .aside-nav a {
+            display: block;
+            margin: 5px 0;
+            color: blue;
+            text-decoration: none;
+        }
+
+        .aside-nav a:hover {
+            color: green;
+        }
+
+        .blockfooter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #7dc95e;
+            color: white;
+            height: 150px;
+            width: 100%;
+        }
+
+        .block {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 50%;
+        }
+
+        .footer {
+            width: 200px;
+        }
+
+        .footer h5 {
+            color: black;
+        }
+
+        .footer a {
+            color: blue;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .header, .menu {
+                flex-direction: column;
+                font-size: 12px;
+                align-items: center;
+            }
+
+            .menu {
+                background-color: blueviolet;
+            }
+
+            .content, .main, .aside {
+                flex-direction: column;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .main {
+                margin: 10px;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .aside {
+                margin-top: 10px;
+            }
+
+            .blockfooter {
+                flex-direction: column;
+                padding: 20px;
+                height: auto;
+            }
+
+            .block, .footer {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .header, .menu, .breadcrumb-item, .blockfooter, .block {
+                font-size: 12px;
+            }
+
+            .blockfooter {
+                padding: 10px;
+            }
+
+            .footer {
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav class="header">
+        <div class="logo">Ailes-Enchantées</div>
+        <div class="menu">
+            <a href="../index.html" title="Accueil">Accueil</a>
+            <a href="./blog.html" title="Blog">Blog</a>
+            <a href="./Agenda.html" title="Évènements">Évènements</a>
+            <a href="./qui_somme_nous.html" title="Qui sommes nous ?">Qui sommes nous ?</a>
+            <a href="https://www.facebook.com/forum.lepidoptera/" target="_blank" title="Forum">Forum</a>
+            <a href="./contact.html" title="Contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-item">
+            <a href="../pages/Sommaire-index.html">Sommaire</a> &gt;
+            <a href="../index.html">Accueil</a> &gt; Galerie
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- MAIN -->
+        <div class="main">
+            <h1>Galerie des Papillons</h1>
+            <div class="gallery">
+                <!-- Add your gallery cards here -->
+            </div>
+        </div>
+
+        <!-- ASIDE -->
+        <aside class="aside">
+            <div class="aside-nav">
+                <h5>Images</h5>
+                <a href="https://www.photospapillons.com/papillons-de-france.php" target="_blank">Banques images</a>
+                <a href="./Galerie-index.html">Galerie images</a>
+            </div>
+            <div class="aside-nav">
+                <h5>Évènements</h5>
+                <a href="./calendar.html">Agenda</a>
+                <a href="./assos.html">Assemblé</a>
+            </div>
+            <div class="aside-nav">
+                <h5>Les sorties</h5>
+                <a href="./musée.html">Musée</a>
+                <a href="./exposition.html">Exposition</a>
+            </div>
+            <div class="aside-nav">
+                <h5>Sites web</h5>
+                <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/" target="_blank">Actualité</a>
+                <a href="./recherche_wiki.html">Recherche Wikipedia</a>
+            </div>
+            <div class="aside-nav">
+                <h5>Identifier</h5>
+                <a href="./identifier.html">Papillons</a>
+            </div>
+            <div class="aside-nav">
+                <h5>Équipes</h5>
+                <a href="./members.html">Membres</a>
+                <a href="./teams.html">Les équipes</a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="blockfooter">
+        <div class="block">
+            <div class="footer">
+                <h5>Contact</h5>
+                <a href="./contact.html">Contact</a>
+                <a href="./qui_somme_nous.html">Qui sommes nous?</a>
+            </div>
+            <div class="footer">
+                <h5>Galerie</h5>
+                <a href="./galerie.html">Galerie images</a>
+                <a href="./blog.html">Blog</a>
+            </div>
+            <div class="footer">
+                <h5>Informations</h5>
+                <a href="./calendar.html">Agenda</a>
+                <a href="./assos.html">Assemblée</a>
+            </div>
+            <div class="footer">
+                <h5>Sites web</h5>
+                <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/" target="_blank">Actualité</a>
+                <a href="./recherche_wiki.html">Recherche Wikipedia</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and Popper.js CDN --><!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXlRG5x+2abEQcWrGkTxTZp+szD9jIYY4B1/17q7vr8+8ZE29+9/tZdXA4iX" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1QKfJ0OQbujMr+8C9liwbCl4lUXykaJ12Kz9Gle1A4JlT0CpDfz5W28R9jb3z8T" crossorigin="anonymous"></script>
+-->
+
+    <script src="../scripts/gallery(3).js"></script>
+
+</body>
+
+</html>

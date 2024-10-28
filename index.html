@@ -1,0 +1,1145 @@
+<!--Evaluation : GDWFSHTMLCSSBOOTEXAIII1A-->
+<!--Giet FRANCK Graduate Développeur PHP/Symfony Promo BECQUEREL-->
+<!--code passé au validator w3c--><!--! pb balise: lang="en"-->
+
+<!--?php
+include 'admin/db_connect.php';
+
+$sql = "SELECT * FROM horaires";
+$result = $conn->query($sql);
+?>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<!--ISO 639-1-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entomologie">
+  <!--Description of my page-->
+  <title>ECF-accueil</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!--font-style-->
+  <link rel="stylesheet" href="./style/header_style.css">
+  <link rel="stylesheet" href="./styles/accueil_style.css">
+  <link rel="stylesheet" href="./style/footer_style.css">
+
+  <!--style de police d'ecriture-->
+  <link href="https://fonts.cdnfonts.com/css/rajdhani" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+
+  <!--kit icones-->
+  <!--my code (64e89a7edd) to use the free fontawesome icons -->
+  <script src="https://kit.fontawesome.com/64e89a7edd.js" crossorigin="anonymous"></script>
+
+  <style>
+    /*-- FONTS --*/
+    /*
+    @font-face {
+      font-family: 'Rajdhani';
+      font-style: normal;
+      font-weight: 500;
+      src: url('assets/fonts/rajdhani-v14-latin-500.woff2') format('woff2'),
+           url('assets/fonts/rajdhani-v14-latin-500.woff') format('woff');
+    }
+    
+    @font-face {
+      font-family: 'Barlow';
+      font-style: normal;
+      font-weight: 400;
+      src: url('assets/fonts/barlow-v5-latin-400.woff2') format('woff2'),
+           url('assets/fonts/barlow-v5-latin-400.woff') format('woff');
+    }
+    
+    @font-face {
+      font-family: 'Barlow';
+      font-style: normal;
+      font-weight: 500;
+      src: url('assets/fonts/barlow-v5-latin-500.woff2') format('woff2'),
+           url('assets/fonts/barlow-v5-latin-500.woff') format('woff');
+    }
+    
+    @font-face {
+      font-family: 'Tangerine';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../assets/fonts/tangerine-v17-latin-regular.woff2') format('woff2'),
+           url('../assets/fonts/tangerine-v17-latin-regular.woff') format('woff');
+    }
+    
+    @font-face {
+      font-family: 'Tangerine';
+      font-style: normal;
+      font-weight: 700;
+      src: url('../assets/fonts/tangerine-v17-latin-700.woff2') format('woff2'),
+           url('../assets/fonts/tangerine-v17-latin-700.woff') format('woff');
+    }*/
+  </style>
+
+  <!-- STYLE-CSS -->
+  <!--
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+      iframe {
+          width: 100%;
+          height: 600px;
+          border: none;
+      }
+    </style>-->
+</head>
+
+<body>
+  <!-- HEADER -->
+  <nav class="header">
+    <div class="logo">Ailes-Enchantées</span></div><!--Entomologie-->
+    <div class="menu">
+      <a href="./index.html" class="link-nav m-2">Accueil</a>
+      <a href="./pages/blog.html" class="link-nav m-2">Blog</a>
+      <a href="./pages/Agenda.html" class="link-nav m-2">évenements</a>
+      <a href="./pages/proflle_team.html" class="link-nav m-2">Qui sommes nous ?</a>
+      <a href="https:/www.facebook.com/forum.lepidoptera/" target="_blank" class="link-nav m-2">Forum</a>
+      <a href="./contact/contact.html" class="link-nav m-2">Contact</a><!-- ./pages/contact.html  -->
+      
+      <!-- Lien pour les administrateurs -->
+      <!--<li><a href="./php/admin_login.php">Connexion Administrateur</a></li>--><!--admin_login.php-->
+
+      <!-- desactiver <div class=" Navbar__Link">--><!---->
+        <!--<a class="nav-link" href="./php/admin_login.php">--><!--./php/admin_login.php  ./php/login.php-->
+        <!-- desactiver <a class="nav-link" href="./php/admin/admin_login.php">--> <!-- ./php/admin/admin_login.php -->
+          <!--<a class="nav-link" href="./admin/admin_login.php">-->
+          <!-- desactiver <svg xmlns="http://www.w3.org/2000/svg" viewBox="-49 141 512 512" width="16" height="16" aria-hidden="true"
+            fill="currentColor" class="bi bi-unlock-fill  text-white">
+            <path
+              d="M423 638H-9c-13.807 0-25-11.193-25-25 0-53.438 17.131-104.058 49.542-146.388 22.2-28.994 50.961-52.656 83.376-69.006C75.53 371.377 62 337.07 62 301c0-79.953 65.047-145 145-145s145 65.047 145 145c0 36.07-13.53 70.377-36.918 96.606 32.416 16.349 61.177 40.012 83.376 69.005C430.869 508.942 448 559.562 448 613c0 13.807-11.193 25-25 25zM17.657 588h378.687c-9.908-74.383-63.38-137.724-136.792-158.682a25 25 0 0 1-5.533-45.75C283.615 366.669 302 335.03 302 301c0-52.383-42.617-95-95-95s-95 42.617-95 95c0 34.03 18.386 65.668 47.981 82.568a25.003 25.003 0 0 1 12.423 24.712 25.003 25.003 0 0 1-17.956 21.038C81.037 450.276 27.564 513.617 17.657 588z">
+            </path>
+          </svg>
+        </a>
+      </div>-->
+
+      <div class=" Navbar__Link"><!---->
+        <!--<a class="nav-link" href="./php/admin_login.php">--><!--./php/admin_login.php  ./php/login.php-->
+        <!--<a class="nav-link" href="./php/admin/admin_login.php">-->
+        <a class="nav-link" href="./admin/admin_login.php">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-49 141 512 512" width="16" height="16" aria-hidden="true"
+            fill="currentColor" class="bi bi-unlock-fill  text-white">
+            <path
+              d="M423 638H-9c-13.807 0-25-11.193-25-25 0-53.438 17.131-104.058 49.542-146.388 22.2-28.994 50.961-52.656 83.376-69.006C75.53 371.377 62 337.07 62 301c0-79.953 65.047-145 145-145s145 65.047 145 145c0 36.07-13.53 70.377-36.918 96.606 32.416 16.349 61.177 40.012 83.376 69.005C430.869 508.942 448 559.562 448 613c0 13.807-11.193 25-25 25zM17.657 588h378.687c-9.908-74.383-63.38-137.724-136.792-158.682a25 25 0 0 1-5.533-45.75C283.615 366.669 302 335.03 302 301c0-52.383-42.617-95-95-95s-95 42.617-95 95c0 34.03 18.386 65.668 47.981 82.568a25.003 25.003 0 0 1 12.423 24.712 25.003 25.003 0 0 1-17.956 21.038C81.037 450.276 27.564 513.617 17.657 588z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-item">
+    <a href="./pages/Sommaire-index.html" class="link-rep">Sommaire</a> / Accueil
+    <!--<a href="./index.html" class="link-rep">Acceuil</a>   --> <!--calendrier-->
+  </div>
+
+  <!-- CONTENTENU -->
+  <div class="content">
+    <!-- MAIN -->
+    <main class="main">
+      <section class="section-article"><!--section-article-->
+        <h2 class="title">BIENVENUE SUR le SITE <br>Ailes-Enchantées.fr</h2><!--BIENVENUE SUR L'ASSOCIATION -->
+        <p class="text-center">
+          Ce site est actuellement en construction, nous vous remercions donc pour votre indulgence.
+          Nous travaillons activement pour vous offrir une expérience optimale. Bonne navigation sur notre site !
+        </p>
+
+        <!--LIGNE SEPARATRICE-->
+        <div class="content-ligne">
+          <div class="hr "></div>
+        </div>
+
+        <p class="text-center">
+          Vous pouvez aussi, si vous le souhaitez, nous faire part de vos commentaires <!--à l'adresse suivante :-->
+          <!--narasseiprebroi-4867@yopmail.com--><!--franck16600@gmail.com--><!--mon.site@exemple.com-->. Nous vous
+          remercions pour votre contribution précieuse.
+        </p>
+
+        <br>
+        <p class="text-center">
+          Notre Mission
+          Ailes-Enchantées.fr est dédié à la protection et à la promotion des papillons. Nous visons à
+          sensibiliser le public à l'importance de ces magnifiques insectes et à encourager leur
+          préservation à travers divers projets éducatifs et événements. Restez à l'écoute pour plus de
+          mises à jour et de contenus fascinants sur les papillons !
+        </p>
+
+        <div class="btn-card">
+          <a href="./pages/adhesion.html" class="link-btn text-white my-2 my-sm-0"
+            title="cliquer-adherez">Adherez ! clickez ici<!--inscrivez-vous ici-->
+          </a>
+        </div>
+      </section>
+
+      <!--BLOCK IMAGE 2 -->
+      <div class="block-img">
+        <div class="section">
+          <img class="card-img-top d-flex align-content-center align-items-center justify-content-center rounded-3"
+            src="./images3/pixelcut-export.jpeg" alt="Image">Image source: Ronny Overhate
+          Pixabay<!--Image par Ronny Overhate de Pixabay--><!--./images3/mon_image_de_fond.jpg-->
+        </div>
+      </div>
+
+      <!-- ACTUALITE -->
+      <div class="section-article">
+        <h5 class="subtitle">
+          Friend of the Earth a lancé une campagne de<br>recensement des
+          papillons dans le monde
+        </h5>
+        <p>
+          Afin de participer à ce recensement mondial, il suffit de prendre
+          une photographie des papillons que chacun observe et de se trouver
+          suffisamment près de l'insecte pour permettre son identification,
+          mais à une distance raisonnable pour ne pas le déranger. Il faut
+          ensuite envoyer la photographie par
+          <a href="https://www.futura-sciences.com/tech/telecharger/whatsapp-132" target="_blank">l'application WhatsApp
+          </a>
+          (+39 351 252 2520) en précisant les coordonnées GPS de la prise de
+          vue. Friend of the Earth enverra en retour l'identification de
+          l'espèce photographiée et ajoutera cette observation à sa base de
+          données. Un héros des Papillons sera désigné sur les réseaux sociaux
+          chaque mois pour avoir fourni le plus grand nombre de photographies
+          !
+        </p>
+      </div>
+
+      <!-------------------------------------------------------------------------------------------------------------------->
+      <!--<a href="admin/admin_login(test-1).php">Connexion Administrateur</a>-->
+      <!--<a href="./admin/admin_login(test-1).php">Connexion Administrateur</a>-->
+      <!--<div>
+          <h2>Nos horaires</h2>
+          <?php include 'php/fetch_hours(test-1).php'; ?> -->
+      <!--<?php include 'admin/fetch_hours(test-1).php'; ?>--> <!--
+        </div>-->
+
+      <!--<h1>Bienvenue sur le site des Ailes Enchantées</h1>-->
+      <!--<nav>
+            <ul>
+                <li><a href="pages/sommaire.html">Sommaire</a></li>-->
+      <!--<li><a href="../admin/admin_login.php">Connexion Administrateur</a></li>-->
+      <!--<li><a href="./php/admin_login(test-1).php">Connexion Administrateur (celui-ci test)</a></li>-->
+      <!-- Ajoutez d'autres liens de navigation ici -->
+      <!--<li><a href="../php/login.php">Connexion Administrateur</a></li>-->
+
+      <!--<li><a href="php/login.php">Admin</a></li>-->
+      <!-- desactiver -------------------------------------------- <li><a href="./php/login.php">Admin</a></li>--> <!--login.php-->
+      <!--<ul>
+                  <li><a href="./php/manage_admins.php">Gérer les administrateurs</a></li>-->
+      <!-- Ajoutez d'autres liens ici -->
+      <!--</ul>
+            </ul>
+        </nav>-->
+
+      <!--<h2>Horaires d'Ouverture</h2>
+        <table border="1">
+            <tr>
+                <th>Jour</th>
+                <th>Ouverture</th>
+                <th>Fermeture</th>
+            </tr>
+            <?php
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $ouverture = ($row["ouverture"] == "00:00:00" && $row["fermeture"] == "00:00:00") ? "Fermé" : $row["ouverture"];
+                    $fermeture = ($row["fermeture"] == "00:00:00" && $row["ouverture"] == "00:00:00") ? "Fermé" : $row["fermeture"];
+                    echo "<tr><td>" . $row["jour"]. "</td><td>" . $ouverture. "</td><td>" . $fermeture. "</td></tr>";
+                }
+            } else {
+                echo "<tr><td colspan='3'>Aucun horaire trouvé</td></tr>";
+            }
+            ?>
+        </table>-->
+
+      <!------------------------------------------------------------------------------------------------------------->
+      <!--<h2>Horaires d'Ouverture</h2>
+        <table border="1" id="horaires-table">
+            <tr>
+                <th>Jour</th>
+                <th>Ouverture</th>
+                <th>Fermeture</th>
+            </tr>-->
+      <!-- Les horaires seront insérés ici par JavaScript --><!--
+        </table>-->
+
+      <!--<form action="update_hours(test-1).php" method="post">--><!--
+        <form action="./admin/update_hours(test-1).php" method="post">
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+          Jour : <input type="text" name="jour"><br>
+          Ouverture : <input type="time" name="ouverture"><br>
+          Fermeture : <input type="time" name="fermeture"><br>
+          <input type="submit" value="Mettre à jour">
+      </form>-->
+
+      <!--<h1>Bienvenue au Musée des Papillons</h1>
+      <h2>Horaires d'Ouverture</h2>
+      <?php include 'php/musee.php'; ?>-->
+
+
+      <!-------------------------------------------------------------------------------------------------------------------->
+
+      <!-- desactiver  <div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+        <a href="./php/admin/index.php" class="link-btn text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">connection admin (index.php) admin
+        </a>
+      </div>-->
+      <!-- ! Le gardé ne pas suprimer -->
+      <div class="btn-card bg-primary"><!--./pages/inscription-(desactiver).html-->
+        <a href="./ratings/form_alpha-2.php" class="link-btn bg-primary text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">Laisser un (form_avis.php) rating celui-ci
+        </a>
+      </div>
+      <!-- ! Le gardé ne pas suprimer -->
+      <div class="btn-card bg-secondary"><!--./pages/inscription-(desactiver).html-->
+        <!--<a href="./ratings_feedback/form_avis_ratings - Copie.php" class="link-btn bg-secondary text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">Laisser un (form_avis_ratings-copie.php) rating-->
+        
+          <a href="../mon_projet/ratings_feedback/form_avis_ratings - Copie.php" class="link-btn bg-secondary text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">Laisser un avis (form_avis_ratings-copie.php) rating
+        </a>
+
+         <a class="link-btn bg-secondary text-white my-2 my-sm-0" href="../Mon_projet/ratings_feedback/form_avis_ratings.php"></a>
+      </div>
+
+     
+      <!-- desactiver <div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+        <a href="./php/ratings/form_avis.php" class="link-btn text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">Laisser un (form_avis.php) rating
+        </a>
+      </div>-->
+
+      <!-- desactiver <div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+        <a href="./php/ratings_feedback/form_avis_ratings.php" class="link-btn text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">Laisser un (form_avis_ratings.php) rating_feedback
+        </a>
+      </div>-->
+
+      <!-- desactiver <div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+        <a href="./php/form_alpha-test.php" class="link-btn text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">Laisser un (form_alpha-test.php) php
+        </a>
+      </div>-->
+
+      <!-- desactiver <div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+        <a href="./pages/avis.html" class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un
+          (avis.html) pages
+        </a>
+      </div>-->
+
+      <!--<div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+          <a href="./pages/avis-x1.html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un (avis-x1.html)
+          </a>
+        </div>-->
+
+      <!--<div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+          <a href="./pages/form.html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un avis (form.html)
+          </a>
+        </div>-->
+
+      <!--<div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+          <a href="./php/form_avis.php"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un avis (form_avis.php)
+          </a>
+        </div>-->
+
+      <!--<div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+          <a href="./pages/form_test-1.html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un avis (form_test-1.html)
+          </a>
+        </div>-->
+
+      <!--<div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+          <a href="./pages/form_alpha.html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un avis (form_alpha.html)
+          </a>
+        </div>-->
+
+      <!-- desactiver a tester semble fonctionnel <div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+        <a href="./pages/form_alpha-2.html" class="link-btn text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">Laisser un avis (form_alpha-2-html) pages
+        </a>
+      </div>-->
+
+      <!--<div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+          <a href="./pages/form_alpha-4.html"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un avis (form_alpha-4-html)
+          </a>
+        </div>-->
+
+      <!--<div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+          <a href="./php/form_alpha-4.php"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un avis (form_alpha-4-php)
+          </a>
+        </div>-->
+
+      <!-- desactiver a tester semble fonctionnel <div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--
+        <a href="./php/form_alpha-2.php" class="link-btn text-white my-2 my-sm-0"
+          title="cliquer Laisser un avis">Laisser un avis (form_alpha-2-php) php
+        </a>
+      </div>-->
+
+      <!--<div class="btn-card">--><!--./pages/inscription-(desactiver).html--><!--./php/avis/index.php--><!--
+          <a href="./avis/avis.php"
+            class="link-btn text-white my-2 my-sm-0" title="cliquer Laisser un avis">Laisser un (avis/avis.php)
+          </a>
+        </div>-->
+
+      <!-- desactiver <div class="btn-card">
+        <a href="./php/avis.php" class="link-btn text-white my-2 my-sm-0" title="clicker Laisser un avis">Laisser un
+          3(php/avis.php) php
+        </a>
+      </div>-->
+
+      <!-- desactiver <div class="btn-card">
+        <a href="./pages/submit_avis.html" class="link-btn text-white my-2 my-sm-0"
+          title="clicker Laisser un avis">Laisser un 4(submit_avis.html) pages
+        </a>
+      </div>-->
+
+      <!-- desactiver <div class="btn-card">
+        <a href="./pages/contact-beta.html" class="link-btn text-white my-2 my-sm-0 "
+          title="clicker Laisser un avis">contact (contact-beta.html) pages
+        </a>
+      </div>-->
+
+      <div class="btn-card btn-primary">
+        <a href="./php/form_avis_beta.php" class="link-btn text-white my-2 my-sm-0 "
+          title="clicker Laisser un avis">contact (form_avis_beta.php) php
+        </a>
+      </div>
+
+      <!--<div class="btn-card btn-success">
+          <a href="./php/moderate_comment_beta.php"
+           class="link-btn text-white my-2 my-sm-0 " title="clicker Laisser un avis">contact
+          </a>
+        </div>-->
+
+      <!--------------------------------------------------------------------------------------------------------------------->
+
+      <!-----------------------------------------------------------<h1>Avis des Utilisateurs</h1>
+        <div id="avis">  -->
+      <!--  ?php
+        // Connexion à la base de données
+        $conn = new mysqli('localhost', 'username', 'password', 'database');
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Récupérer les avis approuvés
+        $result = $conn->query("SELECT * FROM avis WHERE is_approved = 1");
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<div>";
+                echo "<p><strong>Nom:</strong> " . $row['nom'] . "</p>";
+                echo "<p><strong>Message:</strong> " . $row['message'] . "</p>";
+                echo "<p><strong>Note:</strong> " . str_repeat("&#9733;", $row['note']) . str_repeat("&#9734;", 5 - $row['note']) . "</p>";
+                echo "</div>";
+            }
+        } else {
+            echo "Aucun avis à afficher.";
+        }
+
+        // Fermer la connexion
+        $conn->close();
+        ?>  -->
+
+
+
+
+
+      <!-- Section des commentaires --> <!--
+        <div class="commentaires" id="comment-section">
+          <h2>Discuter au sujet des papillons</h2>--><!--Commentaires--> <!--
+          <div id="zone_commentaires"></div>
+        </div> -->
+
+      <!--<h1>Bienvenue sur la page principale</h1>
+        <iframe src="horaires.html"></iframe>-->
+
+
+      <!------------------------------------------------------------------<article>
+          <h4 class="sub-title-h4">Horaires d'Ouverture V.1</h4>
+          <table border="1">
+              <thead>
+                  <tr class="head">
+                      <th class="hre">Jour</th>
+                      <th class="hre">Ouverture<br> Matin</th>
+                      <th class="hre">Fermeture<br> Matin</th>
+                      <th class="hre">Ouverture<br> Après-midi</th>
+                      <th class="hre">Fermeture<br> Après-midi</th>
+                  </tr>
+              </thead>
+              <tbody id="hoursTableBody"> --> <!-- lien -->
+      <!-- Les données seront insérées ici par JavaScript -->
+      <!--                                                          </tbody>
+          </table>
+          </article>   -->
+
+      <!-- <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              fetch('./php/horaires/generate_hours_json.php')
+                  .then(response => response.json())
+                  .then(data => {
+                      const tableBody = document.getElementById('hoursTableBody');
+                      if (data.length > 0) {
+                          data.forEach(horaire => {
+                              const row = document.createElement('tr');
+                              const ouvertureMatin = (horaire.ouverture_matin === '00:00:00' && horaire.fermeture_matin === '00:00:00') ? 'Fermé' : horaire.ouverture_matin;
+                              const fermetureMatin = (horaire.fermeture_matin === '00:00:00' && horaire.ouverture_matin === '00:00:00') ? 'Fermé' : horaire.fermeture_matin;
+                              const ouvertureApresmidi = (horaire.ouverture_apresmidi === '00:00:00' && horaire.fermeture_apresmidi === '00:00:00') ? 'Fermé' : horaire.ouverture_apresmidi;
+                              const fermetureApresmidi = (horaire.fermeture_apresmidi === '00:00:00' && horaire.ouverture_apresmidi === '00:00:00') ? 'Fermé' : horaire.fermeture_apresmidi;
+                              row.innerHTML = `
+                                  <td>${horaire.jour}</td>
+                                  <td>${ouvertureMatin}</td>
+                                  <td>${fermetureMatin}</td>
+                                  <td>${ouvertureApresmidi}</td>
+                                  <td>${fermetureApresmidi}</td>
+                              `;
+                              tableBody.appendChild(row);
+                          });
+                      } else {
+                          tableBody.innerHTML = '<tr><td colspan="5">Aucun horaire trouvé</td></tr>';
+                      }
+                  })
+                  .catch(error => console.error('Erreur:', error));
+          });
+        </script> -->
+
+      <!---------------------------------------------------------->
+
+      <!--                                                                     <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              fetch('./horaires/generate_hours_json.php')
+                  .then(response => response.json())
+                  .then(data => {
+                      const tableBody = document.getElementById('hoursTableBody');//lien 
+                      if (data.length > 0) {
+                          data.forEach(horaire => {
+                              const row = document.createElement('tr');
+                              const ouvertureMatin = (horaire.ouverture_matin === '00:00:00' && horaire.fermeture_matin === '00:00:00') ? 'Fermé' : horaire.ouverture_matin;
+                              const fermetureMatin = (horaire.fermeture_matin === '00:00:00' && horaire.ouverture_matin === '00:00:00') ? 'Fermé' : horaire.fermeture_matin;
+                              const ouvertureApresmidi = (horaire.ouverture_apresmidi === '00:00:00' && horaire.fermeture_apresmidi === '00:00:00') ? 'Fermé' : horaire.ouverture_apresmidi;
+                              const fermetureApresmidi = (horaire.fermeture_apresmidi === '00:00:00' && horaire.ouverture_apresmidi === '00:00:00') ? 'Fermé' : horaire.fermeture_apresmidi;
+                              row.innerHTML = `
+                                  <td>${horaire.jour}</td>
+                                  <td>${ouvertureMatin}</td>
+                                  <td>${fermetureMatin}</td>
+                                  <td>${ouvertureApresmidi}</td>
+                                  <td>${fermetureApresmidi}</td>
+                              `;
+                              tableBody.appendChild(row);
+                          });
+                      } else {
+                          tableBody.innerHTML = '<tr><td colspan="5">Aucun horaire trouvé</td></tr>';
+                      }
+                  })
+                  .catch(error => console.error('Erreur:', error));
+          });
+        </script>-->
+
+      <!---------------------------------------------------------->
+
+      <!-- Affiché les horaires tableau -->
+      <!--?php
+        include 'db_connect.php';
+        $sql = "SELECT * FROM horaires";
+        $result = $pdo->query($sql);
+        $horaires = [];
+        if ($result->rowCount() > 0) {
+            $horaires = $result->fetchAll(PDO::FETCH_ASSOC);
+        }
+        $pdo = null;
+        ?>
+        -->
+      <!-- Mise a jour LE 28/06/2024 ------ V.1 -->
+      <!--
+        <article>
+        <h4 class="sub-title-h4">Horaires d'Ouverture V.1</h4>
+            <table border="1">
+                <tr class="head">
+                    <th class="hre">Jour</th>
+                    <th class="hre">Ouverture<br> Matin</th>
+                    <th class="hre">Fermeture<br> Matin</th>
+                    <th class="hre">Ouverture<br> Après-midi</th>
+                    <th class="hre">Fermeture<br> Après-midi</th>
+                </tr>
+                <?php if (!empty($horaires)): ?>
+                    <?php foreach ($horaires as $horaire): ?>
+                        <tr>
+                          <div class="tr-cel">
+                            <td class="day"><?php echo htmlspecialchars($horaire['jour']); ?></td>
+                            <td class="cel"><?php echo ($horaire['ouverture_matin'] == '00:00:00' && $horaire['fermeture_matin'] == '00:00:00') ? 'Fermé' : htmlspecialchars($horaire['ouverture_matin']); ?></td>
+                            <td class="cel"><?php echo ($horaire['fermeture_matin'] == '00:00:00' && $horaire['ouverture_matin'] == '00:00:00') ? 'Fermé' : htmlspecialchars($horaire['fermeture_matin']); ?></td>
+                            <td class="cel"><?php echo ($horaire['ouverture_apresmidi'] == '00:00:00' && $horaire['fermeture_apresmidi'] == '00:00:00') ? 'Fermé' : htmlspecialchars($horaire['ouverture_apresmidi']); ?></td>
+                            <td class="cel"><?php echo ($horaire['fermeture_apresmidi'] == '00:00:00' && $horaire['ouverture_apresmidi'] == '00:00:00') ? 'Fermé' : htmlspecialchars($horaire['fermeture_apresmidi']); ?></td>
+                          </div>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="5">Aucun horaire trouvé</td>
+                    </tr>
+                <?php endif; ?>
+            </table>
+            </article>
+          -->
+
+      <!--------------------------------------------------------------------------------------->
+    </main>
+
+    <!--ASIDE-->
+    <aside class="aside">
+      <div class="aside-nav">
+        <h5>images</h5>
+
+        <a href="#">Banques images</a><!-- target="_blank"-->
+        <a href="./pages/gallery-index.html">Galerie images</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Évènements</h5>
+        <a href="./pages/calendar.html">Agenda</a>
+        <a href="./pages/assos.html">assemblé</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>Les sortie</h5>
+        <!--<a href="./pages/musée.html">Musée</a>-->
+        <a href="./php/horaires_bis.php">Musée</a>
+        <a href="./pages/exposition.html">exposition</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>sur le web</h5>
+
+        <a href="https://biodiversite-foret.fr/2023/07/05/les-groupes-despeces-les-lepidopteres/"
+          target="_blank">Actualité</a>
+        <a href="./pages/recherche_wiki.html">recherche wikipedia</a>
+      </div>
+
+      <div class="aside-nav">
+        <h5>identifier</h5>
+        <a href="./pages/identification.html">quel est ce papillon</a>
+        <a href="./pages/fiche-details.html">page lepidoptera</a>
+      </div>
+
+      <!--<div class="btn-card">
+        <a href="./pages/avis.html"
+          class="link-btn text-white my-2 my-sm-0" title="cliquer-adherez">Laisser un avis
+        </a> --> <!--./pages/inscription-(desactiver).html--> <!--
+      </div>-->
+
+    </aside>
+  </div>
+
+  <!-- FOOTER --> <!-- 19/06/2024 
+    <footer class="blockfooter">
+      <div class="block">
+        <div class="footer d-flex "> --> <!--text-left--><!--flex-column --> <!--
+          <div>
+            <h5 class="text-dark">informations</h5>
+            <a
+              href="./rgpd/mentions_légales.html"
+              class="mention"
+              >mention légale</a
+            >
+            <a href="./pages/a-propos-ecf.html" class="mention"
+              >A propos de cette ECF</a
+            >
+          </div>
+        </div>
+
+        <div class="footer d-flex flex-column "> --> <!--text-left--> <!--
+          <div>
+            <h5 class="text-dark">nous contacter</h5>
+            <a href="tel:+336250214" class="contact">06 25 02 14</a>
+            <a href="mailto:entomologie-asso@example.com" class="contact"
+              >Envoyer un courriel</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+  <!-- FOOTER -->
+  <footer class="blockfooter">
+    <div class="block-ftr"><!---->
+      <div class="content-footer">
+        <div class="footer-1">
+          <div class="mention-1">
+            <h5 class="cl-mention">informations</h5>
+            <a href="./rgpd/mentions_légales.html" class="cl-mention">mention légale</a>
+            <a href="./pages/a-propos-ecf.html" class="cl-mention">A propos de cette ECF</a>
+          </div>
+        </div>
+
+        <div class="footer-2">
+          <div class="mention-2">
+            <h5 class="cl-contact">nous contacter</h5>
+            <a href="tel:+336250214" class="cl-contact">06 25 02 14</a>
+            <a href="mailto:entomologie-asso@example.com" class="cl-contact">Envoyer un courriel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--<script src=""></script>-->
+
+  <!--<script>
+      document.addEventListener('DOMContentLoaded', function() {
+          /*fetch('php/fetch_hours(test-1).php')*/
+          fetch('./php/fetch_hours(test-1).php')
+              .then(response => response.json())
+              .then(data => {
+                  const table = document.getElementById('horaires-table');
+                  if (data.length > 0) {
+                      data.forEach(row => {
+                          const tr = document.createElement('tr');
+                          tr.innerHTML = `<td>${row.jour}</td><td>${row.ouverture}</td><td>${row.fermeture}</td>`;
+                          table.appendChild(tr);
+                      });
+                  } else {
+                      const tr = document.createElement('tr');
+                      tr.innerHTML = `<td colspan='3'>Aucun horaire trouvé</td>`;
+                      table.appendChild(tr);
+                  }
+              })
+              .catch(error => console.error('Erreur:', error));
+      });
+  </script>-->
+
+  <!--?php include('./php/horaires_script.php'); ?>-->
+  <!--?php include('./php/debog_script.php'); ?>-->
+
+</body>
+
+</html>
+
+
+
+
+
+<!-- 
+La structure du project au 02/08/2024 
+C:\xampp\htdocs\Mon_projet\
+|   config\
+│   └── config.php
+C:\xampp\htdocs\Mon_projet site_papillons
+├── index.html
+├── git
+├── admin/
+│   ├── admin_dashboard(test-1).php
+│   ├── admin_dashboard.php
+│   ├── admin_login.php
+│   ├── admin_login-x.php
+│   ├── admin_test_style.css
+│   ├── db_connect.php
+│   ├── db_connect-1.php
+│   ├── index.php
+│   ├── login.php
+│   ├── login-x.php
+│   ├── login-xxx.php
+│   └── logout.php
+├── assets/
+│   ├── images/
+│   │   ├── photo1.jpg
+│   │   ├── photo2.jpg
+├── config/
+│   ├── (config_avis).php
+│   ├── config(e l'ecar).php
+│   ├── config.php
+│   ├── config_alpha.php
+│   ├── config_avis - Copie.php
+│   ├── config_avis.php
+│   ├── config_avis_beta.php
+│   ├── config_contact.php
+│   ├── config_hours.php
+│   ├── config-2.php
+│   └── config-4.php
+├── data/
+│   ├── content-(test).json
+│   ├── content.json
+│   ├── events.json
+│   ├── load-content-test.json
+│   ├── papillons(2) - Copie.json
+│   ├── papillons(2).json
+│   ├── papillons(3).json
+│   ├── papillons(A-1).json
+│   ├── papillons(desactiver pour la version papillons.json).json
+│   ├── papillons.json
+│   └── papillons-ggg.json
+├── images3/
+│   ├── photo1.jpg
+│   ├── photo2.jpg
+│   ├── photo3.jpg
+│   ├── photo4.jpg
+│   ├── photo5.jpg
+│   ├── photo6.jpg
+│   └── photo52.jpg
+├── json/
+│   ├── user.json
+├── pages/
+│   ├── agenda.html
+│   ├── a-propos-ecf.html
+│   ├── assos.html
+│   ├── avis.html
+│   ├── blog.html
+│   ├── calandar.html
+│   ├── contact.html
+│   ├── exposition.html
+│   ├── exposition-origine.html
+│   ├── fiche-details(3).html
+│   ├── fiche_details.html
+│   ├── form.html
+│   ├── form_alpha-2.html
+│   ├── galerie-index.html
+│   ├── header.html
+│   ├── identification.html
+│   ├── inscription-(desactiver).html
+│   ├── inscription(en pause).html
+│   ├── inscription.html
+│   ├── livres.html
+│   ├── Musée (1).html
+│   ├── musée.html
+│   ├── page-dediee-(test).html
+│   ├── page-dediee.html
+│   ├── page-dediee--.html
+│   ├── page-dediee-1.html
+│   ├── page-dediee-arret-test.html
+│   ├── qui_somme_nous.html
+│   ├── qui_somme_nous-sauvegarde.html
+│   ├── qui_somme_nous-sauvegarde-2.html
+│   ├── recherche_wiki.html
+│   ├── Sommaire-index.html
+│   ├── submit_avis.html
+│   ├── thank_you_avi.html
+│   ├── thank_you_avis.html
+│   ├── thank_you_contact-(sauvegardé).html
+│   ├── thank_you_contact.html
+│   └── thank_you_inscription.html
+├── php/
+│   ├── admin/ (dossier)
+│   │   ├── 
+│   ├── avis/ (dossier)
+│   │   ├── 
+│   ├── blog/ (dossier)
+│   │   ├── 
+│   ├── contact/ (dossier)
+│   │   ├── 
+│   ├── fichier avis moderer avisusers (beta)/ (dossier)
+│   │   ├── 
+│   ├── fichier contact/ (dossier)
+│   │   ├── 
+│   ├── fichier horaires/ (dossier)
+│   │   ├── 
+│   ├── horaires/ (dossier)
+│   │   ├── 
+│   ├── inscriptions/ (dossier)
+│   │   ├── 
+│   ├── ratings/ (dossier)
+│   │   ├── 
+│   ├── ratings_feedback/ (dossier)
+│   │   ├── 
+│   ├── sauvegardé/ (dossier)
+│   │   ├── 
+│   ├── x-desactiver/ (dossier)
+│   │   ├── 
+│   ├── admin_dashboard.php
+│   ├── admin_dashboard-horaires.php
+│   ├── admin_login-(test).php
+│   ├── admin_login(test-1).php
+│   ├── admin_login.php 
+│   ├── admin_login-horaires.php
+│   ├── afficher_commentaires.php
+│   ├── ajouter_commentaire - Copie.php
+│   ├── ajouter_commentaire.php
+│   ├── ajouter_commentaire_beta.php
+│   ├── ajouter_commentaire-x.php
+│   ├── approve_comment.php
+│   ├── approve_comment_beta.php
+│   ├── avis.php
+│   ├── blog.php
+│   ├── check_login.php
+│   ├── comment_handler.php
+│   ├── config_avis.php
+│   ├── config_avis_beta.php
+│   ├── create_admin.php
+│   ├── create_user.php
+│   ├── csrf_token------------------------.php
+│   ├── csrf_token_avi.php
+│   ├── csrf_token_avis.php
+│   ├── csrf_token_avis_beta.php
+│   ├── csrf_token_avis-1----------------.php
+│   ├── csrf_token_contact.php
+│   ├── csrf_token_hours.php
+│   ├── csrf_token_include.php
+│   ├── csrf_token_moderation.php
+│   ├── db_connect(a l'ecar).php
+│   ├── db_connect.php
+│   ├── db_connect------.php
+│   ├── db_connect_horaires.php
+│   ├── db_connected.php
+│   ├── db_connect-test.php
+│   ├── debog_script.php
+│   ├── display_comments.php
+│   ├── fetch_hours(test-1).php
+│   ├── fetch_hours.php
+│   ├── form_alpha-2.php
+│   ├── form_alpha-test.php
+│   ├── form_avis-2.php
+│   ├── generate_hash.php
+│   ├── get_events-(1.0).php
+│   ├── get_events.php
+│   ├── handle_admin_actions.php
+│   ├── handle_login.php
+│   ├── horaires - Copie.php
+│   ├── horaires.php
+│   ├── horaires_beta.php
+│   ├── horaires_bis - Copie.php
+│   ├── horaires_bis.php
+│   ├── horaires_bis--------------------------------.php
+│   ├── horaires_script - Copie.php
+│   ├── horaires_script.php
+│   ├── init-session.php
+│   ├── inscription (2).php
+│   ├── inscription.php
+│   ├── login(a l'ecar).php
+│   ├── login(desactiver pour autre test).php
+│   ├── login(test-1).php
+│   ├── login.php
+│   ├── login_avis.php
+│   ├── logout.php
+│   ├── manage_admin.php
+│   ├── manage_admins.php
+│   ├── manage_horaires.php
+│   ├── moderate_comment_beta.php
+│   ├── moderate_comments - Copie.php
+│   ├── moderate_comments.php
+│   ├── moderate_comments-0.php
+│   ├── moderate_comments-1.php
+│   ├── moderate_comments-x.php
+│   ├── musee.php
+│   ├── process-comment.php
+│   ├── process-contact.php
+│   ├── process-contact-1.php
+│   ├── recuperer_commentaires.php
+│   ├── recuperer_commentaires_beta.php
+│   ├── session_init - Copie.php
+│   ├── session_init.php
+│   ├── session_init_avis.php
+│   ├── session_init_contact.php
+│   ├── session_init_hours.php
+│   ├── session_init-test.php
+│   ├── submit_avis.php
+│   ├── submit_contact.php
+│   ├── submit_inscription.php
+│   ├── submit_rating.php
+│   ├── submit_ratings_beta.php
+│   ├── test_connection.php
+│   ├── test_db_connection.php
+│   ├── update_hours.php
+│   ├── update_hours_beta.php
+│   ├── update_table_structure.php
+│   └── user-rating.php
+├── ressource/
+│   ├── fiches-identification-obj-compressed.pdf
+│   └── Guide-papillons.pdf
+├── rgpd/
+│   ├── mentions_légales -(sauvegardé).html
+│   └── mentions_légales.html
+├── script pour initialisé les utilisateur la premiere fois/
+│   ├── add_admin.php
+│   └── create_admin.php
+├── scripts/
+│   ├── (comments_script_beta).js
+│   ├── avis.js
+│   ├── avis_script.js
+│   ├── avis_script-4.js
+│   ├── avis_script-test.js
+│   ├── comment_script-1.js
+│   ├── comments_script.js
+│   ├── comments_script_beta.js
+│   ├── contact_script -(sauvegardé).js
+│   ├── contact_script voir sauvegarde.js
+│   ├── contact_script.js
+│   ├── galerie.js
+│   ├── gallery(2 test).js
+│   ├── gallery(2).js
+│   ├── gallery(3).js
+│   ├── gallery(A-1).js
+│   ├── gallery.js
+│   ├── gallery.js
+│   ├── inscription.js
+│   ├── inscription_script.js
+│   ├── load-content(2).js
+│   ├── load-content(3).js
+│   ├── load-content-(test).js
+│   ├── load-content.js
+│   ├── main.js
+│   ├── script.js
+│   ├── scriptB.js
+│   ├── script-----B.js
+│   ├── submit_avis.js
+│   └── xxx-avis_script.js
+├── style/
+│   ├── avis_style.css
+│   ├── contact_style.css
+│   ├── contenu_agenda_style.css
+│   ├── contenu_blog_style.css
+│   ├── contenu_calendar_style.css
+│   ├── contenu_exposition_style.css
+│   ├── contenu_gallery_style.css
+│   ├── contenu_index_style.css
+│   ├── contenu_musée_style.css
+│   ├── contenu_style.css
+│   ├── footer_style.css
+│   ├── header_style.css
+│   ├── inscription.css
+│   ├── inscription_style.css
+│   ├── style(3).css
+│   ├── style(3.1).css
+│   ├── style(5).css
+│   ├── style(x).css
+│   ├── style(x1).css
+│   ├── style.css
+│   ├── test_avis_style.css
+│   ├── test_avis_style-2.css
+│   ├── -xxx-inscription_style(desactive pour test).css
+│   ├── -xxx-inscription_style-(en attente test).css
+│   ├── -xxx-style (desactive).css
+│   ├── -xxx-style(desactive-2).css
+│   ├── -xxx-style-1.css
+│   ├── -xxx-style-2.css
+│   └── -xxx-test_avis_style.css
+├── styles/
+│   ├── admin-horaires_style.css
+│   ├── avis_style.css
+│   ├── calendar_style.css
+│   ├── contact_style -(sauvegardé).css
+│   ├── contact_style.css
+│   ├── contact_style-xxx.css
+│   ├── form_avis_style.css
+│   ├── inscription.css
+│   ├── inscription_style.css
+│   ├── style.css
+│   ├── submit_avis_style.css
+│   ├── test_avis_style.css
+│   └── test_avis_style-2.css
+
+
+
+
+
+
+
+
+
+
+│   ├── inscription.js
+│   ├── contact_script.js
+│   ├── comments_script.js
+│   ├── calendar_script.js
+│   ├── avis.js
+│   ├── load-content.js
+│   ├── main.js
+│   ├── papillons.js
+│   ├── gallery.js
+
+
+
+
+
+
+├── styles/
+│   ├── avis_style.css
+│   ├── calendar_style.css
+│   ├── contact_style.css
+│   ├── inscription_style.css
+│   └── styles.css
+
+├── data/
+│   ├── content.json
+│   ├── events.json
+│   └── papillons.json
+├── php/
+│   ├── admin_login.php 
+│   ├── ajouter_commentaire.php 
+│   ├── csrf_token.php  
+│   ├── get_events.php
+│   ├── inscription.php
+│   ├── moderate_comments.php 
+│   ├── process_comment.php
+│   ├── process_contact.php
+│   ├── recupeter_commentaires.php
+│   ├── session_init.php
+│   ├── session_init_contact.php
+│   ├── submit_avis.php
+│   ├── submit_contact.php  
+│   └── submit_inscription.php
+├── pages/
+│   ├── agenda.html
+│   ├── a-propos-ecf.html
+│   ├── assos.html
+│   ├── blog.html
+│   ├── calandar.html
+│   ├── contact.html
+│   ├── exposition.html
+│   ├── fiche_details.html
+│   ├── galerie-index.html
+│   ├── identification.html
+│   ├── inscription.html
+│   ├── musée.html
+│   ├── page-dediee.html
+│   ├── qui_somme_nous.html
+│   ├── recherche_wiki.html
+│   ├── sommaire.html
+│   └── thank_you.html
+├── rgpd/
+│   └── mentions_legales.html
+├── images3/
+│   ├── photo1.jpg
+│   ├── photo2.jpg
+│   ├── photo3.jpg
+│   ├── photo4.jpg
+│   ├── photo5.jpg
+│   ├── photo6.jpg
+│   └── photo_.jpg
+
+
+└── assets/
+    └── images/
+        ├── insect-biology.jpg
+        ├── insect-habitats.jpg
+        └── ecosystem-roles.jpg
+
+
+PhpMyAdmin
+La structure des Tables site_papillons
+├── site_papillons/
+│     ├── nouvelle table (attente de création de table)
+│     ├── admins
+│     ├── avis (vide inutilisé)
+│     ├── avisusers
+│     ├── comments
+│     ├── contacts
+│     ├── horaires
+│     ├── inscriptions
+│     ├── users2 (vide inutilisé)
+│     ├── user_feedback
+├── Test
+
+-->

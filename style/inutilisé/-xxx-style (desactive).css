@@ -1,0 +1,254 @@
+/*
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+*/
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/*footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  /*position: fixed;*/  /*
+  bottom: 0;
+  width: 100%;
+} */
+
+/*-- FOOTER --*/
+.blockfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #7dc95e;
+  color: white;
+  height: 125px;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 80px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.mention {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 200px;
+  color: blue;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 200px;
+  color: blue;
+}
+
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+/*-- Copyright --*/
+.copiryght {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #7dc95e;
+  color: blue;
+  padding: 5px;
+  width: 100%;
+}
+
+
+/* Media Queries for responsive design */
+/* Media Queries for header */
+@media (max-width: 768px) {
+  .header, .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+  .breadcrumb-item {
+    width: 100%;
+    text-align: center;
+  }
+  .main, .aside {
+    width: 100%;
+  }
+}
+
+/*
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .header {
+    font-size: 12px;
+    display: flex;
+    /*flex-direction: row;*//*
+    flex-direction: column;
+    text-align: left;
+    max-width: 100%;
+    /*-----------------*//*
+
+  }
+}*/
+
+
+
+
+
+
+
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+  table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  table thead, table tbody, table th, table td, table tr {
+      display: block;
+  }
+
+  table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  table tr {
+      margin: 0 0 1rem 0;
+  }
+
+  table tr:nth-child(odd) {
+      background: #f2f2f2;
+  }
+
+  table td {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+  }
+
+  table td:before {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      transform: translateY(-50%);
+      text-align: left;
+      font-weight: bold;
+  }
+
+  table td:before {
+      content: attr(data-label);
+  }
+}
+
+/*-------------------------------------- ASIDE --*/
+
+      /*
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+        .main,
+        .aside {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 100%;
+          margin: 0px;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+        .aside {
+          padding: 0px;
+          margin-top: 10px;
+        }
+      }
+      */
+
+/*-- Media Queries for FOOTER --*/
+@media (max-width: 768px) {  
+  .block,
+  .contact,
+  .mention,
+  .text-dark {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+  }
+}

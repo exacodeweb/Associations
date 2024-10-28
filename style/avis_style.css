@@ -1,0 +1,468 @@
+body {
+  background-position: 100% 100%;
+  margin: 0;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/*.breadcrumb-item {
+  width: 100%;
+  background: none;
+  margin: 10px;
+  float: left;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center; 
+  padding: 0;
+}*/
+
+/*.link-item {
+  margin: 0 5px;
+}  */
+
+/*.breadcrumb-item {
+  margin: 0 5px;
+}*/
+
+
+/*.content {
+  display: flex;
+  flex-direction: column; 
+  width: 100%;/*90%*/  /*
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}*/
+
+/*.main {
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  background: #fbfbf9;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(128, 128, 128, 0.2); 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}*/
+
+/*.pt {
+  text-align: center !important;
+}*/
+
+/* Section spécifique pour le formulaire */
+.section-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: #f8f9f8;
+  padding: 10px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;/*justify*/
+  padding: 10px;
+  width: 50%;
+}
+
+h2 {
+  color: #0000ff;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 12px 0 20px;/*12px 0 50px*/
+  font-size: 1.5em;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 80%;
+
+  background-color: #f8f9f8;
+  height: auto;
+  border: none;
+}
+
+/*.form-control-rating {
+  /*display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  width: 80%;
+
+  background-color: #f8f9f8;
+  height: auto;
+  border: none;
+
+  
+  /*
+  position: absolute;
+  top: 0;
+  left: 0*//*
+  text-align: center !important; *//*
+
+  padding-top: 20px;
+}*/
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input {
+  height: 35px !important;/*25px*/
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+}
+
+/*------------------------------------------------
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;/*15px*/   /*
+  padding: 30px !important;/*10px*/  /*
+  margin-bottom: 20px;
+  width: 160px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: mediumorchid;
+  color: white;
+  border: none;
+
+  padding-bottom: 20px;
+}
+
+button:hover {
+  background: rgb(211, 85, 163);
+}  ------------------------------------------*/
+
+/*.submit_avis {
+  position: absolute;
+  top: 0;
+  left: 0;
+}*/
+
+ /*-------------------------------------------------------------------------------------------------------- star --*/
+/*
+ .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+
+
+  border: 1px solid red;
+  height: auto;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  position: relative;
+  width: 1em;
+  font-size: 3vw;
+  color: #FFD700;
+  cursor: pointer;
+}
+
+.rating label::before {
+  content: "\2605";
+  position: absolute;
+  opacity: 0;
+}
+
+.rating label:hover:before,
+.rating label:hover ~ label:before {
+  opacity: 1 !important;
+}
+
+.rating input:checked ~ label:before {
+  opacity: 1;
+}
+
+.rating label:hover:before,
+.rating label:hover ~ label:before,
+.rating input:checked ~ label:before {
+  color: #FFD700;
+}*/
+
+ /*------------------------------------------------------------------------------------------------------FOOTER--*/
+ /*
+  .blockfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #7dc95e;
+    color: white;
+    height: 150px;
+    width: 100%;
+  }
+
+  .block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    margin-left: 80px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mention {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 200px;
+    color: blue;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 200px;
+    color: blue;
+  }
+
+  a {
+    color: #0000ff;
+    text-decoration: none;
+  }*/
+
+/*span,.star {
+  color: gold !important;
+}*/
+
+
+/* Responsive Design */
+@media screen and (max-width: 576px) {
+  .content {
+      width: 100%;
+      padding: 5px;
+  }
+
+  .main {
+      width: 90%;
+      border: 1px solid red;
+      padding: 20px;
+  }
+
+  .article {
+    width: 100% ;
+  }
+
+  .form {
+      width: 100%;
+  }
+
+  .form-control {
+      width: 100%;
+  }
+
+  input {
+      width: 100%;
+  }
+}
+
+
+/*------------------------------------------------------*/
+/* Section spécifique pour le formulaire */
+form,
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 30px;
+  /*padding: 10px !important;*/
+  text-align: left;
+  width: 80%;
+
+}
+
+input, textarea {
+  border: 1px solid gray !important;
+}
+
+.avis-form {
+  width: 50% !important;
+}
+
+.form-control {
+    margin-bottom: 0px;/*1em*/
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.form-control input,
+.form-control textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-control textarea {
+    resize: vertical;
+}
+
+.form-control-rating {
+  padding-top: 20px;
+}
+
+/*.form button {
+  display: block;
+  width: 100%;
+  padding: 0.75em;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form button:hover {
+    background-color: #218838;
+}*/
+
+/*label .note .form-control-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  text-align: center;
+  justify-content: center;
+}*/
+
+/* Section spécifique pour les étoiles */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.rating label::before {
+    content: "\2605";
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #FFD700;
+}
+
+.rating input:checked ~ label,
+.rating input:checked ~ label:hover,
+.rating input:checked ~ label:hover ~ label {
+    color: #FFD700;
+}
+
+/* selecteur ajouter */
+.note {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+/* Section spécifique pour le bouton */
+.form button .submit {
+  display: block;
+  width: 100%;
+  width: 160px;
+  height: 30px;
+  padding: 0.75em;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  background: mediumorchid;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form button:hover {
+  background-color: #218838;
+  background: rgb(211, 85, 163);
+}
+
+.btn {
+  /*top: 30px;*/
+  padding-top: 0px;
+  padding-bottom: 0px;
+  left: 0;
+}
